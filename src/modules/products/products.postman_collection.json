@@ -1,0 +1,236 @@
+{
+  "info": {
+    "name": "Products Module",
+    "description": "Product catalog with 3,035 electronics products. Rich filtering by category, brand, price, availability, and more",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "base_url", "value": "http://localhost:4010/api/v1" }
+  ],
+  "item": [
+    {
+      "name": "List Products",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/public/products?page=1&limit=24",
+          "host": ["{{base_url}}"],
+          "path": ["public", "products"],
+          "query": [
+            { "key": "page", "value": "1" },
+            { "key": "limit", "value": "24" },
+            { "key": "category", "value": "", "disabled": true },
+            { "key": "brand", "value": "", "disabled": true },
+            { "key": "min_price", "value": "", "disabled": true },
+            { "key": "max_price", "value": "", "disabled": true },
+            { "key": "availability", "value": "", "disabled": true },
+            { "key": "in_store", "value": "", "disabled": true },
+            { "key": "speed", "value": "", "disabled": true },
+            { "key": "sustainable", "value": "", "disabled": true },
+            { "key": "on_sale", "value": "", "disabled": true },
+            { "key": "min_rating", "value": "", "disabled": true },
+            { "key": "q", "value": "", "disabled": true },
+            { "key": "sort", "value": "", "disabled": true }
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));",
+              "pm.test('Has data array', () => pm.expect(pm.response.json().data).to.be.an('array'));",
+              "pm.test('Has pagination', () => pm.expect(pm.response.json().pagination).to.have.property('total'));",
+              "if (pm.response.json().data.length > 0) {",
+              "  pm.environment.set('product_id', pm.response.json().data[0]._id);",
+              "  pm.environment.set('product_slug', pm.response.json().data[0].slug);",
+              "}"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Get Product by ID",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/public/products/{{product_id}}",
+          "host": ["{{base_url}}"],
+          "path": ["public", "products", "{{product_id}}"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));",
+              "pm.test('Has product data', () => {",
+              "  const data = pm.response.json().data;",
+              "  pm.expect(data).to.have.property('name');",
+              "  pm.expect(data).to.have.property('price');",
+              "  pm.expect(data).to.have.property('images');",
+              "  pm.expect(data).to.have.property('specification');",
+              "});"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Get Product by Slug",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/public/products/slug/{{product_slug}}",
+          "host": ["{{base_url}}"],
+          "path": ["public", "products", "slug", "{{product_slug}}"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Get Related Products",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/public/products/{{product_id}}/related",
+          "host": ["{{base_url}}"],
+          "path": ["public", "products", "{{product_id}}", "related"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));",
+              "pm.test('Has data array', () => pm.expect(pm.response.json().data).to.be.an('array'));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Get Product Reviews",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/public/products/{{product_id}}/reviews?page=1&limit=10",
+          "host": ["{{base_url}}"],
+          "path": ["public", "products", "{{product_id}}", "reviews"],
+          "query": [
+            { "key": "page", "value": "1" },
+            { "key": "limit", "value": "10" },
+            { "key": "sort", "value": "", "disabled": true }
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));",
+              "pm.test('Has data array', () => pm.expect(pm.response.json().data).to.be.an('array'));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Filter by Price Range",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/public/products?min_price=100&max_price=500&limit=10",
+          "host": ["{{base_url}}"],
+          "path": ["public", "products"],
+          "query": [
+            { "key": "min_price", "value": "100" },
+            { "key": "max_price", "value": "500" },
+            { "key": "limit", "value": "10" }
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));",
+              "pm.test('Prices in range', () => {",
+              "  const data = pm.response.json().data;",
+              "  data.forEach(p => {",
+              "    pm.expect(p.price).to.be.at.least(100);",
+              "    pm.expect(p.price).to.be.at.most(500);",
+              "  });",
+              "});"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Filter On Sale",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/public/products?on_sale=true&limit=10",
+          "host": ["{{base_url}}"],
+          "path": ["public", "products"],
+          "query": [
+            { "key": "on_sale", "value": "true" },
+            { "key": "limit", "value": "10" }
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Sort by Price Ascending",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/public/products?sort=price_asc&limit=10",
+          "host": ["{{base_url}}"],
+          "path": ["public", "products"],
+          "query": [
+            { "key": "sort", "value": "price_asc" },
+            { "key": "limit", "value": "10" }
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

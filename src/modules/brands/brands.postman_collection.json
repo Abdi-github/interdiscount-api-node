@@ -1,0 +1,117 @@
+{
+  "info": {
+    "name": "Brands Module",
+    "description": "Product brand listing with 647 brands. Filterable and sortable",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "base_url", "value": "http://localhost:4010/api/v1" }
+  ],
+  "item": [
+    {
+      "name": "List Brands",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/public/brands?page=1&limit=20",
+          "host": ["{{base_url}}"],
+          "path": ["public", "brands"],
+          "query": [
+            { "key": "page", "value": "1" },
+            { "key": "limit", "value": "20" },
+            { "key": "search", "value": "", "disabled": true },
+            { "key": "sort", "value": "", "disabled": true }
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));",
+              "pm.test('Has data array', () => pm.expect(pm.response.json().data).to.be.an('array'));",
+              "if (pm.response.json().data.length > 0) {",
+              "  pm.environment.set('brand_id', pm.response.json().data[0]._id);",
+              "  pm.environment.set('brand_slug', pm.response.json().data[0].slug);",
+              "}"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Get Brand by ID",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/public/brands/{{brand_id}}",
+          "host": ["{{base_url}}"],
+          "path": ["public", "brands", "{{brand_id}}"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));",
+              "pm.test('Has brand data', () => {",
+              "  const data = pm.response.json().data;",
+              "  pm.expect(data).to.have.property('name');",
+              "  pm.expect(data).to.have.property('slug');",
+              "  pm.expect(data).to.have.property('product_count');",
+              "});"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Get Brand by Slug",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/public/brands/slug/{{brand_slug}}",
+          "host": ["{{base_url}}"],
+          "path": ["public", "brands", "slug", "{{brand_slug}}"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Search Brands",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/public/brands?search=samsung&limit=5",
+          "host": ["{{base_url}}"],
+          "path": ["public", "brands"],
+          "query": [
+            { "key": "search", "value": "samsung" },
+            { "key": "limit", "value": "5" }
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
