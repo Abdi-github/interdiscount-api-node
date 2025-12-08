@@ -1,0 +1,686 @@
+{
+  "info": {
+    "name": "Store Management Module",
+    "description": "Store manager endpoints: dashboard, inventory, pickup orders, transfers, promotions, store info, and staff. Requires store_manager role and store assignment",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "base_url", "value": "http://localhost:4010/api/v1" }
+  ],
+  "item": [
+    {
+      "name": "Auth - Login as Store Manager",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "const res = pm.response.json();",
+              "if (res.success) {",
+              "  pm.environment.set('manager_token', res.data.tokens.access_token);",
+              "}",
+              "pm.test('Login successful', () => pm.response.to.have.status(200));"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"manager.de@interdiscount-clone.ch\",\n  \"password\": \"Password123!\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/public/auth/login",
+          "host": ["{{base_url}}"],
+          "path": ["public", "auth", "login"]
+        }
+      }
+    },
+    {
+      "name": "Store Info",
+      "item": [
+        {
+          "name": "Get My Store Info",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{manager_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/store/info",
+              "host": ["{{base_url}}"],
+              "path": ["store", "info"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));",
+            "pm.test('Has store data', () => {",
+            "  pm.expect(pm.response.json().data).to.have.property('name');",
+            "  pm.expect(pm.response.json().data).to.have.property('opening_hours');",
+            "});"
+          ]}}]
+        },
+        {
+          "name": "Update Store Info",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{manager_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"phone\": \"+41 44 888 99 00\",\n  \"remarks\": \"Renovated entrance\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/store/info",
+              "host": ["{{base_url}}"],
+              "path": ["store", "info"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "List Store Staff",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{manager_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/store/staff",
+              "host": ["{{base_url}}"],
+              "path": ["store", "staff"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));",
+            "pm.test('Has data array', () => pm.expect(pm.response.json().data).to.be.an('array'));"
+          ]}}]
+        }
+      ]
+    },
+    {
+      "name": "Dashboard",
+      "item": [
+        {
+          "name": "Store Dashboard",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{manager_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/store/dashboard",
+              "host": ["{{base_url}}"],
+              "path": ["store", "dashboard"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Store Revenue",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{manager_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/store/dashboard/revenue?period=monthly",
+              "host": ["{{base_url}}"],
+              "path": ["store", "dashboard", "revenue"],
+              "query": [
+                { "key": "period", "value": "monthly" },
+                { "key": "from", "value": "", "disabled": true },
+                { "key": "to", "value": "", "disabled": true }
+              ]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Store Top Products",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{manager_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/store/dashboard/top-products?limit=10",
+              "host": ["{{base_url}}"],
+              "path": ["store", "dashboard", "top-products"],
+              "query": [{ "key": "limit", "value": "10" }]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Pickup Summary",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{manager_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/store/dashboard/pickup-summary",
+              "host": ["{{base_url}}"],
+              "path": ["store", "dashboard", "pickup-summary"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        }
+      ]
+    },
+    {
+      "name": "Inventory",
+      "item": [
+        {
+          "name": "List Inventory",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{manager_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/store/inventory?page=1&limit=20",
+              "host": ["{{base_url}}"],
+              "path": ["store", "inventory"],
+              "query": [
+                { "key": "page", "value": "1" },
+                { "key": "limit", "value": "20" },
+                { "key": "sort", "value": "", "disabled": true },
+                { "key": "search", "value": "", "disabled": true },
+                { "key": "is_active", "value": "", "disabled": true }
+              ]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));",
+            "pm.test('Has data array', () => pm.expect(pm.response.json().data).to.be.an('array'));",
+            "if (pm.response.json().data.length > 0) {",
+            "  pm.environment.set('inventory_product_id', pm.response.json().data[0].product_id);",
+            "}"
+          ]}}]
+        },
+        {
+          "name": "Get Inventory for Product",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{manager_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/store/inventory/{{inventory_product_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["store", "inventory", "{{inventory_product_id}}"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Update Inventory",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{manager_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"quantity\": 50,\n  \"min_stock\": 5,\n  \"max_stock\": 100,\n  \"location_in_store\": \"Aisle 3, Shelf B\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/store/inventory/{{inventory_product_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["store", "inventory", "{{inventory_product_id}}"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Bulk Update Inventory",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{manager_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"items\": [\n    { \"product_id\": \"69a079537808ec1bb7917447\", \"quantity\": 25 },\n    { \"product_id\": \"69a079537808ec1bb791744f\", \"quantity\": 30, \"location_in_store\": \"Aisle 1\" }\n  ]\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/store/inventory/bulk-update",
+              "host": ["{{base_url}}"],
+              "path": ["store", "inventory", "bulk-update"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Scan Update",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{manager_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"product_code\": \"100012345\",\n  \"quantity_change\": 5,\n  \"operation\": \"add\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/store/inventory/scan",
+              "host": ["{{base_url}}"],
+              "path": ["store", "inventory", "scan"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200 or 404', () => {",
+            "  pm.expect(pm.response.code).to.be.oneOf([200, 404]);",
+            "});"
+          ]}}]
+        },
+        {
+          "name": "Low Stock Items",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{manager_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/store/inventory/low-stock",
+              "host": ["{{base_url}}"],
+              "path": ["store", "inventory", "low-stock"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Out of Stock Items",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{manager_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/store/inventory/out-of-stock",
+              "host": ["{{base_url}}"],
+              "path": ["store", "inventory", "out-of-stock"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Export Inventory (CSV)",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{manager_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/store/inventory/export",
+              "host": ["{{base_url}}"],
+              "path": ["store", "inventory", "export"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        }
+      ]
+    },
+    {
+      "name": "Pickup Orders",
+      "item": [
+        {
+          "name": "List Pickup Orders",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{manager_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/store/pickup-orders?page=1&limit=20",
+              "host": ["{{base_url}}"],
+              "path": ["store", "pickup-orders"],
+              "query": [
+                { "key": "page", "value": "1" },
+                { "key": "limit", "value": "20" },
+                { "key": "status", "value": "", "disabled": true },
+                { "key": "sort", "value": "", "disabled": true }
+              ]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));",
+            "pm.test('Has data array', () => pm.expect(pm.response.json().data).to.be.an('array'));",
+            "if (pm.response.json().data.length > 0) {",
+            "  pm.environment.set('pickup_order_id', pm.response.json().data[0]._id);",
+            "}"
+          ]}}]
+        },
+        {
+          "name": "Get Pickup Order Detail",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{manager_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/store/pickup-orders/{{pickup_order_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["store", "pickup-orders", "{{pickup_order_id}}"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Confirm Pickup Order",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Authorization", "value": "Bearer {{manager_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/store/pickup-orders/{{pickup_order_id}}/confirm",
+              "host": ["{{base_url}}"],
+              "path": ["store", "pickup-orders", "{{pickup_order_id}}", "confirm"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Mark Ready for Pickup",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Authorization", "value": "Bearer {{manager_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/store/pickup-orders/{{pickup_order_id}}/ready",
+              "host": ["{{base_url}}"],
+              "path": ["store", "pickup-orders", "{{pickup_order_id}}", "ready"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Mark Collected",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Authorization", "value": "Bearer {{manager_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/store/pickup-orders/{{pickup_order_id}}/collected",
+              "host": ["{{base_url}}"],
+              "path": ["store", "pickup-orders", "{{pickup_order_id}}", "collected"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Cancel Pickup Order",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{manager_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"reason\": \"Product no longer available in store\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/store/pickup-orders/{{pickup_order_id}}/cancel",
+              "host": ["{{base_url}}"],
+              "path": ["store", "pickup-orders", "{{pickup_order_id}}", "cancel"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        }
+      ]
+    },
+    {
+      "name": "Stock Transfers",
+      "item": [
+        {
+          "name": "List Transfers",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{manager_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/store/transfers?page=1&limit=20",
+              "host": ["{{base_url}}"],
+              "path": ["store", "transfers"],
+              "query": [
+                { "key": "page", "value": "1" },
+                { "key": "limit", "value": "20" },
+                { "key": "status", "value": "", "disabled": true },
+                { "key": "direction", "value": "", "disabled": true },
+                { "key": "sort", "value": "", "disabled": true }
+              ]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));",
+            "pm.test('Has data array', () => pm.expect(pm.response.json().data).to.be.an('array'));",
+            "if (pm.response.json().data.length > 0) {",
+            "  pm.environment.set('transfer_id', pm.response.json().data[0]._id);",
+            "}"
+          ]}}]
+        },
+        {
+          "name": "Request Transfer",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{manager_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"from_store_id\": \"69a079537808ec1bb79173a2\",\n  \"items\": [\n    { \"product_id\": \"69a079537808ec1bb7917447\", \"quantity\": 5 }\n  ],\n  \"notes\": \"Urgent restock needed for weekend sale\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/store/transfers",
+              "host": ["{{base_url}}"],
+              "path": ["store", "transfers"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 201', () => pm.response.to.have.status(201));",
+            "if (pm.response.json().data) {",
+            "  pm.environment.set('new_transfer_id', pm.response.json().data._id);",
+            "}"
+          ]}}]
+        },
+        {
+          "name": "Get Transfer Detail",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{manager_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/store/transfers/{{transfer_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["store", "transfers", "{{transfer_id}}"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Ship Transfer",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Authorization", "value": "Bearer {{manager_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/store/transfers/{{transfer_id}}/ship",
+              "host": ["{{base_url}}"],
+              "path": ["store", "transfers", "{{transfer_id}}", "ship"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Receive Transfer",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{manager_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"items\": [\n    { \"product_id\": \"69a079537808ec1bb7917447\", \"received_quantity\": 5 }\n  ],\n  \"notes\": \"All items in good condition\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/store/transfers/{{transfer_id}}/receive",
+              "host": ["{{base_url}}"],
+              "path": ["store", "transfers", "{{transfer_id}}", "receive"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Cancel Transfer",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{manager_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"reason\": \"No longer needed\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/store/transfers/{{new_transfer_id}}/cancel",
+              "host": ["{{base_url}}"],
+              "path": ["store", "transfers", "{{new_transfer_id}}", "cancel"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        }
+      ]
+    },
+    {
+      "name": "Promotions",
+      "item": [
+        {
+          "name": "List Promotions",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{manager_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/store/promotions?page=1&limit=20",
+              "host": ["{{base_url}}"],
+              "path": ["store", "promotions"],
+              "query": [
+                { "key": "page", "value": "1" },
+                { "key": "limit", "value": "20" },
+                { "key": "is_active", "value": "", "disabled": true },
+                { "key": "discount_type", "value": "", "disabled": true },
+                { "key": "current", "value": "", "disabled": true }
+              ]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));",
+            "pm.test('Has data array', () => pm.expect(pm.response.json().data).to.be.an('array'));",
+            "if (pm.response.json().data.length > 0) {",
+            "  pm.environment.set('promotion_id', pm.response.json().data[0]._id);",
+            "}"
+          ]}}]
+        },
+        {
+          "name": "Create Promotion",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{manager_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Weekend Special\",\n  \"description\": \"10% off all TV accessories this weekend\",\n  \"category_id\": \"69a079537808ec1bb7916d8e\",\n  \"discount_type\": \"percentage\",\n  \"discount_value\": 10,\n  \"valid_from\": \"2026-03-01T00:00:00.000Z\",\n  \"valid_until\": \"2026-03-03T23:59:59.000Z\",\n  \"is_active\": true\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/store/promotions",
+              "host": ["{{base_url}}"],
+              "path": ["store", "promotions"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 201', () => pm.response.to.have.status(201));",
+            "if (pm.response.json().data) {",
+            "  pm.environment.set('new_promotion_id', pm.response.json().data._id);",
+            "}"
+          ]}}]
+        },
+        {
+          "name": "Get Promotion Detail",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{manager_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/store/promotions/{{new_promotion_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["store", "promotions", "{{new_promotion_id}}"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Update Promotion",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{manager_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Extended Weekend Special\",\n  \"discount_value\": 15\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/store/promotions/{{new_promotion_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["store", "promotions", "{{new_promotion_id}}"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Delete Promotion",
+          "request": {
+            "method": "DELETE",
+            "header": [{ "key": "Authorization", "value": "Bearer {{manager_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/store/promotions/{{new_promotion_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["store", "promotions", "{{new_promotion_id}}"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200 or 204', () => {",
+            "  pm.expect(pm.response.code).to.be.oneOf([200, 204]);",
+            "});"
+          ]}}]
+        }
+      ]
+    }
+  ]
+}
