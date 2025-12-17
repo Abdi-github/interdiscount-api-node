@@ -1,0 +1,273 @@
+{
+  "info": {
+    "name": "Analytics Module",
+    "description": "Analytics endpoints for admin (platform-wide) and store managers (store-level). Provides dashboard stats, revenue time series, top products/stores/categories, user growth, and recent orders",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "base_url", "value": "http://localhost:4010/api/v1" }
+  ],
+  "item": [
+    {
+      "name": "Auth - Login as Admin",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "const res = pm.response.json();",
+              "if (res.success) {",
+              "  pm.environment.set('admin_token', res.data.tokens.access_token);",
+              "}",
+              "pm.test('Login successful', () => pm.response.to.have.status(200));"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"admin.de@interdiscount-clone.ch\",\n  \"password\": \"Password123!\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/public/auth/login",
+          "host": ["{{base_url}}"],
+          "path": ["public", "auth", "login"]
+        }
+      }
+    },
+    {
+      "name": "Auth - Login as Store Manager",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "const res = pm.response.json();",
+              "if (res.success) {",
+              "  pm.environment.set('manager_token', res.data.tokens.access_token);",
+              "}",
+              "pm.test('Login successful', () => pm.response.to.have.status(200));"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"manager.de@interdiscount-clone.ch\",\n  \"password\": \"Password123!\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/public/auth/login",
+          "host": ["{{base_url}}"],
+          "path": ["public", "auth", "login"]
+        }
+      }
+    },
+    {
+      "name": "Admin Analytics",
+      "item": [
+        {
+          "name": "Platform Dashboard Stats",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{admin_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/admin/analytics/platform/stats?preset=last_30_days",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "analytics", "platform", "stats"],
+              "query": [
+                { "key": "preset", "value": "last_30_days" },
+                { "key": "from", "value": "", "disabled": true },
+                { "key": "to", "value": "", "disabled": true }
+              ]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Revenue Time Series",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{admin_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/admin/analytics/revenue?period=monthly&preset=last_6_months",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "analytics", "revenue"],
+              "query": [
+                { "key": "period", "value": "monthly" },
+                { "key": "preset", "value": "last_6_months" },
+                { "key": "from", "value": "", "disabled": true },
+                { "key": "to", "value": "", "disabled": true }
+              ]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Top Products",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{admin_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/admin/analytics/top-products?limit=10&preset=last_30_days",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "analytics", "top-products"],
+              "query": [
+                { "key": "limit", "value": "10" },
+                { "key": "preset", "value": "last_30_days" }
+              ]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Top Stores",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{admin_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/admin/analytics/top-stores?limit=10&preset=last_30_days",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "analytics", "top-stores"],
+              "query": [
+                { "key": "limit", "value": "10" },
+                { "key": "preset", "value": "last_30_days" }
+              ]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Top Categories",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{admin_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/admin/analytics/top-categories?limit=10&preset=last_30_days",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "analytics", "top-categories"],
+              "query": [
+                { "key": "limit", "value": "10" },
+                { "key": "preset", "value": "last_30_days" }
+              ]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "User Growth",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{admin_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/admin/analytics/user-growth?period=monthly&preset=last_6_months",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "analytics", "user-growth"],
+              "query": [
+                { "key": "period", "value": "monthly" },
+                { "key": "preset", "value": "last_6_months" }
+              ]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Recent Orders",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{admin_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/admin/analytics/recent-orders?limit=20",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "analytics", "recent-orders"],
+              "query": [{ "key": "limit", "value": "20" }]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        }
+      ]
+    },
+    {
+      "name": "Store Analytics",
+      "item": [
+        {
+          "name": "Store Dashboard",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{manager_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/store/analytics/dashboard?preset=last_30_days",
+              "host": ["{{base_url}}"],
+              "path": ["store", "analytics", "dashboard"],
+              "query": [
+                { "key": "preset", "value": "last_30_days" },
+                { "key": "from", "value": "", "disabled": true },
+                { "key": "to", "value": "", "disabled": true }
+              ]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Store Revenue",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{manager_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/store/analytics/revenue?period=weekly&preset=last_30_days",
+              "host": ["{{base_url}}"],
+              "path": ["store", "analytics", "revenue"],
+              "query": [
+                { "key": "period", "value": "weekly" },
+                { "key": "preset", "value": "last_30_days" }
+              ]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Store Top Products",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{manager_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/store/analytics/top-products?limit=10&preset=last_30_days",
+              "host": ["{{base_url}}"],
+              "path": ["store", "analytics", "top-products"],
+              "query": [
+                { "key": "limit", "value": "10" },
+                { "key": "preset", "value": "last_30_days" }
+              ]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        }
+      ]
+    }
+  ]
+}
