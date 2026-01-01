@@ -1,0 +1,104 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: interdiscount_api
+    restart: unless-stopped
+    ports:
+      - '4010:4010'
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+      - PORT=4010
+      - MONGODB_URI=mongodb://mongo:27017/interdiscount
+      - REDIS_URL=redis://redis:6379
+      - JWT_ACCESS_SECRET=interdiscount-access-secret-dev-key-2026
+      - JWT_REFRESH_SECRET=interdiscount-refresh-secret-dev-key-2026
+      - JWT_ACCESS_EXPIRES_IN=15m
+      - JWT_REFRESH_EXPIRES_IN=7d
+      - CLOUDINARY_CLOUD_NAME=dzyyygr1x
+      - CLOUDINARY_API_KEY=393749481964766
+      - CLOUDINARY_API_SECRET=your-cloudinary-secret
+      - MAIL_HOST=mailpit
+      - MAIL_PORT=1025
+      - MAIL_FROM=noreply@interdiscount-clone.ch
+      - RATE_LIMIT_WINDOW_MS=900000
+      - RATE_LIMIT_MAX=100
+      - DEFAULT_PAGE_SIZE=24
+      - MAX_PAGE_SIZE=100
+    depends_on:
+      - mongo
+      - redis
+      - mailpit
+    networks:
+      - interdiscount_network
+
+  mongo:
+    image: mongo:7
+    container_name: interdiscount_mongo
+    restart: unless-stopped
+    ports:
+      - '27025:27017'
+    volumes:
+      - interdiscount_mongo_data:/data/db
+    networks:
+      - interdiscount_network
+
+  redis:
+    image: redis:7-alpine
+    container_name: interdiscount_redis
+    restart: unless-stopped
+    ports:
+      - '6385:6379'
+    volumes:
+      - interdiscount_redis_data:/data
+    networks:
+      - interdiscount_network
+
+  mongo-express:
+    image: mongo-express
+    container_name: interdiscount_mongo_express
+    restart: unless-stopped
+    ports:
+      - '8090:8081'
+    environment:
+      - ME_CONFIG_MONGODB_URL=mongodb://mongo:27017
+      - ME_CONFIG_BASICAUTH=false
+    depends_on:
+      - mongo
+    networks:
+      - interdiscount_network
+
+  redis-commander:
+    image: rediscommander/redis-commander
+    container_name: interdiscount_redis_commander
+    restart: unless-stopped
+    ports:
+      - '8091:8081'
+    environment:
+      - REDIS_HOSTS=local:redis:6379
+    depends_on:
+      - redis
+    networks:
+      - interdiscount_network
+
+  mailpit:
+    image: axllent/mailpit
+    container_name: interdiscount_mailpit
+    restart: unless-stopped
+    ports:
+      - '8030:8025'
+      - '1030:1025'
+    networks:
+      - interdiscount_network
+
+volumes:
+  interdiscount_mongo_data:
+  interdiscount_redis_data:
+
+networks:
+  interdiscount_network:
+    driver: bridge

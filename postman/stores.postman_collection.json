@@ -1,0 +1,146 @@
+{
+  "info": {
+    "name": "Stores Module",
+    "description": "Public store listing, detail, and geo-search endpoints for 164+ Swiss retail stores",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "base_url", "value": "http://localhost:4010/api/v1" }
+  ],
+  "item": [
+    {
+      "name": "List Stores",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/public/stores?page=1&limit=20",
+          "host": ["{{base_url}}"],
+          "path": ["public", "stores"],
+          "query": [
+            { "key": "page", "value": "1" },
+            { "key": "limit", "value": "20" },
+            { "key": "canton_id", "value": "", "disabled": true },
+            { "key": "city_id", "value": "", "disabled": true },
+            { "key": "format", "value": "", "disabled": true },
+            { "key": "search", "value": "", "disabled": true },
+            { "key": "lat", "value": "", "disabled": true },
+            { "key": "lng", "value": "", "disabled": true },
+            { "key": "radius", "value": "", "disabled": true }
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));",
+              "pm.test('Has data array', () => pm.expect(pm.response.json().data).to.be.an('array'));",
+              "if (pm.response.json().data.length > 0) {",
+              "  pm.environment.set('store_id', pm.response.json().data[0]._id);",
+              "  pm.environment.set('store_slug', pm.response.json().data[0].slug);",
+              "}"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Get Store by ID",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/public/stores/{{store_id}}",
+          "host": ["{{base_url}}"],
+          "path": ["public", "stores", "{{store_id}}"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));",
+              "pm.test('Has store data', () => {",
+              "  const data = pm.response.json().data;",
+              "  pm.expect(data).to.have.property('name');",
+              "  pm.expect(data).to.have.property('opening_hours');",
+              "});"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Get Store by Slug",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/public/stores/slug/{{store_slug}}",
+          "host": ["{{base_url}}"],
+          "path": ["public", "stores", "slug", "{{store_slug}}"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Filter by Canton",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/public/stores?canton_id={{canton_id}}&limit=10",
+          "host": ["{{base_url}}"],
+          "path": ["public", "stores"],
+          "query": [
+            { "key": "canton_id", "value": "{{canton_id}}" },
+            { "key": "limit", "value": "10" }
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Filter by Format (XXL)",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/public/stores?format=xxl&limit=10",
+          "host": ["{{base_url}}"],
+          "path": ["public", "stores"],
+          "query": [
+            { "key": "format", "value": "xxl" },
+            { "key": "limit", "value": "10" }
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

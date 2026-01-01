@@ -1,0 +1,314 @@
+[
+  {
+    "_id": "69a079537808ec1bb7916d74",
+    "name": {
+      "en": "Zurich",
+      "fr": "Zurich",
+      "de": "Zürich",
+      "it": "Zurigo"
+    },
+    "slug": "zurich",
+    "code": "ZH",
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7916d75",
+    "name": {
+      "en": "Bern",
+      "fr": "Berne",
+      "de": "Bern",
+      "it": "Berna"
+    },
+    "slug": "bern",
+    "code": "BE",
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7916d76",
+    "name": {
+      "en": "Lucerne",
+      "fr": "Lucerne",
+      "de": "Luzern",
+      "it": "Lucerna"
+    },
+    "slug": "luzern",
+    "code": "LU",
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7916d77",
+    "name": {
+      "en": "Uri",
+      "fr": "Uri",
+      "de": "Uri",
+      "it": "Uri"
+    },
+    "slug": "uri",
+    "code": "UR",
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7916d78",
+    "name": {
+      "en": "Schwyz",
+      "fr": "Schwyz",
+      "de": "Schwyz",
+      "it": "Svitto"
+    },
+    "slug": "schwyz",
+    "code": "SZ",
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7916d79",
+    "name": {
+      "en": "Obwalden",
+      "fr": "Obwald",
+      "de": "Obwalden",
+      "it": "Obvaldo"
+    },
+    "slug": "obwalden",
+    "code": "OW",
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7916d7a",
+    "name": {
+      "en": "Nidwalden",
+      "fr": "Nidwald",
+      "de": "Nidwalden",
+      "it": "Nidvaldo"
+    },
+    "slug": "nidwalden",
+    "code": "NW",
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7916d7b",
+    "name": {
+      "en": "Glarus",
+      "fr": "Glaris",
+      "de": "Glarus",
+      "it": "Glarona"
+    },
+    "slug": "glarus",
+    "code": "GL",
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7916d7c",
+    "name": {
+      "en": "Zug",
+      "fr": "Zoug",
+      "de": "Zug",
+      "it": "Zugo"
+    },
+    "slug": "zug",
+    "code": "ZG",
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7916d7d",
+    "name": {
+      "en": "Fribourg",
+      "fr": "Fribourg",
+      "de": "Freiburg",
+      "it": "Friburgo"
+    },
+    "slug": "fribourg",
+    "code": "FR",
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7916d7e",
+    "name": {
+      "en": "Solothurn",
+      "fr": "Soleure",
+      "de": "Solothurn",
+      "it": "Soletta"
+    },
+    "slug": "solothurn",
+    "code": "SO",
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7916d7f",
+    "name": {
+      "en": "Basel-Stadt",
+      "fr": "Bâle-Ville",
+      "de": "Basel-Stadt",
+      "it": "Basilea Città"
+    },
+    "slug": "basel-stadt",
+    "code": "BS",
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7916d80",
+    "name": {
+      "en": "Basel-Landschaft",
+      "fr": "Bâle-Campagne",
+      "de": "Basel-Landschaft",
+      "it": "Basilea Campagna"
+    },
+    "slug": "basel-landschaft",
+    "code": "BL",
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7916d81",
+    "name": {
+      "en": "Schaffhausen",
+      "fr": "Schaffhouse",
+      "de": "Schaffhausen",
+      "it": "Sciaffusa"
+    },
+    "slug": "schaffhausen",
+    "code": "SH",
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7916d82",
+    "name": {
+      "en": "Appenzell Ausserrhoden",
+      "fr": "Appenzell Rhodes-Extérieures",
+      "de": "Appenzell Ausserrhoden",
+      "it": "Appenzello Esterno"
+    },
+    "slug": "appenzell-ausserrhoden",
+    "code": "AR",
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7916d83",
+    "name": {
+      "en": "Appenzell Innerrhoden",
+      "fr": "Appenzell Rhodes-Intérieures",
+      "de": "Appenzell Innerrhoden",
+      "it": "Appenzello Interno"
+    },
+    "slug": "appenzell-innerrhoden",
+    "code": "AI",
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7916d84",
+    "name": {
+      "en": "St. Gallen",
+      "fr": "Saint-Gall",
+      "de": "St. Gallen",
+      "it": "San Gallo"
+    },
+    "slug": "st-gallen",
+    "code": "SG",
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7916d85",
+    "name": {
+      "en": "Graubünden",
+      "fr": "Grisons",
+      "de": "Graubünden",
+      "it": "Grigioni"
+    },
+    "slug": "graubuenden",
+    "code": "GR",
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7916d86",
+    "name": {
+      "en": "Aargau",
+      "fr": "Argovie",
+      "de": "Aargau",
+      "it": "Argovia"
+    },
+    "slug": "aargau",
+    "code": "AG",
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7916d87",
+    "name": {
+      "en": "Thurgau",
+      "fr": "Thurgovie",
+      "de": "Thurgau",
+      "it": "Turgovia"
+    },
+    "slug": "thurgau",
+    "code": "TG",
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7916d88",
+    "name": {
+      "en": "Ticino",
+      "fr": "Tessin",
+      "de": "Tessin",
+      "it": "Ticino"
+    },
+    "slug": "ticino",
+    "code": "TI",
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7916d89",
+    "name": {
+      "en": "Vaud",
+      "fr": "Vaud",
+      "de": "Waadt",
+      "it": "Vaud"
+    },
+    "slug": "vaud",
+    "code": "VD",
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7916d8a",
+    "name": {
+      "en": "Valais",
+      "fr": "Valais",
+      "de": "Wallis",
+      "it": "Vallese"
+    },
+    "slug": "valais",
+    "code": "VS",
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7916d8b",
+    "name": {
+      "en": "Neuchâtel",
+      "fr": "Neuchâtel",
+      "de": "Neuenburg",
+      "it": "Neuchâtel"
+    },
+    "slug": "neuchatel",
+    "code": "NE",
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7916d8c",
+    "name": {
+      "en": "Geneva",
+      "fr": "Genève",
+      "de": "Genf",
+      "it": "Ginevra"
+    },
+    "slug": "geneve",
+    "code": "GE",
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7916d8d",
+    "name": {
+      "en": "Jura",
+      "fr": "Jura",
+      "de": "Jura",
+      "it": "Giura"
+    },
+    "slug": "jura",
+    "code": "JU",
+    "is_active": true
+  }
+]

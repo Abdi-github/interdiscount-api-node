@@ -1,0 +1,4531 @@
+[
+  {
+    "_id": "69a079537808ec1bb79171f4",
+    "name": "RANDOM HOUSE",
+    "slug": "random-house",
+    "product_count": 2713,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79171f5",
+    "name": "HARPERCOLLINS PUBLISHERS",
+    "slug": "harpercollins-publishers",
+    "product_count": 2648,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79171f6",
+    "name": "DIOGENES VERLAG",
+    "slug": "diogenes-verlag",
+    "product_count": 2111,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79171f7",
+    "name": "HAMA",
+    "slug": "hama",
+    "product_count": 2110,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79171f8",
+    "name": "RAVENSBURGER",
+    "slug": "ravensburger",
+    "product_count": 2088,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79171f9",
+    "name": "CREATIV COMPANY",
+    "slug": "creativ-company",
+    "product_count": 1841,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79171fa",
+    "name": "SCHWABE VERLAG",
+    "slug": "schwabe-verlag",
+    "product_count": 1715,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79171fb",
+    "name": "SUHRKAMP VERLAG",
+    "slug": "suhrkamp-verlag",
+    "product_count": 1712,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79171fc",
+    "name": "CARLSEN COMICS",
+    "slug": "carlsen-comics",
+    "product_count": 1696,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79171fd",
+    "name": "STÄMPFLI",
+    "slug": "stampfli",
+    "product_count": 1476,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79171fe",
+    "name": "SCHULTHESS",
+    "slug": "schulthess",
+    "product_count": 1470,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79171ff",
+    "name": "RANDOM HOUSE UK",
+    "slug": "random-house-uk",
+    "product_count": 1453,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917200",
+    "name": "HEYNE VERLAG",
+    "slug": "heyne-verlag",
+    "product_count": 1369,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917201",
+    "name": "DIKE VERLAG",
+    "slug": "dike-verlag",
+    "product_count": 1331,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917202",
+    "name": "GOLDMANN VERLAG",
+    "slug": "goldmann-verlag",
+    "product_count": 1309,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917203",
+    "name": "RECLAM",
+    "slug": "reclam",
+    "product_count": 1290,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917204",
+    "name": "PENGUIN BOOKS",
+    "slug": "penguin-books",
+    "product_count": 1271,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917205",
+    "name": "DORLING KINDERSLEY DK VERLAG",
+    "slug": "dorling-kindersley-dk-verlag",
+    "product_count": 1212,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917206",
+    "name": "SIMON & SCHUSTER",
+    "slug": "simon-schuster",
+    "product_count": 1192,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917207",
+    "name": "HP",
+    "slug": "hp",
+    "product_count": 1166,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917208",
+    "name": "KOSMOS",
+    "slug": "kosmos",
+    "product_count": 1145,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917209",
+    "name": "COPIC",
+    "slug": "copic",
+    "product_count": 1051,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791720a",
+    "name": "PAN MACMILLAN",
+    "slug": "pan-macmillan",
+    "product_count": 1039,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791720b",
+    "name": "PHILIPS",
+    "slug": "philips",
+    "product_count": 1020,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791720c",
+    "name": "HOGREFE",
+    "slug": "hogrefe",
+    "product_count": 1001,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791720d",
+    "name": "INSEL VERLAG",
+    "slug": "insel-verlag",
+    "product_count": 955,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791720e",
+    "name": "RICO DESIGN",
+    "slug": "rico-design",
+    "product_count": 946,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791720f",
+    "name": "FRECH VERLAG",
+    "slug": "frech-verlag",
+    "product_count": 925,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917210",
+    "name": "APPLE",
+    "slug": "apple",
+    "product_count": 913,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917211",
+    "name": "SAMSUNG",
+    "slug": "samsung",
+    "product_count": 895,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917212",
+    "name": "V-ZUG",
+    "slug": "v-zug",
+    "product_count": 884,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917213",
+    "name": "HELBING LICHTENHAHN VERLAG",
+    "slug": "helbing-lichtenhahn-verlag",
+    "product_count": 878,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917214",
+    "name": "DTV",
+    "slug": "dtv",
+    "product_count": 872,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917215",
+    "name": "HERMA",
+    "slug": "herma",
+    "product_count": 840,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917216",
+    "name": "LITTLE, BROWN AND COMPANY",
+    "slug": "little-brown-and-company",
+    "product_count": 840,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917217",
+    "name": "PEACH",
+    "slug": "peach",
+    "product_count": 817,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917218",
+    "name": "USBORNE PUBLISHING",
+    "slug": "usborne-publishing",
+    "product_count": 816,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917219",
+    "name": "LEITZ",
+    "slug": "leitz",
+    "product_count": 786,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791721a",
+    "name": "FABER-CASTELL",
+    "slug": "faber-castell",
+    "product_count": 784,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791721b",
+    "name": "CANON",
+    "slug": "canon",
+    "product_count": 769,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791721c",
+    "name": "BLANVALET",
+    "slug": "blanvalet",
+    "product_count": 767,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791721d",
+    "name": "INGRAM PUBLISHER SERVICES",
+    "slug": "ingram-publisher-services",
+    "product_count": 765,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791721e",
+    "name": "CORNELSEN VERLAG",
+    "slug": "cornelsen-verlag",
+    "product_count": 757,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791721f",
+    "name": "CARAN D'ACHE",
+    "slug": "caran-d-ache",
+    "product_count": 741,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917220",
+    "name": "GRÄFE & UNZER GU",
+    "slug": "grafe-unzer-gu",
+    "product_count": 735,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917221",
+    "name": "DELOCK",
+    "slug": "delock",
+    "product_count": 707,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917222",
+    "name": "LOEWE VERLAG",
+    "slug": "loewe-verlag",
+    "product_count": 707,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917223",
+    "name": "EDITION MICHAEL FISCHER",
+    "slug": "edition-michael-fischer",
+    "product_count": 706,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917224",
+    "name": "PEARSON ACADEMIC",
+    "slug": "pearson-academic",
+    "product_count": 698,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917225",
+    "name": "LEGO",
+    "slug": "lego",
+    "product_count": 695,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917226",
+    "name": "WESTERMANN SCHULVERLAG SCHWEIZ",
+    "slug": "westermann-schulverlag-schweiz",
+    "product_count": 695,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917227",
+    "name": "DIAMOND US",
+    "slug": "diamond-us",
+    "product_count": 689,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917228",
+    "name": "ASUS",
+    "slug": "asus",
+    "product_count": 681,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917229",
+    "name": "BROTHER",
+    "slug": "brother",
+    "product_count": 673,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791722a",
+    "name": "C.H. BECK",
+    "slug": "c-h-beck",
+    "product_count": 669,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791722b",
+    "name": "BLOOMSBURY",
+    "slug": "bloomsbury",
+    "product_count": 661,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791722c",
+    "name": "STARTECH.COM",
+    "slug": "startech-com",
+    "product_count": 658,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791722d",
+    "name": "BTB VERLAG",
+    "slug": "btb-verlag",
+    "product_count": 656,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791722e",
+    "name": "ALTRAVERSE",
+    "slug": "altraverse",
+    "product_count": 635,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791722f",
+    "name": "PEARSON ELT",
+    "slug": "pearson-elt",
+    "product_count": 634,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917230",
+    "name": "INTEX",
+    "slug": "intex",
+    "product_count": 629,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917231",
+    "name": "ARS EDITION",
+    "slug": "ars-edition",
+    "product_count": 622,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917232",
+    "name": "KAMPA VERLAG",
+    "slug": "kampa-verlag",
+    "product_count": 622,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917233",
+    "name": "EDDING",
+    "slug": "edding",
+    "product_count": 621,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917234",
+    "name": "PANINI",
+    "slug": "panini",
+    "product_count": 608,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917235",
+    "name": "HAUPT VERLAG",
+    "slug": "haupt-verlag",
+    "product_count": 589,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917236",
+    "name": "SMALLRIG",
+    "slug": "smallrig",
+    "product_count": 588,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917237",
+    "name": "UNIONSVERLAG",
+    "slug": "unionsverlag",
+    "product_count": 573,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917238",
+    "name": "URSUS",
+    "slug": "ursus",
+    "product_count": 573,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917239",
+    "name": "PENTEL",
+    "slug": "pentel",
+    "product_count": 570,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791723a",
+    "name": "AUFBAU",
+    "slug": "aufbau",
+    "product_count": 558,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791723b",
+    "name": "HODDER & STOUGHTON",
+    "slug": "hodder-stoughton",
+    "product_count": 558,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791723c",
+    "name": "ROWOHLT",
+    "slug": "rowohlt",
+    "product_count": 555,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791723d",
+    "name": "ELCO",
+    "slug": "elco",
+    "product_count": 536,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791723e",
+    "name": "PARTYDECO",
+    "slug": "partydeco",
+    "product_count": 529,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791723f",
+    "name": "PRYM GROUP",
+    "slug": "prym-group",
+    "product_count": 526,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917240",
+    "name": "HERDER",
+    "slug": "herder",
+    "product_count": 520,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917241",
+    "name": "BIELLA",
+    "slug": "biella",
+    "product_count": 518,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917242",
+    "name": "ANACONDA VERLAG",
+    "slug": "anaconda-verlag",
+    "product_count": 515,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917243",
+    "name": "CBJ",
+    "slug": "cbj",
+    "product_count": 512,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917244",
+    "name": "LOEWE",
+    "slug": "loewe",
+    "product_count": 512,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917245",
+    "name": "KIEPENHEUER & WITSCH",
+    "slug": "kiepenheuer-witsch",
+    "product_count": 509,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917246",
+    "name": "ROLINE",
+    "slug": "roline",
+    "product_count": 499,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917247",
+    "name": "PAULMANN",
+    "slug": "paulmann",
+    "product_count": 497,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917248",
+    "name": "FISCHER TASCHENBUCH VERLAG",
+    "slug": "fischer-taschenbuch-verlag",
+    "product_count": 473,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917249",
+    "name": "SPRINGER",
+    "slug": "springer",
+    "product_count": 468,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791724a",
+    "name": "PIPER",
+    "slug": "piper",
+    "product_count": 460,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791724b",
+    "name": "EPSON",
+    "slug": "epson",
+    "product_count": 458,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791724c",
+    "name": "DUMONT REISEVERLAG",
+    "slug": "dumont-reiseverlag",
+    "product_count": 456,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791724d",
+    "name": "KULI-MULI",
+    "slug": "kuli-muli",
+    "product_count": 456,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791724e",
+    "name": "KOLMA",
+    "slug": "kolma",
+    "product_count": 453,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791724f",
+    "name": "TFA",
+    "slug": "tfa",
+    "product_count": 442,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917250",
+    "name": "RIVA VERLAG",
+    "slug": "riva-verlag",
+    "product_count": 440,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917251",
+    "name": "FOLIA",
+    "slug": "folia",
+    "product_count": 428,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917252",
+    "name": "LAURENCE KING VERLAG",
+    "slug": "laurence-king-verlag",
+    "product_count": 421,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917253",
+    "name": "BELTZ",
+    "slug": "beltz",
+    "product_count": 417,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917254",
+    "name": "ARENA",
+    "slug": "arena",
+    "product_count": 414,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917255",
+    "name": "EGMONT MANGA",
+    "slug": "egmont-manga",
+    "product_count": 413,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917256",
+    "name": "STABILO",
+    "slug": "stabilo",
+    "product_count": 404,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917257",
+    "name": "BACHMANN",
+    "slug": "bachmann",
+    "product_count": 402,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917258",
+    "name": "GLOREX",
+    "slug": "glorex",
+    "product_count": 400,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917259",
+    "name": "KLETT UND BALMER VERLAG",
+    "slug": "klett-und-balmer-verlag",
+    "product_count": 396,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791725a",
+    "name": "LOGITECH",
+    "slug": "logitech",
+    "product_count": 388,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791725b",
+    "name": "TP-LINK",
+    "slug": "tp-link",
+    "product_count": 379,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791725c",
+    "name": "DICOTA",
+    "slug": "dicota",
+    "product_count": 376,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791725d",
+    "name": "MANGA CULT",
+    "slug": "manga-cult",
+    "product_count": 370,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791725e",
+    "name": "STEINHAUER",
+    "slug": "steinhauer",
+    "product_count": 368,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791725f",
+    "name": "PILOT PEN",
+    "slug": "pilot-pen",
+    "product_count": 365,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917260",
+    "name": "XEROX",
+    "slug": "xerox",
+    "product_count": 363,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917261",
+    "name": "MARABU",
+    "slug": "marabu",
+    "product_count": 361,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917262",
+    "name": "PRESTEL",
+    "slug": "prestel",
+    "product_count": 356,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917263",
+    "name": "LENOVO",
+    "slug": "lenovo",
+    "product_count": 351,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917264",
+    "name": "JULIUS ZÖLLNER",
+    "slug": "julius-zollner",
+    "product_count": 345,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917265",
+    "name": "PATONA",
+    "slug": "patona",
+    "product_count": 345,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917266",
+    "name": "EGLO",
+    "slug": "eglo",
+    "product_count": 343,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917267",
+    "name": "EXACOMPTA",
+    "slug": "exacompta",
+    "product_count": 343,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917268",
+    "name": "CLAIREFONTAINE",
+    "slug": "clairefontaine",
+    "product_count": 341,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917269",
+    "name": "FELLOWES",
+    "slug": "fellowes",
+    "product_count": 341,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791726a",
+    "name": "STEFFEN",
+    "slug": "steffen",
+    "product_count": 335,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791726b",
+    "name": "REISE KNOW-HOW VERLAG",
+    "slug": "reise-know-how-verlag",
+    "product_count": 334,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791726c",
+    "name": "AMEWI",
+    "slug": "amewi",
+    "product_count": 333,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791726d",
+    "name": "TALENS",
+    "slug": "talens",
+    "product_count": 333,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791726e",
+    "name": "ROOST",
+    "slug": "roost",
+    "product_count": 332,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791726f",
+    "name": "SBS",
+    "slug": "sbs",
+    "product_count": 332,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917270",
+    "name": "MAUL",
+    "slug": "maul",
+    "product_count": 328,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917271",
+    "name": "BEAMZ",
+    "slug": "beamz",
+    "product_count": 325,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917272",
+    "name": "INTERTRONIC",
+    "slug": "intertronic",
+    "product_count": 324,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917273",
+    "name": "HEADLINE BOOK",
+    "slug": "headline-book",
+    "product_count": 321,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917274",
+    "name": "QUARTO PUBLISHING GROUP",
+    "slug": "quarto-publishing-group",
+    "product_count": 318,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917275",
+    "name": "BASSERMANN",
+    "slug": "bassermann",
+    "product_count": 312,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917276",
+    "name": "KEIN & ABER",
+    "slug": "kein-aber",
+    "product_count": 311,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917277",
+    "name": "UBIQUITI NETWORKS",
+    "slug": "ubiquiti-networks",
+    "product_count": 310,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917278",
+    "name": "AXIS",
+    "slug": "axis",
+    "product_count": 309,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917279",
+    "name": "ZYTGLOGGE",
+    "slug": "zytglogge",
+    "product_count": 309,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791727a",
+    "name": "HELVETIQ",
+    "slug": "helvetiq",
+    "product_count": 307,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791727b",
+    "name": "HOBBYFUN",
+    "slug": "hobbyfun",
+    "product_count": 306,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791727c",
+    "name": "STERNTALER",
+    "slug": "sterntaler",
+    "product_count": 306,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791727d",
+    "name": "NATTOU",
+    "slug": "nattou",
+    "product_count": 305,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791727e",
+    "name": "SONY",
+    "slug": "sony",
+    "product_count": 305,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791727f",
+    "name": "VTECH",
+    "slug": "vtech",
+    "product_count": 304,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917280",
+    "name": "ACER",
+    "slug": "acer",
+    "product_count": 303,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917281",
+    "name": "PELIKAN",
+    "slug": "pelikan",
+    "product_count": 303,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917282",
+    "name": "FISCHER SAUERLÄNDER",
+    "slug": "fischer-sauerlander",
+    "product_count": 301,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917283",
+    "name": "MARCO POLO",
+    "slug": "marco-polo",
+    "product_count": 301,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917284",
+    "name": "NZZ LIBRO",
+    "slug": "nzz-libro",
+    "product_count": 301,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917285",
+    "name": "BONNIER ZAFFRE",
+    "slug": "bonnier-zaffre",
+    "product_count": 300,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917286",
+    "name": "AVERY ZWECKFORM",
+    "slug": "avery-zweckform",
+    "product_count": 297,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917287",
+    "name": "AT VERLAG",
+    "slug": "at-verlag",
+    "product_count": 295,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917288",
+    "name": "UNIVERSITY PRESSES",
+    "slug": "university-presses",
+    "product_count": 292,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917289",
+    "name": "URBAN & FISCHER/ELSEVIER",
+    "slug": "urban-fischer-elsevier",
+    "product_count": 292,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791728a",
+    "name": "MAX HAURI",
+    "slug": "max-hauri",
+    "product_count": 291,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791728b",
+    "name": "KARIN",
+    "slug": "karin",
+    "product_count": 290,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791728c",
+    "name": "OTTERBOX",
+    "slug": "otterbox",
+    "product_count": 290,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791728d",
+    "name": "ABRAMS & CHRONICLE BOOKS",
+    "slug": "abrams-chronicle-books",
+    "product_count": 289,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791728e",
+    "name": "ARTOZ",
+    "slug": "artoz",
+    "product_count": 288,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791728f",
+    "name": "KNESEBECK",
+    "slug": "knesebeck",
+    "product_count": 286,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917290",
+    "name": "LÜBBE",
+    "slug": "lubbe",
+    "product_count": 286,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917291",
+    "name": "OXFORD UNIVERSITY PRESS",
+    "slug": "oxford-university-press",
+    "product_count": 286,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917292",
+    "name": "WILEY-VCH",
+    "slug": "wiley-vch",
+    "product_count": 286,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917293",
+    "name": "UEBERREUTER VERLAG",
+    "slug": "ueberreuter-verlag",
+    "product_count": 285,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917294",
+    "name": "ULMER",
+    "slug": "ulmer",
+    "product_count": 285,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917295",
+    "name": "DURABLE",
+    "slug": "durable",
+    "product_count": 282,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917296",
+    "name": "ELECTROLUX",
+    "slug": "electrolux",
+    "product_count": 282,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917297",
+    "name": "UNI-BALL",
+    "slug": "uni-ball",
+    "product_count": 281,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917298",
+    "name": "KLETT SPRACHEN",
+    "slug": "klett-sprachen",
+    "product_count": 280,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917299",
+    "name": "STAR TRADING",
+    "slug": "star-trading",
+    "product_count": 279,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791729a",
+    "name": "TESA",
+    "slug": "tesa",
+    "product_count": 279,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791729b",
+    "name": "HANSER",
+    "slug": "hanser",
+    "product_count": 278,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791729c",
+    "name": "STEWO",
+    "slug": "stewo",
+    "product_count": 275,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791729d",
+    "name": "TRÄUMELAND",
+    "slug": "traumeland",
+    "product_count": 275,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791729e",
+    "name": "SCHÖFFLING & CO.",
+    "slug": "schoffling-co",
+    "product_count": 273,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791729f",
+    "name": "JOLLEIN",
+    "slug": "jollein",
+    "product_count": 272,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172a0",
+    "name": "TRIAS",
+    "slug": "trias",
+    "product_count": 271,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172a1",
+    "name": "PAGNA",
+    "slug": "pagna",
+    "product_count": 270,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172a2",
+    "name": "MIDAS VERLAG",
+    "slug": "midas-verlag",
+    "product_count": 268,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172a3",
+    "name": "TRISA",
+    "slug": "trisa",
+    "product_count": 268,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172a4",
+    "name": "KÖSEL",
+    "slug": "kosel",
+    "product_count": 266,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172a5",
+    "name": "VERLAG FRIEDRICH OETINGER",
+    "slug": "verlag-friedrich-oetinger",
+    "product_count": 266,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172a6",
+    "name": "VERSUS",
+    "slug": "versus",
+    "product_count": 266,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172a7",
+    "name": "COPPENRATH",
+    "slug": "coppenrath",
+    "product_count": 264,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172a8",
+    "name": "KNAUR",
+    "slug": "knaur",
+    "product_count": 261,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172a9",
+    "name": "BOSCH",
+    "slug": "bosch",
+    "product_count": 260,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172aa",
+    "name": "PROFILE BOOKS",
+    "slug": "profile-books",
+    "product_count": 259,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172ab",
+    "name": "OSRAM",
+    "slug": "osram",
+    "product_count": 258,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172ac",
+    "name": "HOFFMANN UND CAMPE",
+    "slug": "hoffmann-und-campe",
+    "product_count": 257,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172ad",
+    "name": "TESSLOFF",
+    "slug": "tessloff",
+    "product_count": 257,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172ae",
+    "name": "SCHLEICH",
+    "slug": "schleich",
+    "product_count": 256,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172af",
+    "name": "VERLAG AM ESCHBACH",
+    "slug": "verlag-am-eschbach",
+    "product_count": 255,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172b0",
+    "name": "HATJE CANTZ VERLAG",
+    "slug": "hatje-cantz-verlag",
+    "product_count": 252,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172b1",
+    "name": "THIENEMANN",
+    "slug": "thienemann",
+    "product_count": 252,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172b2",
+    "name": "WILEY",
+    "slug": "wiley",
+    "product_count": 252,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172b3",
+    "name": "GENERICTONER",
+    "slug": "generictoner",
+    "product_count": 250,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172b4",
+    "name": "TOKYOPOP",
+    "slug": "tokyopop",
+    "product_count": 249,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172b5",
+    "name": "GROH VERLAG",
+    "slug": "groh-verlag",
+    "product_count": 247,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172b6",
+    "name": "EP PRODUCT",
+    "slug": "ep-product",
+    "product_count": 244,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172b7",
+    "name": "ATLANTIS",
+    "slug": "atlantis",
+    "product_count": 243,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172b8",
+    "name": "PENGUIN TB VERLAG",
+    "slug": "penguin-tb-verlag",
+    "product_count": 241,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172b9",
+    "name": "WORKMAN PUBLISHING",
+    "slug": "workman-publishing",
+    "product_count": 241,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172ba",
+    "name": "BRUCKMANN VERLAG",
+    "slug": "bruckmann-verlag",
+    "product_count": 239,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172bb",
+    "name": "WEBER VERLAG",
+    "slug": "weber-verlag",
+    "product_count": 239,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172bc",
+    "name": "BALTHASAR",
+    "slug": "balthasar",
+    "product_count": 238,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172bd",
+    "name": "EDITION SOMEDIA",
+    "slug": "edition-somedia",
+    "product_count": 237,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172be",
+    "name": "PEARSON FRANCE",
+    "slug": "pearson-france",
+    "product_count": 237,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172bf",
+    "name": "REER",
+    "slug": "reer",
+    "product_count": 236,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172c0",
+    "name": "CELLULAR LINE",
+    "slug": "cellular-line",
+    "product_count": 235,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172c1",
+    "name": "TONIES",
+    "slug": "tonies",
+    "product_count": 234,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172c2",
+    "name": "VALUE",
+    "slug": "value",
+    "product_count": 234,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172c3",
+    "name": "KOOR",
+    "slug": "koor",
+    "product_count": 233,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172c4",
+    "name": "AQUAMARIN VERLAG",
+    "slug": "aquamarin-verlag",
+    "product_count": 231,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172c5",
+    "name": "LONELY PLANET PUBLICATIONS",
+    "slug": "lonely-planet-publications",
+    "product_count": 231,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172c6",
+    "name": "SIEMENS",
+    "slug": "siemens",
+    "product_count": 230,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172c7",
+    "name": "ECON-ULLSTEIN-LIST",
+    "slug": "econ-ullstein-list",
+    "product_count": 229,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172c8",
+    "name": "MOTORBUCH VERLAG",
+    "slug": "motorbuch-verlag",
+    "product_count": 229,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172c9",
+    "name": "MAGELLAN",
+    "slug": "magellan",
+    "product_count": 228,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172ca",
+    "name": "SILHOUETTE",
+    "slug": "silhouette",
+    "product_count": 228,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172cb",
+    "name": "CRICUT",
+    "slug": "cricut",
+    "product_count": 226,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172cc",
+    "name": "DROEMER",
+    "slug": "droemer",
+    "product_count": 226,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172cd",
+    "name": "ESSLINGER",
+    "slug": "esslinger",
+    "product_count": 224,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172ce",
+    "name": "EUROTRAIL",
+    "slug": "eurotrail",
+    "product_count": 224,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172cf",
+    "name": "JBL BY HARMAN",
+    "slug": "jbl-by-harman",
+    "product_count": 224,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172d0",
+    "name": "GMEINER VERLAG",
+    "slug": "gmeiner-verlag",
+    "product_count": 223,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172d1",
+    "name": "HACHETTE CHILDREN'S BOOK",
+    "slug": "hachette-children-s-book",
+    "product_count": 223,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172d2",
+    "name": "HEP VERLAG",
+    "slug": "hep-verlag",
+    "product_count": 223,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172d3",
+    "name": "CRUNCHYROLL",
+    "slug": "crunchyroll",
+    "product_count": 222,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172d4",
+    "name": "PLAYMOBIL",
+    "slug": "playmobil",
+    "product_count": 220,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172d5",
+    "name": "BRAUN + COMPANY",
+    "slug": "braun-company",
+    "product_count": 219,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172d6",
+    "name": "KINGSTON",
+    "slug": "kingston",
+    "product_count": 219,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172d7",
+    "name": "LEXMARK",
+    "slug": "lexmark",
+    "product_count": 219,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172d8",
+    "name": "XAVAX",
+    "slug": "xavax",
+    "product_count": 219,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172d9",
+    "name": "CHRISTOPHORUS",
+    "slug": "christophorus",
+    "product_count": 215,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172da",
+    "name": "CISCO",
+    "slug": "cisco",
+    "product_count": 214,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172db",
+    "name": "AMSTERDAM",
+    "slug": "amsterdam",
+    "product_count": 212,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172dc",
+    "name": "BÜROLINE",
+    "slug": "buroline",
+    "product_count": 212,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172dd",
+    "name": "KLETT-COTTA",
+    "slug": "klett-cotta",
+    "product_count": 211,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172de",
+    "name": "NELSON VERLAG",
+    "slug": "nelson-verlag",
+    "product_count": 211,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172df",
+    "name": "VERLAG AN DER RUHR",
+    "slug": "verlag-an-der-ruhr",
+    "product_count": 211,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172e0",
+    "name": "IIYAMA",
+    "slug": "iiyama",
+    "product_count": 210,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172e1",
+    "name": "MVGVERLAG",
+    "slug": "mvgverlag",
+    "product_count": 209,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172e2",
+    "name": "PENGUIN JUNIOR",
+    "slug": "penguin-junior",
+    "product_count": 209,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172e3",
+    "name": "NOVOOO",
+    "slug": "novooo",
+    "product_count": 207,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172e4",
+    "name": "GESTALTEN",
+    "slug": "gestalten",
+    "product_count": 206,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172e5",
+    "name": "SEVERIN",
+    "slug": "severin",
+    "product_count": 206,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172e6",
+    "name": "STEP BY STEP",
+    "slug": "step-by-step",
+    "product_count": 206,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172e7",
+    "name": "SCHIRNER VERLAG",
+    "slug": "schirner-verlag",
+    "product_count": 205,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172e8",
+    "name": "COSMOS-VERLAG",
+    "slug": "cosmos-verlag",
+    "product_count": 204,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172e9",
+    "name": "KYOCERA",
+    "slug": "kyocera",
+    "product_count": 204,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172ea",
+    "name": "SCHNEIDERBUCH",
+    "slug": "schneiderbuch",
+    "product_count": 204,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172eb",
+    "name": "ULLSTEIN",
+    "slug": "ullstein",
+    "product_count": 204,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172ec",
+    "name": "BEURER",
+    "slug": "beurer",
+    "product_count": 203,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172ed",
+    "name": "I AM CREATIVE",
+    "slug": "i-am-creative",
+    "product_count": 202,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172ee",
+    "name": "CARLETTO",
+    "slug": "carletto",
+    "product_count": 196,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172ef",
+    "name": "DELL",
+    "slug": "dell",
+    "product_count": 196,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172f0",
+    "name": "HEWLETT PACKARD ENTERPRISE",
+    "slug": "hewlett-packard-enterprise",
+    "product_count": 196,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172f1",
+    "name": "DUMONT BUCHVERLAG",
+    "slug": "dumont-buchverlag",
+    "product_count": 195,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172f2",
+    "name": "PHILIPS HUE",
+    "slug": "philips-hue",
+    "product_count": 194,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172f3",
+    "name": "CHICCO",
+    "slug": "chicco",
+    "product_count": 192,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172f4",
+    "name": "EMONS",
+    "slug": "emons",
+    "product_count": 192,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172f5",
+    "name": "KLV VERLAG",
+    "slug": "klv-verlag",
+    "product_count": 192,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172f6",
+    "name": "PATMOS-VERLAG",
+    "slug": "patmos-verlag",
+    "product_count": 192,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172f7",
+    "name": "ZEWI BÉBÉ-JOU",
+    "slug": "zewi-bebe-jou",
+    "product_count": 190,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172f8",
+    "name": "JABADABADO",
+    "slug": "jabadabado",
+    "product_count": 189,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172f9",
+    "name": "WALKER BOOKS",
+    "slug": "walker-books",
+    "product_count": 187,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172fa",
+    "name": "BERGVERLAG ROTHER",
+    "slug": "bergverlag-rother",
+    "product_count": 185,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172fb",
+    "name": "S. FISCHER VERLAG",
+    "slug": "s-fischer-verlag",
+    "product_count": 185,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172fc",
+    "name": "TASCHEN",
+    "slug": "taschen",
+    "product_count": 184,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172fd",
+    "name": "LEHRMITTELVERLAG ZÜRICH",
+    "slug": "lehrmittelverlag-zurich",
+    "product_count": 183,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172fe",
+    "name": "3M",
+    "slug": "3m",
+    "product_count": 182,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79172ff",
+    "name": "CORSAIR",
+    "slug": "corsair",
+    "product_count": 182,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917300",
+    "name": "OKI",
+    "slug": "oki",
+    "product_count": 182,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917301",
+    "name": "VONMÄHLEN",
+    "slug": "vonmahlen",
+    "product_count": 182,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917302",
+    "name": "HOYA",
+    "slug": "hoya",
+    "product_count": 181,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917303",
+    "name": "NAUMANN & GÖBEL VERLAG",
+    "slug": "naumann-gobel-verlag",
+    "product_count": 181,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917304",
+    "name": "HAN",
+    "slug": "han",
+    "product_count": 180,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917305",
+    "name": "OXFORD",
+    "slug": "oxford",
+    "product_count": 180,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917306",
+    "name": "GARMIN",
+    "slug": "garmin",
+    "product_count": 178,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917307",
+    "name": "RAVENSBURGER VERLAG",
+    "slug": "ravensburger-verlag",
+    "product_count": 177,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917308",
+    "name": "SÜDWEST",
+    "slug": "sudwest",
+    "product_count": 177,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917309",
+    "name": "SIMPLEX",
+    "slug": "simplex",
+    "product_count": 176,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791730a",
+    "name": "UK BOOKS",
+    "slug": "uk-books",
+    "product_count": 176,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791730b",
+    "name": "EGMONT COMIC COLLECTION",
+    "slug": "egmont-comic-collection",
+    "product_count": 175,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791730c",
+    "name": "KARLSSON",
+    "slug": "karlsson",
+    "product_count": 175,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791730d",
+    "name": "SOURCEBOOKS",
+    "slug": "sourcebooks",
+    "product_count": 175,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791730e",
+    "name": "RC4WD",
+    "slug": "rc4wd",
+    "product_count": 174,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791730f",
+    "name": "BAUMHAUS VERLAG",
+    "slug": "baumhaus-verlag",
+    "product_count": 173,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917310",
+    "name": "DOMO",
+    "slug": "domo",
+    "product_count": 173,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917311",
+    "name": "ABC",
+    "slug": "abc",
+    "product_count": 172,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917312",
+    "name": "FABER & FABER",
+    "slug": "faber-faber",
+    "product_count": 172,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917313",
+    "name": "CAMBRIDGE UNIVERSITY PRESS",
+    "slug": "cambridge-university-press",
+    "product_count": 171,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917314",
+    "name": "MICROSOFT",
+    "slug": "microsoft",
+    "product_count": 169,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917315",
+    "name": "NEWSTAR",
+    "slug": "newstar",
+    "product_count": 169,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917316",
+    "name": "PATTLOCH",
+    "slug": "pattloch",
+    "product_count": 169,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917317",
+    "name": "BLACK ROCK",
+    "slug": "black-rock",
+    "product_count": 168,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917318",
+    "name": "PENGUIN VERLAG",
+    "slug": "penguin-verlag",
+    "product_count": 167,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917319",
+    "name": "BABY'S ONLY",
+    "slug": "baby-s-only",
+    "product_count": 166,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791731a",
+    "name": "US BOOKS",
+    "slug": "us-books",
+    "product_count": 166,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791731b",
+    "name": "HARDIE GRANT PUBLISHING GROUP",
+    "slug": "hardie-grant-publishing-group",
+    "product_count": 165,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791731c",
+    "name": "SPRINGER FACHMEDIEN",
+    "slug": "springer-fachmedien",
+    "product_count": 165,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791731d",
+    "name": "TOMBOW",
+    "slug": "tombow",
+    "product_count": 164,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791731e",
+    "name": "MAGNETOPLAN",
+    "slug": "magnetoplan",
+    "product_count": 162,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791731f",
+    "name": "NORDSÜD VERLAG",
+    "slug": "nordsud-verlag",
+    "product_count": 162,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917446",
+    "name": "KODAK",
+    "slug": "kodak",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917448",
+    "name": "GOPRO",
+    "slug": "gopro",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791744a",
+    "name": "INSTA360",
+    "slug": "insta360",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791744e",
+    "name": "DJI",
+    "slug": "dji",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917451",
+    "name": "FUJIFILM",
+    "slug": "fujifilm",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791745e",
+    "name": "SANDISK",
+    "slug": "sandisk",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917467",
+    "name": "PANASONIC",
+    "slug": "panasonic",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917476",
+    "name": "NIKON",
+    "slug": "nikon",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791747f",
+    "name": "ROLLEI",
+    "slug": "rollei",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917490",
+    "name": "INTENSO",
+    "slug": "intenso",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791749c",
+    "name": "OLYMPUS",
+    "slug": "olympus",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79174a6",
+    "name": "ANTI-GRAVITY",
+    "slug": "anti-gravity",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79174a8",
+    "name": "POLAROID",
+    "slug": "polaroid",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79174de",
+    "name": "EMPORIA",
+    "slug": "emporia",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79174ea",
+    "name": "NOKIA",
+    "slug": "nokia",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917503",
+    "name": "XIAOMI",
+    "slug": "xiaomi",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791751c",
+    "name": "HMD",
+    "slug": "hmd",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917530",
+    "name": "NINTENDO",
+    "slug": "nintendo",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917535",
+    "name": "AOC",
+    "slug": "aoc",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917556",
+    "name": "ERAZER",
+    "slug": "erazer",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917573",
+    "name": "YUBICO",
+    "slug": "yubico",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791757c",
+    "name": "VALVE",
+    "slug": "valve",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917581",
+    "name": "AMAZON",
+    "slug": "amazon",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917589",
+    "name": "FISCHER",
+    "slug": "fischer",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791758c",
+    "name": "HITS4KIDS",
+    "slug": "hits4kids",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791758e",
+    "name": "YANKEE CANDLE",
+    "slug": "yankee-candle",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917590",
+    "name": "4SMARTS",
+    "slug": "4smarts",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917593",
+    "name": "IMAO",
+    "slug": "imao",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917595",
+    "name": "THULE",
+    "slug": "thule",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917599",
+    "name": "IPURO",
+    "slug": "ipuro",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791759c",
+    "name": "FEBREZE",
+    "slug": "febreze",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791759e",
+    "name": "COOP",
+    "slug": "coop",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79175a1",
+    "name": "FOR THE DRIVERS",
+    "slug": "for-the-drivers",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79175a4",
+    "name": "MEGUIAR'S",
+    "slug": "meguiar-s",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79175a9",
+    "name": "HP AUTOZUBEHÖR",
+    "slug": "hp-autozubehor",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79175ac",
+    "name": "DIVERSE",
+    "slug": "diverse",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79175b2",
+    "name": "ENHANCE",
+    "slug": "enhance",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79175b6",
+    "name": "VANSPACE",
+    "slug": "vanspace",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79175b8",
+    "name": "RAMMOUNT",
+    "slug": "rammount",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79175ba",
+    "name": "TESLOGIC",
+    "slug": "teslogic",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79175c4",
+    "name": "MINOURA",
+    "slug": "minoura",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79175d0",
+    "name": "PRINCE LIONHEART",
+    "slug": "prince-lionheart",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79175e2",
+    "name": "SISSEL",
+    "slug": "sissel",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79175e4",
+    "name": "BRUNNER",
+    "slug": "brunner",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79175e6",
+    "name": "PHONOCAR",
+    "slug": "phonocar",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79175eb",
+    "name": "FLIPLINE",
+    "slug": "flipline",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79175f2",
+    "name": "AVA & MAY",
+    "slug": "ava-may",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79175f4",
+    "name": "ZURRFIX",
+    "slug": "zurrfix",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79175f7",
+    "name": "THOMAR",
+    "slug": "thomar",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79175fc",
+    "name": "UHU",
+    "slug": "uhu",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79175fe",
+    "name": "DREAMBABY",
+    "slug": "dreambaby",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917600",
+    "name": "TRIXIE",
+    "slug": "trixie",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917605",
+    "name": "CARIBI",
+    "slug": "caribi",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791760b",
+    "name": "INTERDISCOUNT",
+    "slug": "interdiscount",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791760e",
+    "name": "MEDIASHOP",
+    "slug": "mediashop",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917611",
+    "name": "DETTOL",
+    "slug": "dettol",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917613",
+    "name": "SWISSMEME",
+    "slug": "swissmeme",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791761f",
+    "name": "YUME TOYS",
+    "slug": "yume-toys",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917622",
+    "name": "CRAZE",
+    "slug": "craze",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917629",
+    "name": "BOXBOLLEN",
+    "slug": "boxbollen",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917633",
+    "name": "GIIKER",
+    "slug": "giiker",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917635",
+    "name": "TRAMLI",
+    "slug": "tramli",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917637",
+    "name": "TOTALLY",
+    "slug": "totally",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917639",
+    "name": "EASYMAXX",
+    "slug": "easymaxx",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917645",
+    "name": "OLIMPIA SPLENDID",
+    "slug": "olimpia-splendid",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917647",
+    "name": "LIVINGTON",
+    "slug": "livington",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791764a",
+    "name": "RELAXDAYS",
+    "slug": "relaxdays",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791764c",
+    "name": "NEUTROGENA",
+    "slug": "neutrogena",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917651",
+    "name": "SOMBO",
+    "slug": "sombo",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917655",
+    "name": "KICA",
+    "slug": "kica",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917660",
+    "name": "NEUTRAL",
+    "slug": "neutral",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917664",
+    "name": "PMI TRADING",
+    "slug": "pmi-trading",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791766e",
+    "name": "PAJOMA",
+    "slug": "pajoma",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917670",
+    "name": "CALIBER",
+    "slug": "caliber",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917677",
+    "name": "INFINITY",
+    "slug": "infinity",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917679",
+    "name": "SHASHIBO",
+    "slug": "shashibo",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791767b",
+    "name": "ZIPPO",
+    "slug": "zippo",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791767d",
+    "name": "KEY-BAK",
+    "slug": "key-bak",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791767f",
+    "name": "PHILIPPI",
+    "slug": "philippi",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917683",
+    "name": "TROIKA",
+    "slug": "troika",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791768a",
+    "name": "TECHNISAT",
+    "slug": "technisat",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791768c",
+    "name": "NEOTION",
+    "slug": "neotion",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917694",
+    "name": "REBEL",
+    "slug": "rebel",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917698",
+    "name": "INSYS",
+    "slug": "insys",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791769a",
+    "name": "TELESTAR",
+    "slug": "telestar",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791769e",
+    "name": "NIWOTRON",
+    "slug": "niwotron",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79176a5",
+    "name": "SEKI",
+    "slug": "seki",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79176a8",
+    "name": "CE-SCOUTING",
+    "slug": "ce-scouting",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79176b7",
+    "name": "ONEFORALL",
+    "slug": "oneforall",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79176bd",
+    "name": "MACLEAN BRACKETS",
+    "slug": "maclean-brackets",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79176c0",
+    "name": "PRESIDENT",
+    "slug": "president",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79176c5",
+    "name": "PNI",
+    "slug": "pni",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79176c8",
+    "name": "ONE FOR ALL",
+    "slug": "one-for-all",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79176cc",
+    "name": "VOGEL'S",
+    "slug": "vogel-s",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79176e3",
+    "name": "NEOMOUNTS BY NEWSTAR",
+    "slug": "neomounts-by-newstar",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79176ec",
+    "name": "BRAVO",
+    "slug": "bravo",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79176f6",
+    "name": "PUREMOUNTS",
+    "slug": "puremounts",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79176ff",
+    "name": "BARKAN MOUNTS",
+    "slug": "barkan-mounts",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917708",
+    "name": "MULTIBRACKETS",
+    "slug": "multibrackets",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917719",
+    "name": "DSS DIGITAL SIGNAGE SOLUTION",
+    "slug": "dss-digital-signage-solution",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917729",
+    "name": "EQUIP",
+    "slug": "equip",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917741",
+    "name": "HISENSE",
+    "slug": "hisense",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917743",
+    "name": "AG NEOVO",
+    "slug": "ag-neovo",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917745",
+    "name": "LG",
+    "slug": "lg",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791774e",
+    "name": "BENQ",
+    "slug": "benq",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917752",
+    "name": "VIEWSONIC",
+    "slug": "viewsonic",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917759",
+    "name": "OPTOMA",
+    "slug": "optoma",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791777d",
+    "name": "SHARP",
+    "slug": "sharp",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917799",
+    "name": "LC POWER",
+    "slug": "lc-power",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79177a0",
+    "name": "DIGITAL VIDEO DISC",
+    "slug": "digital-video-disc",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79177a5",
+    "name": "TRINITY",
+    "slug": "trinity",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79177a9",
+    "name": "INNENWELT",
+    "slug": "innenwelt",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79177ab",
+    "name": "DIV1",
+    "slug": "div1",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79177b0",
+    "name": "EDITION E",
+    "slug": "edition-e",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79177c4",
+    "name": "BLU RAY",
+    "slug": "blu-ray",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79177d0",
+    "name": "MARSHALL",
+    "slug": "marshall",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79177d5",
+    "name": "JABRA",
+    "slug": "jabra",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79177d9",
+    "name": "BASEUS",
+    "slug": "baseus",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79177db",
+    "name": "SKULLCANDY",
+    "slug": "skullcandy",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79177df",
+    "name": "SENNHEISER",
+    "slug": "sennheiser",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79177e2",
+    "name": "NOTHING",
+    "slug": "nothing",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79177e4",
+    "name": "TURTLE BEACH",
+    "slug": "turtle-beach",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79177ec",
+    "name": "HYPERX",
+    "slug": "hyperx",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79177ef",
+    "name": "JLAB AUDIO",
+    "slug": "jlab-audio",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79177f4",
+    "name": "RAZER",
+    "slug": "razer",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79177f7",
+    "name": "SHOKZ",
+    "slug": "shokz",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79177fa",
+    "name": "BEATS",
+    "slug": "beats",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917807",
+    "name": "CMF",
+    "slug": "cmf",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917810",
+    "name": "STEELSERIES",
+    "slug": "steelseries",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917829",
+    "name": "BEYERDYNAMIC",
+    "slug": "beyerdynamic",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791782f",
+    "name": "YEALINK",
+    "slug": "yealink",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917837",
+    "name": "HUAWEI",
+    "slug": "huawei",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791783e",
+    "name": "ULTIMATE EARS (UE)",
+    "slug": "ultimate-ears-ue",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917856",
+    "name": "AUDIZIO",
+    "slug": "audizio",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791785d",
+    "name": "LENCO",
+    "slug": "lenco",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917863",
+    "name": "SOUNDMASTER",
+    "slug": "soundmaster",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917872",
+    "name": "PURE",
+    "slug": "pure",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917889",
+    "name": "TEUFEL",
+    "slug": "teufel",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917892",
+    "name": "NOXON",
+    "slug": "noxon",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917896",
+    "name": "ROADSTAR",
+    "slug": "roadstar",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791789b",
+    "name": "HOUSE OF MARLEY",
+    "slug": "house-of-marley",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79178aa",
+    "name": "SONOS",
+    "slug": "sonos",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79178b5",
+    "name": "HARMAN / KARDON",
+    "slug": "harman-kardon",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79178b9",
+    "name": "FALLER AUDIO",
+    "slug": "faller-audio",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79178bb",
+    "name": "FENTON",
+    "slug": "fenton",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79178c0",
+    "name": "YAMAHA",
+    "slug": "yamaha",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79178c3",
+    "name": "DENON",
+    "slug": "denon",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79178c7",
+    "name": "GENELEC",
+    "slug": "genelec",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79178c9",
+    "name": "PRO-JECT AUDIO SYSTEMS",
+    "slug": "pro-ject-audio-systems",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79178d3",
+    "name": "FIIO",
+    "slug": "fiio",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79178d6",
+    "name": "POWER DYNAMICS",
+    "slug": "power-dynamics",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79178d8",
+    "name": "FLEXSON",
+    "slug": "flexson",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79178da",
+    "name": "DENVER",
+    "slug": "denver",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79178e7",
+    "name": "VONYX",
+    "slug": "vonyx",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79178f3",
+    "name": "EDIFIER",
+    "slug": "edifier",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917900",
+    "name": "THOMSON",
+    "slug": "thomson",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917907",
+    "name": "KRK",
+    "slug": "krk",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791790a",
+    "name": "AUDIO-TECHNICA",
+    "slug": "audio-technica",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917917",
+    "name": "SANUS SYSTEMS",
+    "slug": "sanus-systems",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791791f",
+    "name": "PLAUD",
+    "slug": "plaud",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917929",
+    "name": "TASCAM",
+    "slug": "tascam",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791792e",
+    "name": "MOBVOI",
+    "slug": "mobvoi",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917938",
+    "name": "SHANLING",
+    "slug": "shanling",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791793a",
+    "name": "POCKETALK",
+    "slug": "pocketalk",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917940",
+    "name": "DEITY",
+    "slug": "deity",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917944",
+    "name": "TRUST",
+    "slug": "trust",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917946",
+    "name": "RØDE MICROPHONES",
+    "slug": "r-de-microphones",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791794b",
+    "name": "SAMSON",
+    "slug": "samson",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791794d",
+    "name": "SANDBERG",
+    "slug": "sandberg",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791794f",
+    "name": "MAONO",
+    "slug": "maono",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917953",
+    "name": "ROCCAT",
+    "slug": "roccat",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917955",
+    "name": "BLUE",
+    "slug": "blue",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791795c",
+    "name": "NUMARK INDUSTRIES",
+    "slug": "numark-industries",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917962",
+    "name": "ELGATO SYSTEMS",
+    "slug": "elgato-systems",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917964",
+    "name": "CASIO",
+    "slug": "casio",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917968",
+    "name": "IK MULTIMEDIA",
+    "slug": "ik-multimedia",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791796d",
+    "name": "AKAI",
+    "slug": "akai",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791796f",
+    "name": "EVE AUDIO",
+    "slug": "eve-audio",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917971",
+    "name": "DELTACO",
+    "slug": "deltaco",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917974",
+    "name": "TECHLY",
+    "slug": "techly",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917976",
+    "name": "RELOOP",
+    "slug": "reloop",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917978",
+    "name": "ROLAND",
+    "slug": "roland",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917983",
+    "name": "T'NB",
+    "slug": "t-nb",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791798b",
+    "name": "LEWITT",
+    "slug": "lewitt",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917993",
+    "name": "ASM",
+    "slug": "asm",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917996",
+    "name": "ICON",
+    "slug": "icon",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917999",
+    "name": "AUDIENT",
+    "slug": "audient",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791799c",
+    "name": "AUSTRIAN AUDIO",
+    "slug": "austrian-audio",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79179a2",
+    "name": "GODOX",
+    "slug": "godox",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79179a7",
+    "name": "NATIVE INSTRUMENTS",
+    "slug": "native-instruments",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79179b7",
+    "name": "KORG",
+    "slug": "korg",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79179c3",
+    "name": "PIONEER CAR",
+    "slug": "pioneer-car",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79179c6",
+    "name": "BLOW",
+    "slug": "blow",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79179cb",
+    "name": "PIONEER",
+    "slug": "pioneer",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79179cd",
+    "name": "KENWOOD",
+    "slug": "kenwood",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79179d4",
+    "name": "JBL AQUARIUM",
+    "slug": "jbl-aquarium",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917a01",
+    "name": "BLAUPUNKT",
+    "slug": "blaupunkt",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917a19",
+    "name": "UGREEN",
+    "slug": "ugreen",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917a1b",
+    "name": "VERBATIM",
+    "slug": "verbatim",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917a22",
+    "name": "LINK2GO",
+    "slug": "link2go",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917a24",
+    "name": "SMART",
+    "slug": "smart",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917a27",
+    "name": "LINDY",
+    "slug": "lindy",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917a2a",
+    "name": "TRANSMEDIA",
+    "slug": "transmedia",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917a2c",
+    "name": "SONERO",
+    "slug": "sonero",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917a41",
+    "name": "MARMITEK",
+    "slug": "marmitek",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917a45",
+    "name": "CLICKTRONIC",
+    "slug": "clicktronic",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917a4b",
+    "name": "PD CONNEX",
+    "slug": "pd-connex",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917a50",
+    "name": "I-TEC",
+    "slug": "i-tec",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917a5c",
+    "name": "SATECHI",
+    "slug": "satechi",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917a6b",
+    "name": "HDGEAR",
+    "slug": "hdgear",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917a81",
+    "name": "HDSUPPLY",
+    "slug": "hdsupply",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917a8a",
+    "name": "HUZARO",
+    "slug": "huzaro",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917a94",
+    "name": "PLAYSEAT",
+    "slug": "playseat",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917a96",
+    "name": "PLAYSEATS",
+    "slug": "playseats",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917a9f",
+    "name": "SIMAGIC",
+    "slug": "simagic",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917aa9",
+    "name": "POWERA",
+    "slug": "powera",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917aad",
+    "name": "FURY",
+    "slug": "fury",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917ab2",
+    "name": "COLLECTIVEMINDS",
+    "slug": "collectiveminds",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917ab4",
+    "name": "ARCANY",
+    "slug": "arcany",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917ab6",
+    "name": "PDP",
+    "slug": "pdp",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917ac3",
+    "name": "URAGE",
+    "slug": "urage",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917ac6",
+    "name": "THUNDERX3",
+    "slug": "thunderx3",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917ac8",
+    "name": "NACON",
+    "slug": "nacon",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917acc",
+    "name": "THRUSTMASTER",
+    "slug": "thrustmaster",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917ad4",
+    "name": "MOZA RACING",
+    "slug": "moza-racing",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917ad6",
+    "name": "GAMESIR",
+    "slug": "gamesir",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917ad9",
+    "name": "ULTRADESK",
+    "slug": "ultradesk",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917af5",
+    "name": "MOZA",
+    "slug": "moza",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917afc",
+    "name": "NOBLECHAIRS",
+    "slug": "noblechairs",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917b16",
+    "name": "LAOWA",
+    "slug": "laowa",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917b18",
+    "name": "VILTROX",
+    "slug": "viltrox",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917b2b",
+    "name": "CAMOUFLAGE",
+    "slug": "camouflage",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917b2e",
+    "name": "YASHICA",
+    "slug": "yashica",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917b34",
+    "name": "REVELL",
+    "slug": "revell",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917b45",
+    "name": "DJI DELIVERY",
+    "slug": "dji-delivery",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917b52",
+    "name": "HOVER AIR",
+    "slug": "hover-air",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917b63",
+    "name": "RCWARE",
+    "slug": "rcware",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917b6a",
+    "name": "DRONEBLOX",
+    "slug": "droneblox",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917b6d",
+    "name": "POLAR PRO FILTERS",
+    "slug": "polar-pro-filters",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917b6f",
+    "name": "FLARM",
+    "slug": "flarm",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917b81",
+    "name": "B&W",
+    "slug": "b-w",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917b8d",
+    "name": "FUTABA",
+    "slug": "futaba",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917b8f",
+    "name": "PGYTECH",
+    "slug": "pgytech",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917b94",
+    "name": "TAMRON",
+    "slug": "tamron",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917b9a",
+    "name": "SIGMA",
+    "slug": "sigma",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917bc9",
+    "name": "7ARTISANS",
+    "slug": "7artisans",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917bda",
+    "name": "RAYNOX",
+    "slug": "raynox",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917bf1",
+    "name": "MANFROTTO",
+    "slug": "manfrotto",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917bf3",
+    "name": "JOBY",
+    "slug": "joby",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917bfe",
+    "name": "ULANZI",
+    "slug": "ulanzi",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917c0b",
+    "name": "BENRO",
+    "slug": "benro",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917c13",
+    "name": "DÖRR",
+    "slug": "dorr",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917c1a",
+    "name": "SIRUI",
+    "slug": "sirui",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917c2b",
+    "name": "PEAK DESIGN",
+    "slug": "peak-design",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917c52",
+    "name": "LEXAR MEDIA",
+    "slug": "lexar-media",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917c80",
+    "name": "XGRIDS",
+    "slug": "xgrids",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917c9a",
+    "name": "GOOGLE",
+    "slug": "google",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917c9d",
+    "name": "CROSSCALL",
+    "slug": "crosscall",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917c9f",
+    "name": "DORO",
+    "slug": "doro",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917ca4",
+    "name": "EIGER",
+    "slug": "eiger",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917cfd",
+    "name": "GIGASET",
+    "slug": "gigaset",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917d26",
+    "name": "FANVIL",
+    "slug": "fanvil",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917d52",
+    "name": "POLY",
+    "slug": "poly",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917d55",
+    "name": "DIGITUS",
+    "slug": "digitus",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917d57",
+    "name": "AUDIOCODES",
+    "slug": "audiocodes",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917d5e",
+    "name": "KENSINGTON",
+    "slug": "kensington",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917d66",
+    "name": "SHURE",
+    "slug": "shure",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917d68",
+    "name": "MOTOROLA",
+    "slug": "motorola",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917d73",
+    "name": "ALBRECHT",
+    "slug": "albrecht",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917d88",
+    "name": "TCL",
+    "slug": "tcl",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917d8b",
+    "name": "OMRON",
+    "slug": "omron",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917d8d",
+    "name": "FITBIT",
+    "slug": "fitbit",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917da1",
+    "name": "KSIX",
+    "slug": "ksix",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917db7",
+    "name": "RINGCONN",
+    "slug": "ringconn",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917dc4",
+    "name": "ULTRAHUMAN",
+    "slug": "ultrahuman",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917de1",
+    "name": "ANKER",
+    "slug": "anker",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917dfa",
+    "name": "XTORM",
+    "slug": "xtorm",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917e00",
+    "name": "AUKEY",
+    "slug": "aukey",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917e06",
+    "name": "MAKO",
+    "slug": "mako",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917e10",
+    "name": "RABBITER",
+    "slug": "rabbiter",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917e16",
+    "name": "CANYON",
+    "slug": "canyon",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917e3b",
+    "name": "AQIILA",
+    "slug": "aqiila",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917e3f",
+    "name": "TETHER TOOLS",
+    "slug": "tether-tools",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917e43",
+    "name": "BELKIN",
+    "slug": "belkin",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917e4b",
+    "name": "INTER-TECH",
+    "slug": "inter-tech",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917e4e",
+    "name": "KOBO",
+    "slug": "kobo",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917e51",
+    "name": "TOLINO",
+    "slug": "tolino",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917e57",
+    "name": "POCKETBOOK",
+    "slug": "pocketbook",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917e59",
+    "name": "ONYX",
+    "slug": "onyx",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917e69",
+    "name": "KIKKERLAND",
+    "slug": "kikkerland",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917e7c",
+    "name": "ZAGG",
+    "slug": "zagg",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917e95",
+    "name": "TARGUS",
+    "slug": "targus",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917ea5",
+    "name": "DISPLEX",
+    "slug": "displex",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917ebc",
+    "name": "FSP",
+    "slug": "fsp",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917ec4",
+    "name": "R-GO TOOLS B.V.",
+    "slug": "r-go-tools-b-v",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917ed1",
+    "name": "SAMSONITE",
+    "slug": "samsonite",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917ee1",
+    "name": "SPECK PRODUCTS",
+    "slug": "speck-products",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917ef7",
+    "name": "HAMMER",
+    "slug": "hammer",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917efa",
+    "name": "MEDISANA",
+    "slug": "medisana",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917eff",
+    "name": "WITHINGS",
+    "slug": "withings",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917f02",
+    "name": "ALIVECOR",
+    "slug": "alivecor",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917f04",
+    "name": "BRAUN",
+    "slug": "braun",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917f09",
+    "name": "SOEHNLE-WAAGEN",
+    "slug": "soehnle-waagen",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917f17",
+    "name": "ECOMED",
+    "slug": "ecomed",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917f1f",
+    "name": "ADE",
+    "slug": "ade",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917f22",
+    "name": "ADLER",
+    "slug": "adler",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917f28",
+    "name": "BACTRACK",
+    "slug": "bactrack",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917f2a",
+    "name": "YUWELL",
+    "slug": "yuwell",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917f30",
+    "name": "TRISTAR",
+    "slug": "tristar",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917f40",
+    "name": "BOSO",
+    "slug": "boso",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917f44",
+    "name": "CONTOUR",
+    "slug": "contour",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917f53",
+    "name": "NANOREPRO",
+    "slug": "nanorepro",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917f64",
+    "name": "QLUPOD",
+    "slug": "qlupod",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917f66",
+    "name": "ACE",
+    "slug": "ace",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917f68",
+    "name": "VEROVAL",
+    "slug": "veroval",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917f6b",
+    "name": "BBLÜV",
+    "slug": "bbluv",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917f91",
+    "name": "CREALITY",
+    "slug": "creality",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7918011",
+    "name": "NAVIGATOR",
+    "slug": "navigator",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7918018",
+    "name": "DYMO",
+    "slug": "dymo",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7918025",
+    "name": "FISCHER PAPIER",
+    "slug": "fischer-papier",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7918028",
+    "name": "MONDI BUSINESS PAPER",
+    "slug": "mondi-business-paper",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7918037",
+    "name": "PAPYRUS",
+    "slug": "papyrus",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791804b",
+    "name": "ANTALIS",
+    "slug": "antalis",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7918053",
+    "name": "SEIKO GROUP",
+    "slug": "seiko-group",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791806b",
+    "name": "FAVORIT SPA",
+    "slug": "favorit-spa",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7918085",
+    "name": "XTOOL",
+    "slug": "xtool",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79180aa",
+    "name": "ZEBRA TECHNOLOGIES",
+    "slug": "zebra-technologies",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79180c3",
+    "name": "SEIKO",
+    "slug": "seiko",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79180e3",
+    "name": "HONEYWELL",
+    "slug": "honeywell",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79180e5",
+    "name": "AGFA",
+    "slug": "agfa",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79180e7",
+    "name": "IRIS",
+    "slug": "iris",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79180fb",
+    "name": "PLUSTEK",
+    "slug": "plustek",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7918100",
+    "name": "FUJITSU",
+    "slug": "fujitsu",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7918105",
+    "name": "RICOH",
+    "slug": "ricoh",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7918107",
+    "name": "REFLECTA",
+    "slug": "reflecta",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791810c",
+    "name": "WESTERN DIGITAL",
+    "slug": "western-digital",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7918110",
+    "name": "WD",
+    "slug": "wd",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7918115",
+    "name": "EMTEC",
+    "slug": "emtec",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7918118",
+    "name": "MEDIARANGE",
+    "slug": "mediarange",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791812b",
+    "name": "LACIE",
+    "slug": "lacie",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7918138",
+    "name": "LEDGER",
+    "slug": "ledger",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791813d",
+    "name": "ADATA",
+    "slug": "adata",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7918149",
+    "name": "INNOVATION IT",
+    "slug": "innovation-it",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791815b",
+    "name": "CRUCIAL",
+    "slug": "crucial",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7918167",
+    "name": "TOSHIBA",
+    "slug": "toshiba",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7918177",
+    "name": "KINGSTON TECHNOLOGY",
+    "slug": "kingston-technology",
+    "product_count": 0,
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7918179",
+    "name": "SYNOLOGY",
+    "slug": "synology",
+    "product_count": 0,
+    "is_active": true
+  }
+]

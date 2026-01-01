@@ -1,0 +1,243 @@
+{
+  "info": {
+    "name": "Orders Module",
+    "description": "Customer order management: place orders (delivery/pickup), list, detail, cancel, and return",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "base_url", "value": "http://localhost:4010/api/v1" }
+  ],
+  "item": [
+    {
+      "name": "Auth - Login as Customer",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "const res = pm.response.json();",
+              "if (res.success) {",
+              "  pm.environment.set('customer_token', res.data.tokens.access_token);",
+              "}",
+              "pm.test('Login successful', () => pm.response.to.have.status(200));"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"customer.de@example.ch\",\n  \"password\": \"Password123!\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/public/auth/login",
+          "host": ["{{base_url}}"],
+          "path": ["public", "auth", "login"]
+        }
+      }
+    },
+    {
+      "name": "Orders",
+      "item": [
+        {
+          "name": "Place Order (Delivery)",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{customer_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"items\": [\n    { \"product_id\": \"69a079537808ec1bb7917447\", \"quantity\": 1 },\n    { \"product_id\": \"69a079537808ec1bb791744f\", \"quantity\": 2 }\n  ],\n  \"shipping_address_id\": \"69a051b9862bb102d344f14f\",\n  \"billing_address_id\": \"69a051b9862bb102d344f14f\",\n  \"payment_method\": \"card\",\n  \"notes\": \"Please ring the doorbell\",\n  \"is_store_pickup\": false\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/customer/orders",
+              "host": ["{{base_url}}"],
+              "path": ["customer", "orders"]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status 201', () => pm.response.to.have.status(201));",
+                  "pm.test('Has order number', () => {",
+                  "  pm.expect(pm.response.json().data).to.have.property('order_number');",
+                  "});",
+                  "if (pm.response.json().data) {",
+                  "  pm.environment.set('order_id', pm.response.json().data._id);",
+                  "  pm.environment.set('order_number', pm.response.json().data.order_number);",
+                  "}"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Place Order (Store Pickup)",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{customer_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"items\": [\n    { \"product_id\": \"69a079537808ec1bb7917455\", \"quantity\": 1 }\n  ],\n  \"shipping_address_id\": \"69a051b9862bb102d344f14f\",\n  \"billing_address_id\": \"69a051b9862bb102d344f14f\",\n  \"payment_method\": \"twint\",\n  \"is_store_pickup\": true,\n  \"store_pickup_id\": \"69a079537808ec1bb79173a3\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/customer/orders",
+              "host": ["{{base_url}}"],
+              "path": ["customer", "orders"]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status 201', () => pm.response.to.have.status(201));",
+                  "pm.test('Is store pickup', () => {",
+                  "  pm.expect(pm.response.json().data.is_store_pickup).to.be.true;",
+                  "});",
+                  "if (pm.response.json().data) {",
+                  "  pm.environment.set('pickup_order_id', pm.response.json().data._id);",
+                  "}"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "List My Orders",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{customer_token}}" }
+            ],
+            "url": {
+              "raw": "{{base_url}}/customer/orders?page=1&limit=10",
+              "host": ["{{base_url}}"],
+              "path": ["customer", "orders"],
+              "query": [
+                { "key": "page", "value": "1" },
+                { "key": "limit", "value": "10" },
+                { "key": "status", "value": "", "disabled": true },
+                { "key": "payment_status", "value": "", "disabled": true },
+                { "key": "sort", "value": "", "disabled": true }
+              ]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status 200', () => pm.response.to.have.status(200));",
+                  "pm.test('Has data array', () => pm.expect(pm.response.json().data).to.be.an('array'));",
+                  "if (pm.response.json().data.length > 0 && !pm.environment.get('order_id')) {",
+                  "  pm.environment.set('order_id', pm.response.json().data[0]._id);",
+                  "}"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Get Order Detail",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{customer_token}}" }
+            ],
+            "url": {
+              "raw": "{{base_url}}/customer/orders/{{order_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["customer", "orders", "{{order_id}}"]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status 200', () => pm.response.to.have.status(200));",
+                  "pm.test('Has order data', () => {",
+                  "  const data = pm.response.json().data;",
+                  "  pm.expect(data).to.have.property('order_number');",
+                  "  pm.expect(data).to.have.property('status');",
+                  "  pm.expect(data).to.have.property('total');",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Cancel Order",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{customer_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"reason\": \"Changed my mind, found a better deal elsewhere\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/customer/orders/{{order_id}}/cancel",
+              "host": ["{{base_url}}"],
+              "path": ["customer", "orders", "{{order_id}}", "cancel"]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status 200', () => pm.response.to.have.status(200));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Return Order",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{customer_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"reason\": \"Product was defective upon arrival\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/customer/orders/{{order_id}}/return",
+              "host": ["{{base_url}}"],
+              "path": ["customer", "orders", "{{order_id}}", "return"]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status 200 or 400', () => {",
+                  "  pm.expect(pm.response.code).to.be.oneOf([200, 400]);",
+                  "});"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,320 @@
+{
+  "info": {
+    "name": "Auth Module",
+    "description": "Authentication endpoints: register, login, refresh tokens, email verification, password reset",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "base_url", "value": "http://localhost:4010/api/v1" }
+  ],
+  "item": [
+    {
+      "name": "Register Customer",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"test.customer@example.ch\",\n  \"password\": \"TestPassword123!\",\n  \"first_name\": \"Test\",\n  \"last_name\": \"Kunde\",\n  \"phone\": \"+41 79 123 45 67\",\n  \"preferred_language\": \"de\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/public/auth/register",
+          "host": ["{{base_url}}"],
+          "path": ["public", "auth", "register"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status 201', () => pm.response.to.have.status(201));",
+              "pm.test('Has user data', () => {",
+              "  const data = pm.response.json().data;",
+              "  pm.expect(data).to.have.property('user');",
+              "  pm.expect(data).to.have.property('tokens');",
+              "});",
+              "if (pm.response.json().data) {",
+              "  pm.environment.set('auth_token', pm.response.json().data.tokens.access_token);",
+              "  pm.environment.set('refresh_token', pm.response.json().data.tokens.refresh_token);",
+              "}"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Login as Admin",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"admin.de@interdiscount-clone.ch\",\n  \"password\": \"Password123!\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/public/auth/login",
+          "host": ["{{base_url}}"],
+          "path": ["public", "auth", "login"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));",
+              "pm.test('Has tokens', () => {",
+              "  const data = pm.response.json().data;",
+              "  pm.expect(data.tokens).to.have.property('access_token');",
+              "  pm.expect(data.tokens).to.have.property('refresh_token');",
+              "});",
+              "if (pm.response.json().data) {",
+              "  pm.environment.set('admin_token', pm.response.json().data.tokens.access_token);",
+              "  pm.environment.set('admin_refresh_token', pm.response.json().data.tokens.refresh_token);",
+              "}"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Login as Customer",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"customer.de@example.ch\",\n  \"password\": \"Password123!\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/public/auth/login",
+          "host": ["{{base_url}}"],
+          "path": ["public", "auth", "login"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));",
+              "if (pm.response.json().data) {",
+              "  pm.environment.set('customer_token', pm.response.json().data.tokens.access_token);",
+              "  pm.environment.set('customer_refresh_token', pm.response.json().data.tokens.refresh_token);",
+              "  pm.environment.set('customer_id', pm.response.json().data.user._id);",
+              "}"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Login as Store Manager",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"manager.de@interdiscount-clone.ch\",\n  \"password\": \"Password123!\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/public/auth/login",
+          "host": ["{{base_url}}"],
+          "path": ["public", "auth", "login"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));",
+              "if (pm.response.json().data) {",
+              "  pm.environment.set('manager_token', pm.response.json().data.tokens.access_token);",
+              "  pm.environment.set('manager_refresh_token', pm.response.json().data.tokens.refresh_token);",
+              "}"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Refresh Token",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"refresh_token\": \"{{customer_refresh_token}}\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/public/auth/refresh",
+          "host": ["{{base_url}}"],
+          "path": ["public", "auth", "refresh"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));",
+              "pm.test('Has new access token', () => {",
+              "  pm.expect(pm.response.json().data.tokens.access_token).to.be.a('string');",
+              "});"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Verify Email",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/public/auth/verify-email/{{verification_token}}",
+          "host": ["{{base_url}}"],
+          "path": ["public", "auth", "verify-email", "{{verification_token}}"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status 200 or 400', () => {",
+              "  pm.expect(pm.response.code).to.be.oneOf([200, 400]);",
+              "});"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Forgot Password",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"customer.de@example.ch\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/public/auth/forgot-password",
+          "host": ["{{base_url}}"],
+          "path": ["public", "auth", "forgot-password"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Reset Password",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"token\": \"{{reset_token}}\",\n  \"password\": \"NewPassword123!\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/public/auth/reset-password",
+          "host": ["{{base_url}}"],
+          "path": ["public", "auth", "reset-password"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status 200 or 400', () => {",
+              "  pm.expect(pm.response.code).to.be.oneOf([200, 400]);",
+              "});"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Resend Verification",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"customer.de@example.ch\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/public/auth/resend-verification",
+          "host": ["{{base_url}}"],
+          "path": ["public", "auth", "resend-verification"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Validation - Login Missing Password",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"customer.de@example.ch\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/public/auth/login",
+          "host": ["{{base_url}}"],
+          "path": ["public", "auth", "login"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status 400', () => pm.response.to.have.status(400));",
+              "pm.test('Has error', () => pm.expect(pm.response.json().success).to.be.false);"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

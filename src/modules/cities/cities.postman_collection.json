@@ -1,0 +1,133 @@
+{
+  "info": {
+    "name": "Cities Module",
+    "description": "Swiss city public listing endpoints with postal code lookup",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "base_url", "value": "http://localhost:4010/api/v1" }
+  ],
+  "item": [
+    {
+      "name": "List Cities",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/public/cities?page=1&limit=20",
+          "host": ["{{base_url}}"],
+          "path": ["public", "cities"],
+          "query": [
+            { "key": "page", "value": "1" },
+            { "key": "limit", "value": "20" },
+            { "key": "canton_id", "value": "", "disabled": true },
+            { "key": "search", "value": "", "disabled": true }
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));",
+              "pm.test('Has data array', () => pm.expect(pm.response.json().data).to.be.an('array'));",
+              "if (pm.response.json().data.length > 0) {",
+              "  pm.environment.set('city_id', pm.response.json().data[0]._id);",
+              "  pm.environment.set('city_slug', pm.response.json().data[0].slug);",
+              "}"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Get City by ID",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/public/cities/{{city_id}}",
+          "host": ["{{base_url}}"],
+          "path": ["public", "cities", "{{city_id}}"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));",
+              "pm.test('Has city data', () => {",
+              "  const data = pm.response.json().data;",
+              "  pm.expect(data).to.have.property('name');",
+              "  pm.expect(data).to.have.property('postal_codes');",
+              "});"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Get City by Slug",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/public/cities/slug/{{city_slug}}",
+          "host": ["{{base_url}}"],
+          "path": ["public", "cities", "slug", "{{city_slug}}"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Find City by Postal Code",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/public/cities/postal-code/8001",
+          "host": ["{{base_url}}"],
+          "path": ["public", "cities", "postal-code", "8001"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Invalid Postal Code",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/public/cities/postal-code/0000",
+          "host": ["{{base_url}}"],
+          "path": ["public", "cities", "postal-code", "0000"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status 404', () => pm.response.to.have.status(404));"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

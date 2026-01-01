@@ -1,0 +1,112 @@
+{
+  "info": {
+    "name": "Cantons Module",
+    "description": "Swiss canton public listing endpoints",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "base_url", "value": "http://localhost:4010/api/v1" }
+  ],
+  "item": [
+    {
+      "name": "List Cantons",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/public/cantons?page=1&limit=26",
+          "host": ["{{base_url}}"],
+          "path": ["public", "cantons"],
+          "query": [
+            { "key": "page", "value": "1" },
+            { "key": "limit", "value": "26" },
+            { "key": "search", "value": "", "disabled": true }
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));",
+              "pm.test('Has data array', () => pm.expect(pm.response.json().data).to.be.an('array'));",
+              "pm.test('Has pagination', () => pm.expect(pm.response.json().pagination).to.have.property('total'));",
+              "if (pm.response.json().data.length > 0) {",
+              "  pm.environment.set('canton_id', pm.response.json().data[0]._id);",
+              "}"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Get Canton by ID",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/public/cantons/{{canton_id}}",
+          "host": ["{{base_url}}"],
+          "path": ["public", "cantons", "{{canton_id}}"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));",
+              "pm.test('Has canton data', () => {",
+              "  const data = pm.response.json().data;",
+              "  pm.expect(data).to.have.property('name');",
+              "  pm.expect(data).to.have.property('code');",
+              "});"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Get Canton by Code",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/public/cantons/code/ZH",
+          "host": ["{{base_url}}"],
+          "path": ["public", "cantons", "code", "ZH"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));",
+              "pm.test('Is Zürich', () => pm.expect(pm.response.json().data.code).to.eql('ZH'));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Canton Not Found",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/public/cantons/code/XX",
+          "host": ["{{base_url}}"],
+          "path": ["public", "cantons", "code", "XX"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status 404', () => pm.response.to.have.status(404));"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

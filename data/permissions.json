@@ -1,0 +1,779 @@
+[
+  {
+    "_id": "69a051b9862bb102d344efb6",
+    "name": "*:*",
+    "display_name": {
+      "en": "Full Access",
+      "fr": "Accès complet",
+      "de": "Vollzugriff",
+      "it": "Accesso completo"
+    },
+    "description": {
+      "en": "All permissions on all resources",
+      "fr": "Toutes les permissions sur toutes les ressources",
+      "de": "Alle Berechtigungen für alle Ressourcen",
+      "it": "Tutte le autorizzazioni su tutte le risorse"
+    },
+    "resource": "*",
+    "action": "*",
+    "is_active": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efb7",
+    "name": "users:read",
+    "display_name": {
+      "en": "Read Users",
+      "fr": "Lire les utilisateurs",
+      "de": "Benutzer lesen",
+      "it": "Leggere utenti"
+    },
+    "description": {
+      "en": "View user information",
+      "fr": "Voir les informations des utilisateurs",
+      "de": "Benutzerinformationen anzeigen",
+      "it": "Visualizzare informazioni utente"
+    },
+    "resource": "users",
+    "action": "read",
+    "is_active": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efb8",
+    "name": "users:create",
+    "display_name": {
+      "en": "Create Users",
+      "fr": "Créer des utilisateurs",
+      "de": "Benutzer erstellen",
+      "it": "Creare utenti"
+    },
+    "description": {
+      "en": "Create new user accounts",
+      "fr": "Créer de nouveaux comptes utilisateurs",
+      "de": "Neue Benutzerkonten erstellen",
+      "it": "Creare nuovi account utente"
+    },
+    "resource": "users",
+    "action": "create",
+    "is_active": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efb9",
+    "name": "users:update",
+    "display_name": {
+      "en": "Update Users",
+      "fr": "Modifier les utilisateurs",
+      "de": "Benutzer aktualisieren",
+      "it": "Aggiornare utenti"
+    },
+    "description": {
+      "en": "Update user information",
+      "fr": "Modifier les informations des utilisateurs",
+      "de": "Benutzerinformationen aktualisieren",
+      "it": "Aggiornare informazioni utente"
+    },
+    "resource": "users",
+    "action": "update",
+    "is_active": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efba",
+    "name": "users:delete",
+    "display_name": {
+      "en": "Delete Users",
+      "fr": "Supprimer les utilisateurs",
+      "de": "Benutzer löschen",
+      "it": "Eliminare utenti"
+    },
+    "description": {
+      "en": "Delete user accounts",
+      "fr": "Supprimer des comptes utilisateurs",
+      "de": "Benutzerkonten löschen",
+      "it": "Eliminare account utente"
+    },
+    "resource": "users",
+    "action": "delete",
+    "is_active": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efbb",
+    "name": "products:read",
+    "display_name": {
+      "en": "Read Products",
+      "fr": "Lire les produits",
+      "de": "Produkte lesen",
+      "it": "Leggere prodotti"
+    },
+    "description": {
+      "en": "View products",
+      "fr": "Voir les produits",
+      "de": "Produkte anzeigen",
+      "it": "Visualizzare prodotti"
+    },
+    "resource": "products",
+    "action": "read",
+    "is_active": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efbc",
+    "name": "products:create",
+    "display_name": {
+      "en": "Create Products",
+      "fr": "Créer des produits",
+      "de": "Produkte erstellen",
+      "it": "Creare prodotti"
+    },
+    "description": {
+      "en": "Create new products",
+      "fr": "Créer de nouveaux produits",
+      "de": "Neue Produkte erstellen",
+      "it": "Creare nuovi prodotti"
+    },
+    "resource": "products",
+    "action": "create",
+    "is_active": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efbd",
+    "name": "products:update",
+    "display_name": {
+      "en": "Update Products",
+      "fr": "Modifier les produits",
+      "de": "Produkte aktualisieren",
+      "it": "Aggiornare prodotti"
+    },
+    "description": {
+      "en": "Update product information",
+      "fr": "Modifier les informations des produits",
+      "de": "Produktinformationen aktualisieren",
+      "it": "Aggiornare informazioni prodotto"
+    },
+    "resource": "products",
+    "action": "update",
+    "is_active": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efbe",
+    "name": "products:delete",
+    "display_name": {
+      "en": "Delete Products",
+      "fr": "Supprimer les produits",
+      "de": "Produkte löschen",
+      "it": "Eliminare prodotti"
+    },
+    "description": {
+      "en": "Delete products",
+      "fr": "Supprimer des produits",
+      "de": "Produkte löschen",
+      "it": "Eliminare prodotti"
+    },
+    "resource": "products",
+    "action": "delete",
+    "is_active": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efbf",
+    "name": "categories:read",
+    "display_name": {
+      "en": "Read Categories",
+      "fr": "Lire les catégories",
+      "de": "Kategorien lesen",
+      "it": "Leggere categorie"
+    },
+    "description": {
+      "en": "View categories",
+      "fr": "Voir les catégories",
+      "de": "Kategorien anzeigen",
+      "it": "Visualizzare categorie"
+    },
+    "resource": "categories",
+    "action": "read",
+    "is_active": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efc0",
+    "name": "categories:manage",
+    "display_name": {
+      "en": "Manage Categories",
+      "fr": "Gérer les catégories",
+      "de": "Kategorien verwalten",
+      "it": "Gestire categorie"
+    },
+    "description": {
+      "en": "Create, update and delete categories",
+      "fr": "Créer, modifier et supprimer des catégories",
+      "de": "Kategorien erstellen, aktualisieren und löschen",
+      "it": "Creare, aggiornare ed eliminare categorie"
+    },
+    "resource": "categories",
+    "action": "manage",
+    "is_active": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efc1",
+    "name": "brands:read",
+    "display_name": {
+      "en": "Read Brands",
+      "fr": "Lire les marques",
+      "de": "Marken lesen",
+      "it": "Leggere marchi"
+    },
+    "description": {
+      "en": "View brands",
+      "fr": "Voir les marques",
+      "de": "Marken anzeigen",
+      "it": "Visualizzare marchi"
+    },
+    "resource": "brands",
+    "action": "read",
+    "is_active": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efc2",
+    "name": "brands:manage",
+    "display_name": {
+      "en": "Manage Brands",
+      "fr": "Gérer les marques",
+      "de": "Marken verwalten",
+      "it": "Gestire marchi"
+    },
+    "description": {
+      "en": "Create, update and delete brands",
+      "fr": "Créer, modifier et supprimer des marques",
+      "de": "Marken erstellen, aktualisieren und löschen",
+      "it": "Creare, aggiornare ed eliminare marchi"
+    },
+    "resource": "brands",
+    "action": "manage",
+    "is_active": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efc3",
+    "name": "orders:read",
+    "display_name": {
+      "en": "Read Orders",
+      "fr": "Lire les commandes",
+      "de": "Bestellungen lesen",
+      "it": "Leggere ordini"
+    },
+    "description": {
+      "en": "View orders",
+      "fr": "Voir les commandes",
+      "de": "Bestellungen anzeigen",
+      "it": "Visualizzare ordini"
+    },
+    "resource": "orders",
+    "action": "read",
+    "is_active": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efc4",
+    "name": "orders:create",
+    "display_name": {
+      "en": "Create Orders",
+      "fr": "Créer des commandes",
+      "de": "Bestellungen erstellen",
+      "it": "Creare ordini"
+    },
+    "description": {
+      "en": "Place new orders",
+      "fr": "Passer de nouvelles commandes",
+      "de": "Neue Bestellungen aufgeben",
+      "it": "Effettuare nuovi ordini"
+    },
+    "resource": "orders",
+    "action": "create",
+    "is_active": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efc5",
+    "name": "orders:update",
+    "display_name": {
+      "en": "Update Orders",
+      "fr": "Modifier les commandes",
+      "de": "Bestellungen aktualisieren",
+      "it": "Aggiornare ordini"
+    },
+    "description": {
+      "en": "Update order status",
+      "fr": "Modifier le statut d'une commande",
+      "de": "Bestellstatus aktualisieren",
+      "it": "Aggiornare stato ordine"
+    },
+    "resource": "orders",
+    "action": "update",
+    "is_active": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efc6",
+    "name": "orders:cancel",
+    "display_name": {
+      "en": "Cancel Orders",
+      "fr": "Annuler les commandes",
+      "de": "Bestellungen stornieren",
+      "it": "Annullare ordini"
+    },
+    "description": {
+      "en": "Cancel orders",
+      "fr": "Annuler des commandes",
+      "de": "Bestellungen stornieren",
+      "it": "Annullare ordini"
+    },
+    "resource": "orders",
+    "action": "cancel",
+    "is_active": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efc7",
+    "name": "orders:manage",
+    "display_name": {
+      "en": "Manage All Orders",
+      "fr": "Gérer toutes les commandes",
+      "de": "Alle Bestellungen verwalten",
+      "it": "Gestire tutti gli ordini"
+    },
+    "description": {
+      "en": "Full order management including refunds",
+      "fr": "Gestion complète des commandes y compris les remboursements",
+      "de": "Vollständige Bestellungsverwaltung inklusive Rückerstattungen",
+      "it": "Gestione completa ordini inclusi i rimborsi"
+    },
+    "resource": "orders",
+    "action": "manage",
+    "is_active": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efc8",
+    "name": "reviews:read",
+    "display_name": {
+      "en": "Read Reviews",
+      "fr": "Lire les avis",
+      "de": "Bewertungen lesen",
+      "it": "Leggere recensioni"
+    },
+    "description": {
+      "en": "View reviews",
+      "fr": "Voir les avis",
+      "de": "Bewertungen anzeigen",
+      "it": "Visualizzare recensioni"
+    },
+    "resource": "reviews",
+    "action": "read",
+    "is_active": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efc9",
+    "name": "reviews:create",
+    "display_name": {
+      "en": "Create Reviews",
+      "fr": "Créer des avis",
+      "de": "Bewertungen erstellen",
+      "it": "Creare recensioni"
+    },
+    "description": {
+      "en": "Write product reviews",
+      "fr": "Rédiger des avis sur les produits",
+      "de": "Produktbewertungen schreiben",
+      "it": "Scrivere recensioni prodotti"
+    },
+    "resource": "reviews",
+    "action": "create",
+    "is_active": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efca",
+    "name": "reviews:moderate",
+    "display_name": {
+      "en": "Moderate Reviews",
+      "fr": "Modérer les avis",
+      "de": "Bewertungen moderieren",
+      "it": "Moderare recensioni"
+    },
+    "description": {
+      "en": "Approve or reject reviews",
+      "fr": "Approuver ou rejeter des avis",
+      "de": "Bewertungen genehmigen oder ablehnen",
+      "it": "Approvare o rifiutare recensioni"
+    },
+    "resource": "reviews",
+    "action": "moderate",
+    "is_active": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efcb",
+    "name": "stores:read",
+    "display_name": {
+      "en": "Read Stores",
+      "fr": "Lire les magasins",
+      "de": "Filialen lesen",
+      "it": "Leggere negozi"
+    },
+    "description": {
+      "en": "View store information",
+      "fr": "Voir les informations des magasins",
+      "de": "Filialinformationen anzeigen",
+      "it": "Visualizzare informazioni negozio"
+    },
+    "resource": "stores",
+    "action": "read",
+    "is_active": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efcc",
+    "name": "stores:manage",
+    "display_name": {
+      "en": "Manage Stores",
+      "fr": "Gérer les magasins",
+      "de": "Filialen verwalten",
+      "it": "Gestire negozi"
+    },
+    "description": {
+      "en": "Create, update and delete stores",
+      "fr": "Créer, modifier et supprimer des magasins",
+      "de": "Filialen erstellen, aktualisieren und löschen",
+      "it": "Creare, aggiornare ed eliminare negozi"
+    },
+    "resource": "stores",
+    "action": "manage",
+    "is_active": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efcd",
+    "name": "wishlists:read",
+    "display_name": {
+      "en": "Read Wishlists",
+      "fr": "Lire les listes de souhaits",
+      "de": "Wunschlisten lesen",
+      "it": "Leggere liste desideri"
+    },
+    "description": {
+      "en": "View wishlists",
+      "fr": "Voir les listes de souhaits",
+      "de": "Wunschlisten anzeigen",
+      "it": "Visualizzare liste desideri"
+    },
+    "resource": "wishlists",
+    "action": "read",
+    "is_active": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efce",
+    "name": "wishlists:manage",
+    "display_name": {
+      "en": "Manage Wishlists",
+      "fr": "Gérer les listes de souhaits",
+      "de": "Wunschlisten verwalten",
+      "it": "Gestire liste desideri"
+    },
+    "description": {
+      "en": "Add and remove wishlist items",
+      "fr": "Ajouter et supprimer des articles de la liste de souhaits",
+      "de": "Artikel zur Wunschliste hinzufügen und entfernen",
+      "it": "Aggiungere e rimuovere articoli dalla lista desideri"
+    },
+    "resource": "wishlists",
+    "action": "manage",
+    "is_active": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efcf",
+    "name": "addresses:read",
+    "display_name": {
+      "en": "Read Addresses",
+      "fr": "Lire les adresses",
+      "de": "Adressen lesen",
+      "it": "Leggere indirizzi"
+    },
+    "description": {
+      "en": "View addresses",
+      "fr": "Voir les adresses",
+      "de": "Adressen anzeigen",
+      "it": "Visualizzare indirizzi"
+    },
+    "resource": "addresses",
+    "action": "read",
+    "is_active": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efd0",
+    "name": "addresses:manage",
+    "display_name": {
+      "en": "Manage Addresses",
+      "fr": "Gérer les adresses",
+      "de": "Adressen verwalten",
+      "it": "Gestire indirizzi"
+    },
+    "description": {
+      "en": "Create, update and delete addresses",
+      "fr": "Créer, modifier et supprimer des adresses",
+      "de": "Adressen erstellen, aktualisieren und löschen",
+      "it": "Creare, aggiornare ed eliminare indirizzi"
+    },
+    "resource": "addresses",
+    "action": "manage",
+    "is_active": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efd1",
+    "name": "promotions:read",
+    "display_name": {
+      "en": "Read Promotions",
+      "fr": "Lire les promotions",
+      "de": "Aktionen lesen",
+      "it": "Leggere promozioni"
+    },
+    "description": {
+      "en": "View promotions and coupons",
+      "fr": "Voir les promotions et coupons",
+      "de": "Aktionen und Gutscheine anzeigen",
+      "it": "Visualizzare promozioni e buoni"
+    },
+    "resource": "promotions",
+    "action": "read",
+    "is_active": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efd2",
+    "name": "promotions:manage",
+    "display_name": {
+      "en": "Manage Promotions",
+      "fr": "Gérer les promotions",
+      "de": "Aktionen verwalten",
+      "it": "Gestire promozioni"
+    },
+    "description": {
+      "en": "Create, update and delete promotions",
+      "fr": "Créer, modifier et supprimer des promotions",
+      "de": "Aktionen erstellen, aktualisieren und löschen",
+      "it": "Creare, aggiornare ed eliminare promozioni"
+    },
+    "resource": "promotions",
+    "action": "manage",
+    "is_active": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efd3",
+    "name": "analytics:read",
+    "display_name": {
+      "en": "Read Analytics",
+      "fr": "Lire les analyses",
+      "de": "Analysen lesen",
+      "it": "Leggere analitiche"
+    },
+    "description": {
+      "en": "View analytics dashboards",
+      "fr": "Voir les tableaux de bord analytiques",
+      "de": "Analyse-Dashboards anzeigen",
+      "it": "Visualizzare dashboard analitiche"
+    },
+    "resource": "analytics",
+    "action": "read",
+    "is_active": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efd4",
+    "name": "analytics:export",
+    "display_name": {
+      "en": "Export Analytics",
+      "fr": "Exporter les analyses",
+      "de": "Analysen exportieren",
+      "it": "Esportare analitiche"
+    },
+    "description": {
+      "en": "Export analytics data",
+      "fr": "Exporter les données analytiques",
+      "de": "Analysedaten exportieren",
+      "it": "Esportare dati analitici"
+    },
+    "resource": "analytics",
+    "action": "export",
+    "is_active": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efd5",
+    "name": "roles:read",
+    "display_name": {
+      "en": "Read Roles",
+      "fr": "Lire les rôles",
+      "de": "Rollen lesen",
+      "it": "Leggere ruoli"
+    },
+    "description": {
+      "en": "View roles",
+      "fr": "Voir les rôles",
+      "de": "Rollen anzeigen",
+      "it": "Visualizzare ruoli"
+    },
+    "resource": "roles",
+    "action": "read",
+    "is_active": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efd6",
+    "name": "roles:manage",
+    "display_name": {
+      "en": "Manage Roles",
+      "fr": "Gérer les rôles",
+      "de": "Rollen verwalten",
+      "it": "Gestire ruoli"
+    },
+    "description": {
+      "en": "Create, update and delete roles",
+      "fr": "Créer, modifier et supprimer des rôles",
+      "de": "Rollen erstellen, aktualisieren und löschen",
+      "it": "Creare, aggiornare ed eliminare ruoli"
+    },
+    "resource": "roles",
+    "action": "manage",
+    "is_active": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efd7",
+    "name": "permissions:read",
+    "display_name": {
+      "en": "Read Permissions",
+      "fr": "Lire les permissions",
+      "de": "Berechtigungen lesen",
+      "it": "Leggere autorizzazioni"
+    },
+    "description": {
+      "en": "View permissions",
+      "fr": "Voir les permissions",
+      "de": "Berechtigungen anzeigen",
+      "it": "Visualizzare autorizzazioni"
+    },
+    "resource": "permissions",
+    "action": "read",
+    "is_active": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efd8",
+    "name": "permissions:manage",
+    "display_name": {
+      "en": "Manage Permissions",
+      "fr": "Gérer les permissions",
+      "de": "Berechtigungen verwalten",
+      "it": "Gestire autorizzazioni"
+    },
+    "description": {
+      "en": "Assign and revoke permissions",
+      "fr": "Attribuer et révoquer des permissions",
+      "de": "Berechtigungen zuweisen und entziehen",
+      "it": "Assegnare e revocare autorizzazioni"
+    },
+    "resource": "permissions",
+    "action": "manage",
+    "is_active": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efd9",
+    "name": "settings:read",
+    "display_name": {
+      "en": "Read Settings",
+      "fr": "Lire les paramètres",
+      "de": "Einstellungen lesen",
+      "it": "Leggere impostazioni"
+    },
+    "description": {
+      "en": "View platform settings",
+      "fr": "Voir les paramètres de la plateforme",
+      "de": "Plattformeinstellungen anzeigen",
+      "it": "Visualizzare impostazioni piattaforma"
+    },
+    "resource": "settings",
+    "action": "read",
+    "is_active": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efda",
+    "name": "settings:manage",
+    "display_name": {
+      "en": "Manage Settings",
+      "fr": "Gérer les paramètres",
+      "de": "Einstellungen verwalten",
+      "it": "Gestire impostazioni"
+    },
+    "description": {
+      "en": "Update platform settings",
+      "fr": "Modifier les paramètres de la plateforme",
+      "de": "Plattformeinstellungen aktualisieren",
+      "it": "Aggiornare impostazioni piattaforma"
+    },
+    "resource": "settings",
+    "action": "manage",
+    "is_active": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  }
+]

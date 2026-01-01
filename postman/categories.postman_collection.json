@@ -1,0 +1,166 @@
+{
+  "info": {
+    "name": "Categories Module",
+    "description": "Product category tree with 1,126 categories across 5 levels. Supports tree view, breadcrumb, and children listing",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "base_url", "value": "http://localhost:4010/api/v1" }
+  ],
+  "item": [
+    {
+      "name": "List Categories (Flat)",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/public/categories?page=1&limit=20",
+          "host": ["{{base_url}}"],
+          "path": ["public", "categories"],
+          "query": [
+            { "key": "page", "value": "1" },
+            { "key": "limit", "value": "20" },
+            { "key": "level", "value": "", "disabled": true },
+            { "key": "parent_id", "value": "", "disabled": true },
+            { "key": "format", "value": "", "disabled": true },
+            { "key": "search", "value": "", "disabled": true }
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));",
+              "pm.test('Has data array', () => pm.expect(pm.response.json().data).to.be.an('array'));",
+              "if (pm.response.json().data.length > 0) {",
+              "  pm.environment.set('category_id', pm.response.json().data[0]._id);",
+              "  pm.environment.set('category_slug', pm.response.json().data[0].slug);",
+              "}"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "List Categories (Tree)",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/public/categories?format=tree",
+          "host": ["{{base_url}}"],
+          "path": ["public", "categories"],
+          "query": [
+            { "key": "format", "value": "tree" }
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));",
+              "pm.test('Has nested children', () => {",
+              "  const data = pm.response.json().data;",
+              "  pm.expect(data).to.be.an('array');",
+              "});"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Get Category by ID",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/public/categories/{{category_id}}",
+          "host": ["{{base_url}}"],
+          "path": ["public", "categories", "{{category_id}}"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));",
+              "pm.test('Has category data', () => {",
+              "  const data = pm.response.json().data;",
+              "  pm.expect(data).to.have.property('name');",
+              "  pm.expect(data).to.have.property('slug');",
+              "  pm.expect(data).to.have.property('level');",
+              "});"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Get Category by Slug",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/public/categories/slug/{{category_slug}}",
+          "host": ["{{base_url}}"],
+          "path": ["public", "categories", "slug", "{{category_slug}}"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Get Category Children",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/public/categories/{{category_id}}/children",
+          "host": ["{{base_url}}"],
+          "path": ["public", "categories", "{{category_id}}", "children"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));",
+              "pm.test('Has data array', () => pm.expect(pm.response.json().data).to.be.an('array'));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Get Category Breadcrumb",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/public/categories/{{category_id}}/breadcrumb",
+          "host": ["{{base_url}}"],
+          "path": ["public", "categories", "{{category_id}}", "breadcrumb"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));",
+              "pm.test('Has breadcrumb array', () => pm.expect(pm.response.json().data).to.be.an('array'));"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

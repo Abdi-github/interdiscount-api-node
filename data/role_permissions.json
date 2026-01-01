@@ -1,0 +1,410 @@
+[
+  {
+    "_id": "69a051b9862bb102d344efdb",
+    "role_id": "69a051b9862bb102d344efb0",
+    "permission_id": "69a051b9862bb102d344efb6",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efdc",
+    "role_id": "69a051b9862bb102d344efb1",
+    "permission_id": "69a051b9862bb102d344efb7",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efdd",
+    "role_id": "69a051b9862bb102d344efb1",
+    "permission_id": "69a051b9862bb102d344efb8",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efde",
+    "role_id": "69a051b9862bb102d344efb1",
+    "permission_id": "69a051b9862bb102d344efb9",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efdf",
+    "role_id": "69a051b9862bb102d344efb1",
+    "permission_id": "69a051b9862bb102d344efba",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efe0",
+    "role_id": "69a051b9862bb102d344efb1",
+    "permission_id": "69a051b9862bb102d344efbb",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efe1",
+    "role_id": "69a051b9862bb102d344efb1",
+    "permission_id": "69a051b9862bb102d344efbc",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efe2",
+    "role_id": "69a051b9862bb102d344efb1",
+    "permission_id": "69a051b9862bb102d344efbd",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efe3",
+    "role_id": "69a051b9862bb102d344efb1",
+    "permission_id": "69a051b9862bb102d344efbe",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efe4",
+    "role_id": "69a051b9862bb102d344efb1",
+    "permission_id": "69a051b9862bb102d344efbf",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efe5",
+    "role_id": "69a051b9862bb102d344efb1",
+    "permission_id": "69a051b9862bb102d344efc0",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efe6",
+    "role_id": "69a051b9862bb102d344efb1",
+    "permission_id": "69a051b9862bb102d344efc1",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efe7",
+    "role_id": "69a051b9862bb102d344efb1",
+    "permission_id": "69a051b9862bb102d344efc2",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efe8",
+    "role_id": "69a051b9862bb102d344efb1",
+    "permission_id": "69a051b9862bb102d344efc3",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efe9",
+    "role_id": "69a051b9862bb102d344efb1",
+    "permission_id": "69a051b9862bb102d344efc5",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efea",
+    "role_id": "69a051b9862bb102d344efb1",
+    "permission_id": "69a051b9862bb102d344efc6",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efeb",
+    "role_id": "69a051b9862bb102d344efb1",
+    "permission_id": "69a051b9862bb102d344efc7",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efec",
+    "role_id": "69a051b9862bb102d344efb1",
+    "permission_id": "69a051b9862bb102d344efc8",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efed",
+    "role_id": "69a051b9862bb102d344efb1",
+    "permission_id": "69a051b9862bb102d344efca",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efee",
+    "role_id": "69a051b9862bb102d344efb1",
+    "permission_id": "69a051b9862bb102d344efcb",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efef",
+    "role_id": "69a051b9862bb102d344efb1",
+    "permission_id": "69a051b9862bb102d344efcc",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344eff0",
+    "role_id": "69a051b9862bb102d344efb1",
+    "permission_id": "69a051b9862bb102d344efd1",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344eff1",
+    "role_id": "69a051b9862bb102d344efb1",
+    "permission_id": "69a051b9862bb102d344efd2",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344eff2",
+    "role_id": "69a051b9862bb102d344efb1",
+    "permission_id": "69a051b9862bb102d344efd3",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344eff3",
+    "role_id": "69a051b9862bb102d344efb1",
+    "permission_id": "69a051b9862bb102d344efd4",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344eff4",
+    "role_id": "69a051b9862bb102d344efb1",
+    "permission_id": "69a051b9862bb102d344efd5",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344eff5",
+    "role_id": "69a051b9862bb102d344efb1",
+    "permission_id": "69a051b9862bb102d344efd6",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344eff6",
+    "role_id": "69a051b9862bb102d344efb1",
+    "permission_id": "69a051b9862bb102d344efd7",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344eff7",
+    "role_id": "69a051b9862bb102d344efb1",
+    "permission_id": "69a051b9862bb102d344efd8",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344eff8",
+    "role_id": "69a051b9862bb102d344efb1",
+    "permission_id": "69a051b9862bb102d344efd9",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344eff9",
+    "role_id": "69a051b9862bb102d344efb1",
+    "permission_id": "69a051b9862bb102d344efda",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344effa",
+    "role_id": "69a051b9862bb102d344efb2",
+    "permission_id": "69a051b9862bb102d344efbb",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344effb",
+    "role_id": "69a051b9862bb102d344efb2",
+    "permission_id": "69a051b9862bb102d344efbf",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344effc",
+    "role_id": "69a051b9862bb102d344efb2",
+    "permission_id": "69a051b9862bb102d344efc1",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344effd",
+    "role_id": "69a051b9862bb102d344efb2",
+    "permission_id": "69a051b9862bb102d344efc3",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344effe",
+    "role_id": "69a051b9862bb102d344efb2",
+    "permission_id": "69a051b9862bb102d344efc5",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efff",
+    "role_id": "69a051b9862bb102d344efb2",
+    "permission_id": "69a051b9862bb102d344efc8",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344f000",
+    "role_id": "69a051b9862bb102d344efb2",
+    "permission_id": "69a051b9862bb102d344efcb",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344f001",
+    "role_id": "69a051b9862bb102d344efb2",
+    "permission_id": "69a051b9862bb102d344efd1",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344f002",
+    "role_id": "69a051b9862bb102d344efb2",
+    "permission_id": "69a051b9862bb102d344efd3",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344f003",
+    "role_id": "69a051b9862bb102d344efb3",
+    "permission_id": "69a051b9862bb102d344efbb",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344f004",
+    "role_id": "69a051b9862bb102d344efb3",
+    "permission_id": "69a051b9862bb102d344efbf",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344f005",
+    "role_id": "69a051b9862bb102d344efb3",
+    "permission_id": "69a051b9862bb102d344efc3",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344f006",
+    "role_id": "69a051b9862bb102d344efb3",
+    "permission_id": "69a051b9862bb102d344efc5",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344f007",
+    "role_id": "69a051b9862bb102d344efb3",
+    "permission_id": "69a051b9862bb102d344efcb",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344f008",
+    "role_id": "69a051b9862bb102d344efb4",
+    "permission_id": "69a051b9862bb102d344efb7",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344f009",
+    "role_id": "69a051b9862bb102d344efb4",
+    "permission_id": "69a051b9862bb102d344efb9",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344f00a",
+    "role_id": "69a051b9862bb102d344efb4",
+    "permission_id": "69a051b9862bb102d344efbb",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344f00b",
+    "role_id": "69a051b9862bb102d344efb4",
+    "permission_id": "69a051b9862bb102d344efc3",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344f00c",
+    "role_id": "69a051b9862bb102d344efb4",
+    "permission_id": "69a051b9862bb102d344efc5",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344f00d",
+    "role_id": "69a051b9862bb102d344efb4",
+    "permission_id": "69a051b9862bb102d344efc6",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344f00e",
+    "role_id": "69a051b9862bb102d344efb4",
+    "permission_id": "69a051b9862bb102d344efc8",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344f00f",
+    "role_id": "69a051b9862bb102d344efb4",
+    "permission_id": "69a051b9862bb102d344efca",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344f010",
+    "role_id": "69a051b9862bb102d344efb4",
+    "permission_id": "69a051b9862bb102d344efcb",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344f011",
+    "role_id": "69a051b9862bb102d344efb5",
+    "permission_id": "69a051b9862bb102d344efbb",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344f012",
+    "role_id": "69a051b9862bb102d344efb5",
+    "permission_id": "69a051b9862bb102d344efbf",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344f013",
+    "role_id": "69a051b9862bb102d344efb5",
+    "permission_id": "69a051b9862bb102d344efc1",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344f014",
+    "role_id": "69a051b9862bb102d344efb5",
+    "permission_id": "69a051b9862bb102d344efc3",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344f015",
+    "role_id": "69a051b9862bb102d344efb5",
+    "permission_id": "69a051b9862bb102d344efc4",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344f016",
+    "role_id": "69a051b9862bb102d344efb5",
+    "permission_id": "69a051b9862bb102d344efc6",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344f017",
+    "role_id": "69a051b9862bb102d344efb5",
+    "permission_id": "69a051b9862bb102d344efc8",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344f018",
+    "role_id": "69a051b9862bb102d344efb5",
+    "permission_id": "69a051b9862bb102d344efc9",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344f019",
+    "role_id": "69a051b9862bb102d344efb5",
+    "permission_id": "69a051b9862bb102d344efcb",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344f01a",
+    "role_id": "69a051b9862bb102d344efb5",
+    "permission_id": "69a051b9862bb102d344efcd",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344f01b",
+    "role_id": "69a051b9862bb102d344efb5",
+    "permission_id": "69a051b9862bb102d344efce",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344f01c",
+    "role_id": "69a051b9862bb102d344efb5",
+    "permission_id": "69a051b9862bb102d344efcf",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344f01d",
+    "role_id": "69a051b9862bb102d344efb5",
+    "permission_id": "69a051b9862bb102d344efd0",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344f01e",
+    "role_id": "69a051b9862bb102d344efb5",
+    "permission_id": "69a051b9862bb102d344efd1",
+    "created_at": "2025-01-01T00:00:00.000Z"
+  }
+]

@@ -1,0 +1,1356 @@
+{
+  "info": {
+    "name": "Admin Module",
+    "description": "Admin endpoints: dashboard, user/product/category/brand/store/order/review/coupon/location/rbac management, and stock transfers. Requires admin or super_admin role",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "base_url", "value": "http://localhost:4010/api/v1" }
+  ],
+  "item": [
+    {
+      "name": "Auth - Login as Admin",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "const res = pm.response.json();",
+              "if (res.success) {",
+              "  pm.environment.set('admin_token', res.data.tokens.access_token);",
+              "}",
+              "pm.test('Login successful', () => pm.response.to.have.status(200));"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"admin.de@interdiscount-clone.ch\",\n  \"password\": \"Password123!\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/public/auth/login",
+          "host": ["{{base_url}}"],
+          "path": ["public", "auth", "login"]
+        }
+      }
+    },
+    {
+      "name": "Dashboard",
+      "item": [
+        {
+          "name": "Platform Stats",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{admin_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/admin/dashboard/stats",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "dashboard", "stats"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Platform Revenue",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{admin_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/admin/dashboard/revenue?period=monthly",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "dashboard", "revenue"],
+              "query": [
+                { "key": "period", "value": "monthly" },
+                { "key": "from", "value": "", "disabled": true },
+                { "key": "to", "value": "", "disabled": true }
+              ]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Recent Orders",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{admin_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/admin/dashboard/recent-orders?limit=10",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "dashboard", "recent-orders"],
+              "query": [{ "key": "limit", "value": "10" }]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        }
+      ]
+    },
+    {
+      "name": "User Management",
+      "item": [
+        {
+          "name": "List Users",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{admin_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/admin/users?page=1&limit=20",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "users"],
+              "query": [
+                { "key": "page", "value": "1" },
+                { "key": "limit", "value": "20" },
+                { "key": "user_type", "value": "", "disabled": true },
+                { "key": "is_active", "value": "", "disabled": true },
+                { "key": "search", "value": "", "disabled": true }
+              ]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));",
+            "pm.test('Has data & pagination', () => {",
+            "  pm.expect(pm.response.json().data).to.be.an('array');",
+            "  pm.expect(pm.response.json().pagination).to.be.an('object');",
+            "});",
+            "if (pm.response.json().data.length > 0) {",
+            "  pm.environment.set('managed_user_id', pm.response.json().data[0]._id);",
+            "}"
+          ]}}]
+        },
+        {
+          "name": "Get User Detail",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{admin_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/admin/users/69a051b9862bb102d344f05f",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "users", "69a051b9862bb102d344f05f"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));",
+            "pm.test('Has user data', () => pm.expect(pm.response.json().data).to.have.property('email'));"
+          ]}}]
+        },
+        {
+          "name": "Update User",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{admin_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"first_name\": \"Updated\",\n  \"last_name\": \"Customer\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/admin/users/{{managed_user_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "users", "{{managed_user_id}}"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Update User Status",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{admin_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"is_active\": true\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/admin/users/{{managed_user_id}}/status",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "users", "{{managed_user_id}}", "status"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Get User Roles",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{admin_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/admin/users/{{managed_user_id}}/roles",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "users", "{{managed_user_id}}", "roles"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Assign User Roles",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{admin_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"role_ids\": [\"69a051b9862bb102d344efb0\"]\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/admin/users/{{managed_user_id}}/roles",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "users", "{{managed_user_id}}", "roles"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        }
+      ]
+    },
+    {
+      "name": "Product Management",
+      "item": [
+        {
+          "name": "List Products (Admin)",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{admin_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/admin/products?page=1&limit=20",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "products"],
+              "query": [
+                { "key": "page", "value": "1" },
+                { "key": "limit", "value": "20" },
+                { "key": "status", "value": "", "disabled": true },
+                { "key": "brand", "value": "", "disabled": true },
+                { "key": "category", "value": "", "disabled": true },
+                { "key": "search", "value": "", "disabled": true }
+              ]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Create Product",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{admin_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Test Product (Admin Created)\",\n  \"name_short\": \"Test Product\",\n  \"slug\": \"test-product-admin-created\",\n  \"code\": \"prod_test_admin\",\n  \"displayed_code\": \"900099001\",\n  \"brand_id\": \"69a079537808ec1bb79171f4\",\n  \"category_id\": \"69a079537808ec1bb7916d8e\",\n  \"price\": 199.00,\n  \"original_price\": 249.00,\n  \"currency\": \"CHF\",\n  \"specification\": { \"Color\": \"Black\", \"Weight\": \"250g\" },\n  \"availability_state\": \"AVAILABLE\",\n  \"delivery_days\": 3,\n  \"in_store_possible\": true,\n  \"is_orderable\": true,\n  \"is_active\": true,\n  \"status\": \"draft\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/admin/products",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "products"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 201', () => pm.response.to.have.status(201));",
+            "if (pm.response.json().data) {",
+            "  pm.environment.set('admin_product_id', pm.response.json().data._id);",
+            "}"
+          ]}}]
+        },
+        {
+          "name": "Get Product (Admin)",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{admin_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/admin/products/69a079537808ec1bb7917447",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "products", "69a079537808ec1bb7917447"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Update Product",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{admin_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"price\": 179.00,\n  \"promo_labels\": [\"Aktion\"]\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/admin/products/{{admin_product_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "products", "{{admin_product_id}}"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Change Product Status",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{admin_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"active\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/admin/products/{{admin_product_id}}/status",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "products", "{{admin_product_id}}", "status"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Upload Product Images",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Authorization", "value": "Bearer {{admin_token}}" }],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "images", "type": "file", "src": "", "description": "Select product image file" },
+                { "key": "alt", "value": "Test Product Image", "type": "text" }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/admin/products/{{admin_product_id}}/images",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "products", "{{admin_product_id}}", "images"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200 or 201', () => {",
+            "  pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+            "});"
+          ]}}]
+        },
+        {
+          "name": "Delete Product Image",
+          "request": {
+            "method": "DELETE",
+            "header": [{ "key": "Authorization", "value": "Bearer {{admin_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/admin/products/{{admin_product_id}}/images/placeholder_image_id",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "products", "{{admin_product_id}}", "images", "placeholder_image_id"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200 or 404', () => {",
+            "  pm.expect(pm.response.code).to.be.oneOf([200, 404]);",
+            "});"
+          ]}}]
+        }
+      ]
+    },
+    {
+      "name": "Category Management",
+      "item": [
+        {
+          "name": "List Categories (Admin)",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{admin_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/admin/categories?page=1&limit=50",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "categories"],
+              "query": [
+                { "key": "page", "value": "1" },
+                { "key": "limit", "value": "50" },
+                { "key": "format", "value": "flat" },
+                { "key": "level", "value": "", "disabled": true },
+                { "key": "parent_id", "value": "", "disabled": true }
+              ]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Create Category",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{admin_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Test Category\",\n  \"slug\": \"test-category-admin\",\n  \"category_id\": \"cat_test_admin\",\n  \"level\": 1,\n  \"parent_id\": \"69a079537808ec1bb7916d8e\",\n  \"sort_order\": 99,\n  \"is_active\": true\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/admin/categories",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "categories"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 201', () => pm.response.to.have.status(201));",
+            "if (pm.response.json().data) pm.environment.set('admin_category_id', pm.response.json().data._id);"
+          ]}}]
+        },
+        {
+          "name": "Update Category",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{admin_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Updated Test Category\",\n  \"sort_order\": 50\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/admin/categories/{{admin_category_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "categories", "{{admin_category_id}}"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Reorder Categories",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{admin_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"items\": [\n    { \"id\": \"69a079537808ec1bb7916d8e\", \"sort_order\": 1 }\n  ]\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/admin/categories/reorder",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "categories", "reorder"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Delete Category",
+          "request": {
+            "method": "DELETE",
+            "header": [{ "key": "Authorization", "value": "Bearer {{admin_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/admin/categories/{{admin_category_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "categories", "{{admin_category_id}}"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200 or 204', () => pm.expect(pm.response.code).to.be.oneOf([200, 204]));"
+          ]}}]
+        }
+      ]
+    },
+    {
+      "name": "Brand Management",
+      "item": [
+        {
+          "name": "List Brands (Admin)",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{admin_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/admin/brands?page=1&limit=20",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "brands"],
+              "query": [
+                { "key": "page", "value": "1" },
+                { "key": "limit", "value": "20" },
+                { "key": "search", "value": "", "disabled": true }
+              ]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Create Brand",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{admin_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"TestBrand\",\n  \"slug\": \"testbrand\",\n  \"is_active\": true\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/admin/brands",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "brands"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 201', () => pm.response.to.have.status(201));",
+            "if (pm.response.json().data) pm.environment.set('admin_brand_id', pm.response.json().data._id);"
+          ]}}]
+        },
+        {
+          "name": "Update Brand",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{admin_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"TestBrand Updated\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/admin/brands/{{admin_brand_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "brands", "{{admin_brand_id}}"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Delete Brand",
+          "request": {
+            "method": "DELETE",
+            "header": [{ "key": "Authorization", "value": "Bearer {{admin_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/admin/brands/{{admin_brand_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "brands", "{{admin_brand_id}}"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200 or 204', () => pm.expect(pm.response.code).to.be.oneOf([200, 204]));"
+          ]}}]
+        }
+      ]
+    },
+    {
+      "name": "Store Management",
+      "item": [
+        {
+          "name": "List Stores (Admin)",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{admin_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/admin/stores?page=1&limit=20",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "stores"],
+              "query": [
+                { "key": "page", "value": "1" },
+                { "key": "limit", "value": "20" },
+                { "key": "canton", "value": "", "disabled": true },
+                { "key": "format", "value": "", "disabled": true },
+                { "key": "is_active", "value": "", "disabled": true }
+              ]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Create Store",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{admin_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Interdiscount Test Store\",\n  \"slug\": \"test-store-admin\",\n  \"store_id\": \"store_test_admin\",\n  \"street\": \"Teststrasse\",\n  \"street_number\": \"1\",\n  \"postal_code\": \"8001\",\n  \"city_id\": \"69a079537808ec1bb7917320\",\n  \"canton_id\": \"69a079537808ec1bb7916d74\",\n  \"phone\": \"+41 44 111 22 33\",\n  \"email\": \"test-store@interdiscount-clone.ch\",\n  \"latitude\": 47.3769,\n  \"longitude\": 8.5417,\n  \"format\": \"standard\",\n  \"opening_hours\": {\n    \"monday\": { \"open\": \"09:00\", \"close\": \"18:30\" },\n    \"tuesday\": { \"open\": \"09:00\", \"close\": \"18:30\" },\n    \"wednesday\": { \"open\": \"09:00\", \"close\": \"18:30\" },\n    \"thursday\": { \"open\": \"09:00\", \"close\": \"21:00\" },\n    \"friday\": { \"open\": \"09:00\", \"close\": \"18:30\" },\n    \"saturday\": { \"open\": \"09:00\", \"close\": \"17:00\" },\n    \"sunday\": null\n  },\n  \"is_active\": true\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/admin/stores",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "stores"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 201', () => pm.response.to.have.status(201));",
+            "if (pm.response.json().data) pm.environment.set('admin_store_id', pm.response.json().data._id);"
+          ]}}]
+        },
+        {
+          "name": "Get Store Detail (Admin)",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{admin_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/admin/stores/69a079537808ec1bb79173a2",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "stores", "69a079537808ec1bb79173a2"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Update Store",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{admin_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"phone\": \"+41 44 999 88 77\",\n  \"remarks\": \"Updated by admin\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/admin/stores/{{admin_store_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "stores", "{{admin_store_id}}"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Update Store Status",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{admin_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"is_active\": true\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/admin/stores/{{admin_store_id}}/status",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "stores", "{{admin_store_id}}", "status"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "View Store Inventory",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{admin_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/admin/stores/69a079537808ec1bb79173a2/inventory?page=1&limit=20",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "stores", "69a079537808ec1bb79173a2", "inventory"],
+              "query": [
+                { "key": "page", "value": "1" },
+                { "key": "limit", "value": "20" }
+              ]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "List Store Staff",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{admin_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/admin/stores/69a079537808ec1bb79173a3/staff",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "stores", "69a079537808ec1bb79173a3", "staff"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Assign Staff to Store",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{admin_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"user_ids\": [\"69a051b9862bb102d344f03f\"]\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/admin/stores/69a079537808ec1bb79173a3/staff",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "stores", "69a079537808ec1bb79173a3", "staff"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Store Analytics",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{admin_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/admin/stores/69a079537808ec1bb79173a3/analytics",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "stores", "69a079537808ec1bb79173a3", "analytics"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        }
+      ]
+    },
+    {
+      "name": "Stock Transfer Management",
+      "item": [
+        {
+          "name": "List All Transfers",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{admin_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/admin/transfers?page=1&limit=20",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "transfers"],
+              "query": [
+                { "key": "page", "value": "1" },
+                { "key": "limit", "value": "20" },
+                { "key": "status", "value": "", "disabled": true }
+              ]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));",
+            "if (pm.response.json().data && pm.response.json().data.length > 0) {",
+            "  pm.environment.set('admin_transfer_id', pm.response.json().data[0]._id);",
+            "}"
+          ]}}]
+        },
+        {
+          "name": "Get Transfer Detail",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{admin_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/admin/transfers/{{admin_transfer_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "transfers", "{{admin_transfer_id}}"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Approve Transfer",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{admin_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"approved\": true,\n  \"notes\": \"Approved by admin\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/admin/transfers/{{admin_transfer_id}}/approve",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "transfers", "{{admin_transfer_id}}", "approve"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Transfer Analytics",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{admin_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/admin/transfers/analytics",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "transfers", "analytics"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        }
+      ]
+    },
+    {
+      "name": "Order Management",
+      "item": [
+        {
+          "name": "List All Orders",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{admin_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/admin/orders?page=1&limit=20",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "orders"],
+              "query": [
+                { "key": "page", "value": "1" },
+                { "key": "limit", "value": "20" },
+                { "key": "status", "value": "", "disabled": true },
+                { "key": "payment_status", "value": "", "disabled": true },
+                { "key": "is_store_pickup", "value": "", "disabled": true },
+                { "key": "sort", "value": "", "disabled": true }
+              ]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));",
+            "if (pm.response.json().data && pm.response.json().data.length > 0) {",
+            "  pm.environment.set('admin_order_id', pm.response.json().data[0]._id);",
+            "}"
+          ]}}]
+        },
+        {
+          "name": "Get Order Detail (Admin)",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{admin_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/admin/orders/{{admin_order_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "orders", "{{admin_order_id}}"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Update Order Status",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{admin_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"CONFIRMED\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/admin/orders/{{admin_order_id}}/status",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "orders", "{{admin_order_id}}", "status"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Export Orders (CSV)",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{admin_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/admin/orders/export?format=csv",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "orders", "export"],
+              "query": [
+                { "key": "format", "value": "csv" },
+                { "key": "status", "value": "", "disabled": true },
+                { "key": "from", "value": "", "disabled": true },
+                { "key": "to", "value": "", "disabled": true }
+              ]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        }
+      ]
+    },
+    {
+      "name": "Review Management",
+      "item": [
+        {
+          "name": "List All Reviews",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{admin_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/admin/reviews?page=1&limit=20",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "reviews"],
+              "query": [
+                { "key": "page", "value": "1" },
+                { "key": "limit", "value": "20" },
+                { "key": "is_approved", "value": "", "disabled": true },
+                { "key": "rating", "value": "", "disabled": true }
+              ]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));",
+            "if (pm.response.json().data && pm.response.json().data.length > 0) {",
+            "  pm.environment.set('admin_review_id', pm.response.json().data[0]._id);",
+            "}"
+          ]}}]
+        },
+        {
+          "name": "Get Review Detail (Admin)",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{admin_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/admin/reviews/{{admin_review_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "reviews", "{{admin_review_id}}"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Approve Review",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{admin_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"is_approved\": true\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/admin/reviews/{{admin_review_id}}/approve",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "reviews", "{{admin_review_id}}", "approve"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Delete Review (Admin)",
+          "request": {
+            "method": "DELETE",
+            "header": [{ "key": "Authorization", "value": "Bearer {{admin_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/admin/reviews/{{admin_review_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "reviews", "{{admin_review_id}}"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200 or 204', () => pm.expect(pm.response.code).to.be.oneOf([200, 204]));"
+          ]}}]
+        }
+      ]
+    },
+    {
+      "name": "Coupon Management",
+      "item": [
+        {
+          "name": "List Coupons (Admin)",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{admin_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/admin/coupons?page=1&limit=20",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "coupons"],
+              "query": [
+                { "key": "page", "value": "1" },
+                { "key": "limit", "value": "20" },
+                { "key": "is_active", "value": "", "disabled": true }
+              ]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));",
+            "if (pm.response.json().data && pm.response.json().data.length > 0) {",
+            "  pm.environment.set('admin_coupon_id', pm.response.json().data[0]._id);",
+            "}"
+          ]}}]
+        },
+        {
+          "name": "Create Coupon",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{admin_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"code\": \"SUMMER25\",\n  \"description\": \"Summer sale 25% off\",\n  \"discount_type\": \"percentage\",\n  \"discount_value\": 25,\n  \"minimum_order\": 100,\n  \"max_uses\": 500,\n  \"valid_from\": \"2026-06-01T00:00:00.000Z\",\n  \"valid_until\": \"2026-08-31T23:59:59.000Z\",\n  \"is_active\": true\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/admin/coupons",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "coupons"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 201', () => pm.response.to.have.status(201));",
+            "if (pm.response.json().data) pm.environment.set('admin_new_coupon_id', pm.response.json().data._id);"
+          ]}}]
+        },
+        {
+          "name": "Get Coupon Detail",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{admin_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/admin/coupons/{{admin_new_coupon_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "coupons", "{{admin_new_coupon_id}}"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Update Coupon",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{admin_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"discount_value\": 30,\n  \"max_uses\": 1000\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/admin/coupons/{{admin_new_coupon_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "coupons", "{{admin_new_coupon_id}}"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Delete Coupon",
+          "request": {
+            "method": "DELETE",
+            "header": [{ "key": "Authorization", "value": "Bearer {{admin_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/admin/coupons/{{admin_new_coupon_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "coupons", "{{admin_new_coupon_id}}"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200 or 204', () => pm.expect(pm.response.code).to.be.oneOf([200, 204]));"
+          ]}}]
+        }
+      ]
+    },
+    {
+      "name": "Location Management",
+      "item": [
+        {
+          "name": "Create Canton",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{admin_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Test Kanton\",\n  \"slug\": \"test-kanton\",\n  \"code\": \"TK\",\n  \"is_active\": true\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/admin/cantons",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "cantons"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 201', () => pm.response.to.have.status(201));",
+            "if (pm.response.json().data) pm.environment.set('admin_canton_id', pm.response.json().data._id);"
+          ]}}]
+        },
+        {
+          "name": "Update Canton",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{admin_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Test Kanton Updated\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/admin/cantons/{{admin_canton_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "cantons", "{{admin_canton_id}}"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Delete Canton",
+          "request": {
+            "method": "DELETE",
+            "header": [{ "key": "Authorization", "value": "Bearer {{admin_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/admin/cantons/{{admin_canton_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "cantons", "{{admin_canton_id}}"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200 or 204', () => pm.expect(pm.response.code).to.be.oneOf([200, 204]));"
+          ]}}]
+        },
+        {
+          "name": "Create City",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{admin_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Test Stadt\",\n  \"slug\": \"test-stadt\",\n  \"canton_id\": \"69a079537808ec1bb7916d74\",\n  \"postal_codes\": [\"9999\"],\n  \"is_active\": true\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/admin/cities",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "cities"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 201', () => pm.response.to.have.status(201));",
+            "if (pm.response.json().data) pm.environment.set('admin_city_id', pm.response.json().data._id);"
+          ]}}]
+        },
+        {
+          "name": "Update City",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{admin_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Test Stadt Updated\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/admin/cities/{{admin_city_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "cities", "{{admin_city_id}}"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Delete City",
+          "request": {
+            "method": "DELETE",
+            "header": [{ "key": "Authorization", "value": "Bearer {{admin_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/admin/cities/{{admin_city_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "cities", "{{admin_city_id}}"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200 or 204', () => pm.expect(pm.response.code).to.be.oneOf([200, 204]));"
+          ]}}]
+        }
+      ]
+    },
+    {
+      "name": "RBAC Management",
+      "item": [
+        {
+          "name": "List Roles",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{admin_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/admin/roles",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "roles"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));",
+            "pm.test('Has roles', () => pm.expect(pm.response.json().data).to.be.an('array'));"
+          ]}}]
+        },
+        {
+          "name": "Create Role",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{admin_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"test_role\",\n  \"display_name\": \"Test Role\",\n  \"description\": \"A test role for API testing\",\n  \"is_active\": true\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/admin/roles",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "roles"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 201', () => pm.response.to.have.status(201));",
+            "if (pm.response.json().data) pm.environment.set('admin_role_id', pm.response.json().data._id);"
+          ]}}]
+        },
+        {
+          "name": "Update Role",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{admin_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"display_name\": \"Updated Test Role\",\n  \"description\": \"Updated description\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/admin/roles/{{admin_role_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "roles", "{{admin_role_id}}"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "List Permissions",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{admin_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/admin/permissions",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "permissions"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));",
+            "pm.test('Has permissions', () => pm.expect(pm.response.json().data).to.be.an('array'));",
+            "if (pm.response.json().data && pm.response.json().data.length > 0) {",
+            "  pm.environment.set('permission_id', pm.response.json().data[0]._id);",
+            "}"
+          ]}}]
+        },
+        {
+          "name": "Get Role Permissions",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{admin_token}}" }],
+            "url": {
+              "raw": "{{base_url}}/admin/roles/69a051b9862bb102d344efb0/permissions",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "roles", "69a051b9862bb102d344efb0", "permissions"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        },
+        {
+          "name": "Update Role Permissions",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{admin_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"permission_ids\": [\"{{permission_id}}\"]\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/admin/roles/{{admin_role_id}}/permissions",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "roles", "{{admin_role_id}}", "permissions"]
+            }
+          },
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200', () => pm.response.to.have.status(200));"
+          ]}}]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+[
+  {
+    "_id": "69a051b9862bb102d344efb0",
+    "name": "super_admin",
+    "display_name": {
+      "en": "Super Administrator",
+      "fr": "Super Administrateur",
+      "de": "Super-Administrator",
+      "it": "Super Amministratore"
+    },
+    "description": {
+      "en": "Full system access with all permissions",
+      "fr": "Accès complet au système avec toutes les permissions",
+      "de": "Vollständiger Systemzugriff mit allen Berechtigungen",
+      "it": "Accesso completo al sistema con tutte le autorizzazioni"
+    },
+    "is_system": true,
+    "is_active": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efb1",
+    "name": "platform_admin",
+    "display_name": {
+      "en": "Platform Administrator",
+      "fr": "Administrateur de Plateforme",
+      "de": "Plattform-Administrator",
+      "it": "Amministratore Piattaforma"
+    },
+    "description": {
+      "en": "Platform-wide moderation and management capabilities",
+      "fr": "Capacités de modération et de gestion à l'échelle de la plateforme",
+      "de": "Plattformweite Moderations- und Verwaltungsfunktionen",
+      "it": "Funzionalità di moderazione e gestione a livello di piattaforma"
+    },
+    "is_system": true,
+    "is_active": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efb2",
+    "name": "store_manager",
+    "display_name": {
+      "en": "Store Manager",
+      "fr": "Responsable de Magasin",
+      "de": "Filialleiter",
+      "it": "Responsabile Negozio"
+    },
+    "description": {
+      "en": "Full management capabilities within their store",
+      "fr": "Capacités de gestion complètes au sein de leur magasin",
+      "de": "Vollständige Verwaltungsfunktionen innerhalb ihrer Filiale",
+      "it": "Funzionalità di gestione complete all'interno del proprio negozio"
+    },
+    "is_system": true,
+    "is_active": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efb3",
+    "name": "store_staff",
+    "display_name": {
+      "en": "Store Staff",
+      "fr": "Personnel de Magasin",
+      "de": "Filialmitarbeiter",
+      "it": "Personale Negozio"
+    },
+    "description": {
+      "en": "Store order processing and in-store pickup management",
+      "fr": "Traitement des commandes et gestion du retrait en magasin",
+      "de": "Bestellungsbearbeitung und Abholungsverwaltung",
+      "it": "Elaborazione ordini e gestione ritiro in negozio"
+    },
+    "is_system": true,
+    "is_active": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efb4",
+    "name": "support_agent",
+    "display_name": {
+      "en": "Support Agent",
+      "fr": "Agent de Support",
+      "de": "Support-Mitarbeiter",
+      "it": "Agente di Supporto"
+    },
+    "description": {
+      "en": "Customer support and ticket resolution",
+      "fr": "Support client et résolution de tickets",
+      "de": "Kundensupport und Ticketbearbeitung",
+      "it": "Supporto clienti e risoluzione ticket"
+    },
+    "is_system": true,
+    "is_active": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344efb5",
+    "name": "customer",
+    "display_name": {
+      "en": "Customer",
+      "fr": "Client",
+      "de": "Kunde",
+      "it": "Cliente"
+    },
+    "description": {
+      "en": "Standard customer with shopping and account access",
+      "fr": "Client standard avec accès aux achats et au compte",
+      "de": "Standardkunde mit Zugang zu Einkäufen und Konto",
+      "it": "Cliente standard con accesso ad acquisti e account"
+    },
+    "is_system": false,
+    "is_active": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  }
+]

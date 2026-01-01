@@ -1,0 +1,1971 @@
+[
+  {
+    "_id": "69a079537808ec1bb7917320",
+    "name": {
+      "en": "Grenchen",
+      "fr": "Grenchen",
+      "de": "Grenchen",
+      "it": "Grenchen"
+    },
+    "slug": "grenchen",
+    "canton_id": "69a079537808ec1bb7916d75",
+    "postal_codes": [
+      "2540"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917321",
+    "name": {
+      "en": "Zürich",
+      "fr": "Zürich",
+      "de": "Zürich",
+      "it": "Zürich"
+    },
+    "slug": "zurich",
+    "canton_id": "69a079537808ec1bb7916d74",
+    "postal_codes": [
+      "8001",
+      "8003",
+      "8045",
+      "8048",
+      "8050"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917322",
+    "name": {
+      "en": "Basel",
+      "fr": "Basel",
+      "de": "Basel",
+      "it": "Basel"
+    },
+    "slug": "basel",
+    "canton_id": "69a079537808ec1bb7916d7f",
+    "postal_codes": [
+      "4001",
+      "4052",
+      "4053",
+      "4058"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917323",
+    "name": {
+      "en": "Neuchâtel",
+      "fr": "Neuchâtel",
+      "de": "Neuchâtel",
+      "it": "Neuchâtel"
+    },
+    "slug": "neuchatel",
+    "canton_id": "69a079537808ec1bb7916d8b",
+    "postal_codes": [
+      "2000"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917324",
+    "name": {
+      "en": "Lyssach",
+      "fr": "Lyssach",
+      "de": "Lyssach",
+      "it": "Lyssach"
+    },
+    "slug": "lyssach",
+    "canton_id": "69a079537808ec1bb7916d75",
+    "postal_codes": [
+      "3421"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917325",
+    "name": {
+      "en": "Biel",
+      "fr": "Biel",
+      "de": "Biel",
+      "it": "Biel"
+    },
+    "slug": "biel",
+    "canton_id": "69a079537808ec1bb7916d75",
+    "postal_codes": [
+      "2502",
+      "2504"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917326",
+    "name": {
+      "en": "Fribourg",
+      "fr": "Fribourg",
+      "de": "Fribourg",
+      "it": "Fribourg"
+    },
+    "slug": "fribourg",
+    "canton_id": "69a079537808ec1bb7916d7d",
+    "postal_codes": [
+      "1700"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917327",
+    "name": {
+      "en": "Altdorf UR",
+      "fr": "Altdorf UR",
+      "de": "Altdorf UR",
+      "it": "Altdorf UR"
+    },
+    "slug": "altdorf-ur",
+    "canton_id": "69a079537808ec1bb7916d77",
+    "postal_codes": [
+      "6460"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917328",
+    "name": {
+      "en": "Meilen",
+      "fr": "Meilen",
+      "de": "Meilen",
+      "it": "Meilen"
+    },
+    "slug": "meilen",
+    "canton_id": "69a079537808ec1bb7916d7b",
+    "postal_codes": [
+      "8706"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917329",
+    "name": {
+      "en": "Baden",
+      "fr": "Baden",
+      "de": "Baden",
+      "it": "Baden"
+    },
+    "slug": "baden",
+    "canton_id": "69a079537808ec1bb7916d86",
+    "postal_codes": [
+      "5400"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791732a",
+    "name": {
+      "en": "La Chaux-de-Fonds",
+      "fr": "La Chaux-de-Fonds",
+      "de": "La Chaux-de-Fonds",
+      "it": "La Chaux-de-Fonds"
+    },
+    "slug": "la-chaux-de-fonds",
+    "canton_id": "69a079537808ec1bb7916d8b",
+    "postal_codes": [
+      "2300"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791732b",
+    "name": {
+      "en": "Nyon",
+      "fr": "Nyon",
+      "de": "Nyon",
+      "it": "Nyon"
+    },
+    "slug": "nyon",
+    "canton_id": "69a079537808ec1bb7916d89",
+    "postal_codes": [
+      "1260"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791732c",
+    "name": {
+      "en": "Genève",
+      "fr": "Genève",
+      "de": "Genève",
+      "it": "Genève"
+    },
+    "slug": "geneve",
+    "canton_id": "69a079537808ec1bb7916d89",
+    "postal_codes": [
+      "1201",
+      "1203",
+      "1204",
+      "1205",
+      "1207",
+      "1209"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791732d",
+    "name": {
+      "en": "Payerne",
+      "fr": "Payerne",
+      "de": "Payerne",
+      "it": "Payerne"
+    },
+    "slug": "payerne",
+    "canton_id": "69a079537808ec1bb7916d89",
+    "postal_codes": [
+      "1530"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791732e",
+    "name": {
+      "en": "Netstal",
+      "fr": "Netstal",
+      "de": "Netstal",
+      "it": "Netstal"
+    },
+    "slug": "netstal",
+    "canton_id": "69a079537808ec1bb7916d7b",
+    "postal_codes": [
+      "8754"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791732f",
+    "name": {
+      "en": "Burgdorf",
+      "fr": "Burgdorf",
+      "de": "Burgdorf",
+      "it": "Burgdorf"
+    },
+    "slug": "burgdorf",
+    "canton_id": "69a079537808ec1bb7916d75",
+    "postal_codes": [
+      "3400"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917330",
+    "name": {
+      "en": "Seewen SZ",
+      "fr": "Seewen SZ",
+      "de": "Seewen SZ",
+      "it": "Seewen SZ"
+    },
+    "slug": "seewen-sz",
+    "canton_id": "69a079537808ec1bb7916d77",
+    "postal_codes": [
+      "6423"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917331",
+    "name": {
+      "en": "Lugano",
+      "fr": "Lugano",
+      "de": "Lugano",
+      "it": "Lugano"
+    },
+    "slug": "lugano",
+    "canton_id": "69a079537808ec1bb7916d88",
+    "postal_codes": [
+      "6900"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917332",
+    "name": {
+      "en": "Buchs SG",
+      "fr": "Buchs SG",
+      "de": "Buchs SG",
+      "it": "Buchs SG"
+    },
+    "slug": "buchs-sg",
+    "canton_id": "69a079537808ec1bb7916d84",
+    "postal_codes": [
+      "9470"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917333",
+    "name": {
+      "en": "Frauenfeld",
+      "fr": "Frauenfeld",
+      "de": "Frauenfeld",
+      "it": "Frauenfeld"
+    },
+    "slug": "frauenfeld",
+    "canton_id": "69a079537808ec1bb7916d87",
+    "postal_codes": [
+      "8500"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917334",
+    "name": {
+      "en": "Montagny-près-Yverdon",
+      "fr": "Montagny-près-Yverdon",
+      "de": "Montagny-près-Yverdon",
+      "it": "Montagny-près-Yverdon"
+    },
+    "slug": "montagny-pres-yverdon",
+    "canton_id": "69a079537808ec1bb7916d89",
+    "postal_codes": [
+      "1442"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917335",
+    "name": {
+      "en": "Lyss",
+      "fr": "Lyss",
+      "de": "Lyss",
+      "it": "Lyss"
+    },
+    "slug": "lyss",
+    "canton_id": "69a079537808ec1bb7916d75",
+    "postal_codes": [
+      "3250"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917336",
+    "name": {
+      "en": "Allaman",
+      "fr": "Allaman",
+      "de": "Allaman",
+      "it": "Allaman"
+    },
+    "slug": "allaman",
+    "canton_id": "69a079537808ec1bb7916d89",
+    "postal_codes": [
+      "1165"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917337",
+    "name": {
+      "en": "Sursee",
+      "fr": "Sursee",
+      "de": "Sursee",
+      "it": "Sursee"
+    },
+    "slug": "sursee",
+    "canton_id": "69a079537808ec1bb7916d76",
+    "postal_codes": [
+      "6210"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917338",
+    "name": {
+      "en": "Wettingen",
+      "fr": "Wettingen",
+      "de": "Wettingen",
+      "it": "Wettingen"
+    },
+    "slug": "wettingen",
+    "canton_id": "69a079537808ec1bb7916d86",
+    "postal_codes": [
+      "5430"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917339",
+    "name": {
+      "en": "Lenzburg",
+      "fr": "Lenzburg",
+      "de": "Lenzburg",
+      "it": "Lenzburg"
+    },
+    "slug": "lenzburg",
+    "canton_id": "69a079537808ec1bb7916d86",
+    "postal_codes": [
+      "5600"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791733a",
+    "name": {
+      "en": "Bulle",
+      "fr": "Bulle",
+      "de": "Bulle",
+      "it": "Bulle"
+    },
+    "slug": "bulle",
+    "canton_id": "69a079537808ec1bb7916d7d",
+    "postal_codes": [
+      "1630"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791733b",
+    "name": {
+      "en": "S. Antonino",
+      "fr": "S. Antonino",
+      "de": "S. Antonino",
+      "it": "S. Antonino"
+    },
+    "slug": "s-antonino",
+    "canton_id": "69a079537808ec1bb7916d88",
+    "postal_codes": [
+      "6592"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791733c",
+    "name": {
+      "en": "Münsingen",
+      "fr": "Münsingen",
+      "de": "Münsingen",
+      "it": "Münsingen"
+    },
+    "slug": "munsingen",
+    "canton_id": "69a079537808ec1bb7916d75",
+    "postal_codes": [
+      "3110"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791733d",
+    "name": {
+      "en": "Willisau",
+      "fr": "Willisau",
+      "de": "Willisau",
+      "it": "Willisau"
+    },
+    "slug": "willisau",
+    "canton_id": "69a079537808ec1bb7916d76",
+    "postal_codes": [
+      "6130"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791733e",
+    "name": {
+      "en": "Oftringen",
+      "fr": "Oftringen",
+      "de": "Oftringen",
+      "it": "Oftringen"
+    },
+    "slug": "oftringen",
+    "canton_id": "69a079537808ec1bb7916d7e",
+    "postal_codes": [
+      "4665"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791733f",
+    "name": {
+      "en": "Amriswil",
+      "fr": "Amriswil",
+      "de": "Amriswil",
+      "it": "Amriswil"
+    },
+    "slug": "amriswil",
+    "canton_id": "69a079537808ec1bb7916d87",
+    "postal_codes": [
+      "8580"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917340",
+    "name": {
+      "en": "Lausanne",
+      "fr": "Lausanne",
+      "de": "Lausanne",
+      "it": "Lausanne"
+    },
+    "slug": "lausanne",
+    "canton_id": "69a079537808ec1bb7916d89",
+    "postal_codes": [
+      "1003"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917341",
+    "name": {
+      "en": "Muralto",
+      "fr": "Muralto",
+      "de": "Muralto",
+      "it": "Muralto"
+    },
+    "slug": "muralto",
+    "canton_id": "69a079537808ec1bb7916d88",
+    "postal_codes": [
+      "6600"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917342",
+    "name": {
+      "en": "Losone",
+      "fr": "Losone",
+      "de": "Losone",
+      "it": "Losone"
+    },
+    "slug": "losone",
+    "canton_id": "69a079537808ec1bb7916d88",
+    "postal_codes": [
+      "6616"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917343",
+    "name": {
+      "en": "St. Moritz",
+      "fr": "St. Moritz",
+      "de": "St. Moritz",
+      "it": "St. Moritz"
+    },
+    "slug": "st-moritz",
+    "canton_id": "69a079537808ec1bb7916d85",
+    "postal_codes": [
+      "7500"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917344",
+    "name": {
+      "en": "Laufen",
+      "fr": "Laufen",
+      "de": "Laufen",
+      "it": "Laufen"
+    },
+    "slug": "laufen",
+    "canton_id": "69a079537808ec1bb7916d80",
+    "postal_codes": [
+      "4242"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917345",
+    "name": {
+      "en": "Davos Platz",
+      "fr": "Davos Platz",
+      "de": "Davos Platz",
+      "it": "Davos Platz"
+    },
+    "slug": "davos-platz",
+    "canton_id": "69a079537808ec1bb7916d85",
+    "postal_codes": [
+      "7270"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917346",
+    "name": {
+      "en": "Thalwil",
+      "fr": "Thalwil",
+      "de": "Thalwil",
+      "it": "Thalwil"
+    },
+    "slug": "thalwil",
+    "canton_id": "69a079537808ec1bb7916d78",
+    "postal_codes": [
+      "8800"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917347",
+    "name": {
+      "en": "Meyrin",
+      "fr": "Meyrin",
+      "de": "Meyrin",
+      "it": "Meyrin"
+    },
+    "slug": "meyrin",
+    "canton_id": "69a079537808ec1bb7916d89",
+    "postal_codes": [
+      "1217"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917348",
+    "name": {
+      "en": "Schaffhausen",
+      "fr": "Schaffhausen",
+      "de": "Schaffhausen",
+      "it": "Schaffhausen"
+    },
+    "slug": "schaffhausen",
+    "canton_id": "69a079537808ec1bb7916d74",
+    "postal_codes": [
+      "8200"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917349",
+    "name": {
+      "en": "Chur",
+      "fr": "Chur",
+      "de": "Chur",
+      "it": "Chur"
+    },
+    "slug": "chur",
+    "canton_id": "69a079537808ec1bb7916d85",
+    "postal_codes": [
+      "7000"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791734a",
+    "name": {
+      "en": "Prilly",
+      "fr": "Prilly",
+      "de": "Prilly",
+      "it": "Prilly"
+    },
+    "slug": "prilly",
+    "canton_id": "69a079537808ec1bb7916d89",
+    "postal_codes": [
+      "1008"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791734b",
+    "name": {
+      "en": "Granges-Paccot",
+      "fr": "Granges-Paccot",
+      "de": "Granges-Paccot",
+      "it": "Granges-Paccot"
+    },
+    "slug": "granges-paccot",
+    "canton_id": "69a079537808ec1bb7916d7d",
+    "postal_codes": [
+      "1763"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791734c",
+    "name": {
+      "en": "Reinach AG",
+      "fr": "Reinach AG",
+      "de": "Reinach AG",
+      "it": "Reinach AG"
+    },
+    "slug": "reinach-ag",
+    "canton_id": "69a079537808ec1bb7916d86",
+    "postal_codes": [
+      "5734"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791734d",
+    "name": {
+      "en": "Zuchwil",
+      "fr": "Zuchwil",
+      "de": "Zuchwil",
+      "it": "Zuchwil"
+    },
+    "slug": "zuchwil",
+    "canton_id": "69a079537808ec1bb7916d7e",
+    "postal_codes": [
+      "4528"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791734e",
+    "name": {
+      "en": "Brig",
+      "fr": "Brig",
+      "de": "Brig",
+      "it": "Brig"
+    },
+    "slug": "brig",
+    "canton_id": "69a079537808ec1bb7916d8a",
+    "postal_codes": [
+      "3900"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791734f",
+    "name": {
+      "en": "Würenlingen",
+      "fr": "Würenlingen",
+      "de": "Würenlingen",
+      "it": "Würenlingen"
+    },
+    "slug": "wurenlingen",
+    "canton_id": "69a079537808ec1bb7916d86",
+    "postal_codes": [
+      "5303"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917350",
+    "name": {
+      "en": "Widnau",
+      "fr": "Widnau",
+      "de": "Widnau",
+      "it": "Widnau"
+    },
+    "slug": "widnau",
+    "canton_id": "69a079537808ec1bb7916d84",
+    "postal_codes": [
+      "9443"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917351",
+    "name": {
+      "en": "Allschwil",
+      "fr": "Allschwil",
+      "de": "Allschwil",
+      "it": "Allschwil"
+    },
+    "slug": "allschwil",
+    "canton_id": "69a079537808ec1bb7916d80",
+    "postal_codes": [
+      "4123"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917352",
+    "name": {
+      "en": "Olten",
+      "fr": "Olten",
+      "de": "Olten",
+      "it": "Olten"
+    },
+    "slug": "olten",
+    "canton_id": "69a079537808ec1bb7916d7e",
+    "postal_codes": [
+      "4600"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917353",
+    "name": {
+      "en": "Bassecourt",
+      "fr": "Bassecourt",
+      "de": "Bassecourt",
+      "it": "Bassecourt"
+    },
+    "slug": "bassecourt",
+    "canton_id": "69a079537808ec1bb7916d8d",
+    "postal_codes": [
+      "2854"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917354",
+    "name": {
+      "en": "St. Gallen",
+      "fr": "St. Gallen",
+      "de": "St. Gallen",
+      "it": "St. Gallen"
+    },
+    "slug": "st-gallen",
+    "canton_id": "69a079537808ec1bb7916d82",
+    "postal_codes": [
+      "9000",
+      "9015",
+      "9016"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917355",
+    "name": {
+      "en": "Collombey",
+      "fr": "Collombey",
+      "de": "Collombey",
+      "it": "Collombey"
+    },
+    "slug": "collombey",
+    "canton_id": "69a079537808ec1bb7916d89",
+    "postal_codes": [
+      "1868"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917356",
+    "name": {
+      "en": "Solothurn",
+      "fr": "Solothurn",
+      "de": "Solothurn",
+      "it": "Solothurn"
+    },
+    "slug": "solothurn",
+    "canton_id": "69a079537808ec1bb7916d7e",
+    "postal_codes": [
+      "4500"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917357",
+    "name": {
+      "en": "Affoltern am Albis",
+      "fr": "Affoltern am Albis",
+      "de": "Affoltern am Albis",
+      "it": "Affoltern am Albis"
+    },
+    "slug": "affoltern-am-albis",
+    "canton_id": "69a079537808ec1bb7916d74",
+    "postal_codes": [
+      "8910"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917358",
+    "name": {
+      "en": "Sion",
+      "fr": "Sion",
+      "de": "Sion",
+      "it": "Sion"
+    },
+    "slug": "sion",
+    "canton_id": "69a079537808ec1bb7916d8a",
+    "postal_codes": [
+      "1950"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917359",
+    "name": {
+      "en": "Sierre",
+      "fr": "Sierre",
+      "de": "Sierre",
+      "it": "Sierre"
+    },
+    "slug": "sierre",
+    "canton_id": "69a079537808ec1bb7916d8a",
+    "postal_codes": [
+      "3960"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791735a",
+    "name": {
+      "en": "Bern",
+      "fr": "Bern",
+      "de": "Bern",
+      "it": "Bern"
+    },
+    "slug": "bern",
+    "canton_id": "69a079537808ec1bb7916d75",
+    "postal_codes": [
+      "3011",
+      "3014",
+      "3027"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791735b",
+    "name": {
+      "en": "Genève 15 Aéroport",
+      "fr": "Genève 15 Aéroport",
+      "de": "Genève 15 Aéroport",
+      "it": "Genève 15 Aéroport"
+    },
+    "slug": "geneve-15-aeroport",
+    "canton_id": "69a079537808ec1bb7916d89",
+    "postal_codes": [
+      "1215"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791735c",
+    "name": {
+      "en": "Weinfelden",
+      "fr": "Weinfelden",
+      "de": "Weinfelden",
+      "it": "Weinfelden"
+    },
+    "slug": "weinfelden",
+    "canton_id": "69a079537808ec1bb7916d87",
+    "postal_codes": [
+      "8570"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791735d",
+    "name": {
+      "en": "Küsnacht ZH",
+      "fr": "Küsnacht ZH",
+      "de": "Küsnacht ZH",
+      "it": "Küsnacht ZH"
+    },
+    "slug": "kusnacht-zh",
+    "canton_id": "69a079537808ec1bb7916d7b",
+    "postal_codes": [
+      "8700"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791735e",
+    "name": {
+      "en": "Frick",
+      "fr": "Frick",
+      "de": "Frick",
+      "it": "Frick"
+    },
+    "slug": "frick",
+    "canton_id": "69a079537808ec1bb7916d86",
+    "postal_codes": [
+      "5070"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791735f",
+    "name": {
+      "en": "Hochdorf",
+      "fr": "Hochdorf",
+      "de": "Hochdorf",
+      "it": "Hochdorf"
+    },
+    "slug": "hochdorf",
+    "canton_id": "69a079537808ec1bb7916d76",
+    "postal_codes": [
+      "6280"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917360",
+    "name": {
+      "en": "Signy",
+      "fr": "Signy",
+      "de": "Signy",
+      "it": "Signy"
+    },
+    "slug": "signy",
+    "canton_id": "69a079537808ec1bb7916d89",
+    "postal_codes": [
+      "1274"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917361",
+    "name": {
+      "en": "Egerkingen",
+      "fr": "Egerkingen",
+      "de": "Egerkingen",
+      "it": "Egerkingen"
+    },
+    "slug": "egerkingen",
+    "canton_id": "69a079537808ec1bb7916d7e",
+    "postal_codes": [
+      "4622"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917362",
+    "name": {
+      "en": "Aarau",
+      "fr": "Aarau",
+      "de": "Aarau",
+      "it": "Aarau"
+    },
+    "slug": "aarau",
+    "canton_id": "69a079537808ec1bb7916d86",
+    "postal_codes": [
+      "5000"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917363",
+    "name": {
+      "en": "Tenero",
+      "fr": "Tenero",
+      "de": "Tenero",
+      "it": "Tenero"
+    },
+    "slug": "tenero",
+    "canton_id": "69a079537808ec1bb7916d88",
+    "postal_codes": [
+      "6598"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917364",
+    "name": {
+      "en": "Heerbrugg",
+      "fr": "Heerbrugg",
+      "de": "Heerbrugg",
+      "it": "Heerbrugg"
+    },
+    "slug": "heerbrugg",
+    "canton_id": "69a079537808ec1bb7916d84",
+    "postal_codes": [
+      "9435"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917365",
+    "name": {
+      "en": "Oron-la-Ville",
+      "fr": "Oron-la-Ville",
+      "de": "Oron-la-Ville",
+      "it": "Oron-la-Ville"
+    },
+    "slug": "oron-la-ville",
+    "canton_id": "69a079537808ec1bb7916d7d",
+    "postal_codes": [
+      "1610"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917366",
+    "name": {
+      "en": "Martigny",
+      "fr": "Martigny",
+      "de": "Martigny",
+      "it": "Martigny"
+    },
+    "slug": "martigny",
+    "canton_id": "69a079537808ec1bb7916d8a",
+    "postal_codes": [
+      "1920"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917367",
+    "name": {
+      "en": "Kreuzlingen",
+      "fr": "Kreuzlingen",
+      "de": "Kreuzlingen",
+      "it": "Kreuzlingen"
+    },
+    "slug": "kreuzlingen",
+    "canton_id": "69a079537808ec1bb7916d74",
+    "postal_codes": [
+      "8280"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917368",
+    "name": {
+      "en": "Rapperswil",
+      "fr": "Rapperswil",
+      "de": "Rapperswil",
+      "it": "Rapperswil"
+    },
+    "slug": "rapperswil",
+    "canton_id": "69a079537808ec1bb7916d84",
+    "postal_codes": [
+      "8640"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917369",
+    "name": {
+      "en": "Winterthur",
+      "fr": "Winterthur",
+      "de": "Winterthur",
+      "it": "Winterthur"
+    },
+    "slug": "winterthur",
+    "canton_id": "69a079537808ec1bb7916d74",
+    "postal_codes": [
+      "8400",
+      "8404"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791736a",
+    "name": {
+      "en": "Haag (Rheintal)",
+      "fr": "Haag (Rheintal)",
+      "de": "Haag (Rheintal)",
+      "it": "Haag (Rheintal)"
+    },
+    "slug": "haag-rheintal",
+    "canton_id": "69a079537808ec1bb7916d84",
+    "postal_codes": [
+      "9469"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791736b",
+    "name": {
+      "en": "Montreux",
+      "fr": "Montreux",
+      "de": "Montreux",
+      "it": "Montreux"
+    },
+    "slug": "montreux",
+    "canton_id": "69a079537808ec1bb7916d89",
+    "postal_codes": [
+      "1820"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791736c",
+    "name": {
+      "en": "Pfäffikon SZ",
+      "fr": "Pfäffikon SZ",
+      "de": "Pfäffikon SZ",
+      "it": "Pfäffikon SZ"
+    },
+    "slug": "pfaffikon-sz",
+    "canton_id": "69a079537808ec1bb7916d78",
+    "postal_codes": [
+      "8808"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791736d",
+    "name": {
+      "en": "Wädenswil",
+      "fr": "Wädenswil",
+      "de": "Wädenswil",
+      "it": "Wädenswil"
+    },
+    "slug": "wadenswil",
+    "canton_id": "69a079537808ec1bb7916d78",
+    "postal_codes": [
+      "8820"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791736e",
+    "name": {
+      "en": "Dättwil",
+      "fr": "Dättwil",
+      "de": "Dättwil",
+      "it": "Dättwil"
+    },
+    "slug": "dattwil",
+    "canton_id": "69a079537808ec1bb7916d86",
+    "postal_codes": [
+      "5405"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791736f",
+    "name": {
+      "en": "Brugg AG",
+      "fr": "Brugg AG",
+      "de": "Brugg AG",
+      "it": "Brugg AG"
+    },
+    "slug": "brugg-ag",
+    "canton_id": "69a079537808ec1bb7916d86",
+    "postal_codes": [
+      "5200"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917370",
+    "name": {
+      "en": "Zug",
+      "fr": "Zug",
+      "de": "Zug",
+      "it": "Zug"
+    },
+    "slug": "zug",
+    "canton_id": "69a079537808ec1bb7916d7a",
+    "postal_codes": [
+      "6300"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917371",
+    "name": {
+      "en": "Kriens",
+      "fr": "Kriens",
+      "de": "Kriens",
+      "it": "Kriens"
+    },
+    "slug": "kriens",
+    "canton_id": "69a079537808ec1bb7916d76",
+    "postal_codes": [
+      "6010"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917372",
+    "name": {
+      "en": "Liestal",
+      "fr": "Liestal",
+      "de": "Liestal",
+      "it": "Liestal"
+    },
+    "slug": "liestal",
+    "canton_id": "69a079537808ec1bb7916d80",
+    "postal_codes": [
+      "4410"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917373",
+    "name": {
+      "en": "Thusis",
+      "fr": "Thusis",
+      "de": "Thusis",
+      "it": "Thusis"
+    },
+    "slug": "thusis",
+    "canton_id": "69a079537808ec1bb7916d85",
+    "postal_codes": [
+      "7430"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917374",
+    "name": {
+      "en": "Ostermundigen",
+      "fr": "Ostermundigen",
+      "de": "Ostermundigen",
+      "it": "Ostermundigen"
+    },
+    "slug": "ostermundigen",
+    "canton_id": "69a079537808ec1bb7916d75",
+    "postal_codes": [
+      "3072"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917375",
+    "name": {
+      "en": "Sissach",
+      "fr": "Sissach",
+      "de": "Sissach",
+      "it": "Sissach"
+    },
+    "slug": "sissach",
+    "canton_id": "69a079537808ec1bb7916d80",
+    "postal_codes": [
+      "4450"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917376",
+    "name": {
+      "en": "Morges",
+      "fr": "Morges",
+      "de": "Morges",
+      "it": "Morges"
+    },
+    "slug": "morges",
+    "canton_id": "69a079537808ec1bb7916d89",
+    "postal_codes": [
+      "1110"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917377",
+    "name": {
+      "en": "Kaiseraugst",
+      "fr": "Kaiseraugst",
+      "de": "Kaiseraugst",
+      "it": "Kaiseraugst"
+    },
+    "slug": "kaiseraugst",
+    "canton_id": "69a079537808ec1bb7916d80",
+    "postal_codes": [
+      "4303"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917378",
+    "name": {
+      "en": "Visp",
+      "fr": "Visp",
+      "de": "Visp",
+      "it": "Visp"
+    },
+    "slug": "visp",
+    "canton_id": "69a079537808ec1bb7916d8a",
+    "postal_codes": [
+      "3930"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917379",
+    "name": {
+      "en": "Kloten",
+      "fr": "Kloten",
+      "de": "Kloten",
+      "it": "Kloten"
+    },
+    "slug": "kloten",
+    "canton_id": "69a079537808ec1bb7916d74",
+    "postal_codes": [
+      "8302"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791737a",
+    "name": {
+      "en": "Lachen SZ",
+      "fr": "Lachen SZ",
+      "de": "Lachen SZ",
+      "it": "Lachen SZ"
+    },
+    "slug": "lachen-sz",
+    "canton_id": "69a079537808ec1bb7916d78",
+    "postal_codes": [
+      "8853"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791737b",
+    "name": {
+      "en": "Wohlen AG",
+      "fr": "Wohlen AG",
+      "de": "Wohlen AG",
+      "it": "Wohlen AG"
+    },
+    "slug": "wohlen-ag",
+    "canton_id": "69a079537808ec1bb7916d86",
+    "postal_codes": [
+      "5610"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791737c",
+    "name": {
+      "en": "Langnau im Emmental",
+      "fr": "Langnau im Emmental",
+      "de": "Langnau im Emmental",
+      "it": "Langnau im Emmental"
+    },
+    "slug": "langnau-im-emmental",
+    "canton_id": "69a079537808ec1bb7916d75",
+    "postal_codes": [
+      "3550"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791737d",
+    "name": {
+      "en": "Yverdon-les-Bains",
+      "fr": "Yverdon-les-Bains",
+      "de": "Yverdon-les-Bains",
+      "it": "Yverdon-les-Bains"
+    },
+    "slug": "yverdon-les-bains",
+    "canton_id": "69a079537808ec1bb7916d89",
+    "postal_codes": [
+      "1400"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791737e",
+    "name": {
+      "en": "Vaduz",
+      "fr": "Vaduz",
+      "de": "Vaduz",
+      "it": "Vaduz"
+    },
+    "slug": "vaduz",
+    "canton_id": "69a079537808ec1bb7916d84",
+    "postal_codes": [
+      "9490"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791737f",
+    "name": {
+      "en": "Bellinzona",
+      "fr": "Bellinzona",
+      "de": "Bellinzona",
+      "it": "Bellinzona"
+    },
+    "slug": "bellinzona",
+    "canton_id": "69a079537808ec1bb7916d88",
+    "postal_codes": [
+      "6500"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917380",
+    "name": {
+      "en": "Crissier",
+      "fr": "Crissier",
+      "de": "Crissier",
+      "it": "Crissier"
+    },
+    "slug": "crissier",
+    "canton_id": "69a079537808ec1bb7916d89",
+    "postal_codes": [
+      "1023"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917381",
+    "name": {
+      "en": "Dietlikon",
+      "fr": "Dietlikon",
+      "de": "Dietlikon",
+      "it": "Dietlikon"
+    },
+    "slug": "dietlikon",
+    "canton_id": "69a079537808ec1bb7916d74",
+    "postal_codes": [
+      "8305"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917382",
+    "name": {
+      "en": "Hinwil",
+      "fr": "Hinwil",
+      "de": "Hinwil",
+      "it": "Hinwil"
+    },
+    "slug": "hinwil",
+    "canton_id": "69a079537808ec1bb7916d74",
+    "postal_codes": [
+      "8340"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917383",
+    "name": {
+      "en": "Heimberg",
+      "fr": "Heimberg",
+      "de": "Heimberg",
+      "it": "Heimberg"
+    },
+    "slug": "heimberg",
+    "canton_id": "69a079537808ec1bb7916d75",
+    "postal_codes": [
+      "3627"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917384",
+    "name": {
+      "en": "Canobbio",
+      "fr": "Canobbio",
+      "de": "Canobbio",
+      "it": "Canobbio"
+    },
+    "slug": "canobbio",
+    "canton_id": "69a079537808ec1bb7916d88",
+    "postal_codes": [
+      "6952"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917385",
+    "name": {
+      "en": "Villars-sur-Glâne",
+      "fr": "Villars-sur-Glâne",
+      "de": "Villars-sur-Glâne",
+      "it": "Villars-sur-Glâne"
+    },
+    "slug": "villars-sur-glane",
+    "canton_id": "69a079537808ec1bb7916d7d",
+    "postal_codes": [
+      "1752"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917386",
+    "name": {
+      "en": "Spiez",
+      "fr": "Spiez",
+      "de": "Spiez",
+      "it": "Spiez"
+    },
+    "slug": "spiez",
+    "canton_id": "69a079537808ec1bb7916d75",
+    "postal_codes": [
+      "3700"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917387",
+    "name": {
+      "en": "Thônex",
+      "fr": "Thônex",
+      "de": "Thônex",
+      "it": "Thônex"
+    },
+    "slug": "thonex",
+    "canton_id": "69a079537808ec1bb7916d89",
+    "postal_codes": [
+      "1226"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917388",
+    "name": {
+      "en": "Cham",
+      "fr": "Cham",
+      "de": "Cham",
+      "it": "Cham"
+    },
+    "slug": "cham",
+    "canton_id": "69a079537808ec1bb7916d7a",
+    "postal_codes": [
+      "6330"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917389",
+    "name": {
+      "en": "Gstaad",
+      "fr": "Gstaad",
+      "de": "Gstaad",
+      "it": "Gstaad"
+    },
+    "slug": "gstaad",
+    "canton_id": "69a079537808ec1bb7916d75",
+    "postal_codes": [
+      "3780"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791738a",
+    "name": {
+      "en": "Wil SG",
+      "fr": "Wil SG",
+      "de": "Wil SG",
+      "it": "Wil SG"
+    },
+    "slug": "wil-sg",
+    "canton_id": "69a079537808ec1bb7916d84",
+    "postal_codes": [
+      "9500"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791738b",
+    "name": {
+      "en": "Murten",
+      "fr": "Murten",
+      "de": "Murten",
+      "it": "Murten"
+    },
+    "slug": "murten",
+    "canton_id": "69a079537808ec1bb7916d75",
+    "postal_codes": [
+      "3280"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791738c",
+    "name": {
+      "en": "Baar",
+      "fr": "Baar",
+      "de": "Baar",
+      "it": "Baar"
+    },
+    "slug": "baar",
+    "canton_id": "69a079537808ec1bb7916d7a",
+    "postal_codes": [
+      "6340"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791738d",
+    "name": {
+      "en": "Emmenbrücke",
+      "fr": "Emmenbrücke",
+      "de": "Emmenbrücke",
+      "it": "Emmenbrücke"
+    },
+    "slug": "emmenbrucke",
+    "canton_id": "69a079537808ec1bb7916d76",
+    "postal_codes": [
+      "6020"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791738e",
+    "name": {
+      "en": "Rickenbach b. Wil",
+      "fr": "Rickenbach b. Wil",
+      "de": "Rickenbach b. Wil",
+      "it": "Rickenbach b. Wil"
+    },
+    "slug": "rickenbach-b-wil",
+    "canton_id": "69a079537808ec1bb7916d84",
+    "postal_codes": [
+      "9532"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791738f",
+    "name": {
+      "en": "Feuerthalen",
+      "fr": "Feuerthalen",
+      "de": "Feuerthalen",
+      "it": "Feuerthalen"
+    },
+    "slug": "feuerthalen",
+    "canton_id": "69a079537808ec1bb7916d74",
+    "postal_codes": [
+      "8245"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917390",
+    "name": {
+      "en": "Volketswil",
+      "fr": "Volketswil",
+      "de": "Volketswil",
+      "it": "Volketswil"
+    },
+    "slug": "volketswil",
+    "canton_id": "69a079537808ec1bb7916d84",
+    "postal_codes": [
+      "8604"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917391",
+    "name": {
+      "en": "Regensdorf",
+      "fr": "Regensdorf",
+      "de": "Regensdorf",
+      "it": "Regensdorf"
+    },
+    "slug": "regensdorf",
+    "canton_id": "69a079537808ec1bb7916d74",
+    "postal_codes": [
+      "8105"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917392",
+    "name": {
+      "en": "Thun",
+      "fr": "Thun",
+      "de": "Thun",
+      "it": "Thun"
+    },
+    "slug": "thun",
+    "canton_id": "69a079537808ec1bb7916d75",
+    "postal_codes": [
+      "3600",
+      "3604"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917393",
+    "name": {
+      "en": "Zürich-Oerlikon",
+      "fr": "Zürich-Oerlikon",
+      "de": "Zürich-Oerlikon",
+      "it": "Zürich-Oerlikon"
+    },
+    "slug": "zurich-oerlikon",
+    "canton_id": "69a079537808ec1bb7916d74",
+    "postal_codes": [
+      "8050"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917394",
+    "name": {
+      "en": "Luzern",
+      "fr": "Luzern",
+      "de": "Luzern",
+      "it": "Luzern"
+    },
+    "slug": "luzern",
+    "canton_id": "69a079537808ec1bb7916d76",
+    "postal_codes": [
+      "6003"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917395",
+    "name": {
+      "en": "Vevey",
+      "fr": "Vevey",
+      "de": "Vevey",
+      "it": "Vevey"
+    },
+    "slug": "vevey",
+    "canton_id": "69a079537808ec1bb7916d89",
+    "postal_codes": [
+      "1800"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917396",
+    "name": {
+      "en": "Jegenstorf",
+      "fr": "Jegenstorf",
+      "de": "Jegenstorf",
+      "it": "Jegenstorf"
+    },
+    "slug": "jegenstorf",
+    "canton_id": "69a079537808ec1bb7916d75",
+    "postal_codes": [
+      "3303"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917397",
+    "name": {
+      "en": "Reinach BL",
+      "fr": "Reinach BL",
+      "de": "Reinach BL",
+      "it": "Reinach BL"
+    },
+    "slug": "reinach-bl",
+    "canton_id": "69a079537808ec1bb7916d80",
+    "postal_codes": [
+      "4153"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917398",
+    "name": {
+      "en": "Muttenz",
+      "fr": "Muttenz",
+      "de": "Muttenz",
+      "it": "Muttenz"
+    },
+    "slug": "muttenz",
+    "canton_id": "69a079537808ec1bb7916d80",
+    "postal_codes": [
+      "4132"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb7917399",
+    "name": {
+      "en": "Wattwil",
+      "fr": "Wattwil",
+      "de": "Wattwil",
+      "it": "Wattwil"
+    },
+    "slug": "wattwil",
+    "canton_id": "69a079537808ec1bb7916d84",
+    "postal_codes": [
+      "9630"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791739a",
+    "name": {
+      "en": "Langenthal",
+      "fr": "Langenthal",
+      "de": "Langenthal",
+      "it": "Langenthal"
+    },
+    "slug": "langenthal",
+    "canton_id": "69a079537808ec1bb7916d75",
+    "postal_codes": [
+      "4900"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791739b",
+    "name": {
+      "en": "Delémont",
+      "fr": "Delémont",
+      "de": "Delémont",
+      "it": "Delémont"
+    },
+    "slug": "delemont",
+    "canton_id": "69a079537808ec1bb7916d8d",
+    "postal_codes": [
+      "2800"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791739c",
+    "name": {
+      "en": "Bachenbülach",
+      "fr": "Bachenbülach",
+      "de": "Bachenbülach",
+      "it": "Bachenbülach"
+    },
+    "slug": "bachenbulach",
+    "canton_id": "69a079537808ec1bb7916d74",
+    "postal_codes": [
+      "8184"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791739d",
+    "name": {
+      "en": "Dietikon",
+      "fr": "Dietikon",
+      "de": "Dietikon",
+      "it": "Dietikon"
+    },
+    "slug": "dietikon",
+    "canton_id": "69a079537808ec1bb7916d74",
+    "postal_codes": [
+      "8953"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791739e",
+    "name": {
+      "en": "Rorschach",
+      "fr": "Rorschach",
+      "de": "Rorschach",
+      "it": "Rorschach"
+    },
+    "slug": "rorschach",
+    "canton_id": "69a079537808ec1bb7916d84",
+    "postal_codes": [
+      "9400"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb791739f",
+    "name": {
+      "en": "Interlaken",
+      "fr": "Interlaken",
+      "de": "Interlaken",
+      "it": "Interlaken"
+    },
+    "slug": "interlaken",
+    "canton_id": "69a079537808ec1bb7916d75",
+    "postal_codes": [
+      "3800"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79173a0",
+    "name": {
+      "en": "Spreitenbach",
+      "fr": "Spreitenbach",
+      "de": "Spreitenbach",
+      "it": "Spreitenbach"
+    },
+    "slug": "spreitenbach",
+    "canton_id": "69a079537808ec1bb7916d74",
+    "postal_codes": [
+      "8957"
+    ],
+    "is_active": true
+  },
+  {
+    "_id": "69a079537808ec1bb79173a1",
+    "name": {
+      "en": "Conthey",
+      "fr": "Conthey",
+      "de": "Conthey",
+      "it": "Conthey"
+    },
+    "slug": "conthey",
+    "canton_id": "69a079537808ec1bb7916d8a",
+    "postal_codes": [
+      "1964"
+    ],
+    "is_active": true
+  }
+]

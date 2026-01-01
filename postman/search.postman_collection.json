@@ -1,0 +1,102 @@
+{
+  "info": {
+    "name": "Search Module",
+    "description": "Full-text product search with autocomplete suggestions and filter options",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "base_url", "value": "http://localhost:4010/api/v1" }
+  ],
+  "item": [
+    {
+      "name": "Search Products",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/public/search?q=samsung&page=1&limit=10",
+          "host": ["{{base_url}}"],
+          "path": ["public", "search"],
+          "query": [
+            { "key": "q", "value": "samsung" },
+            { "key": "page", "value": "1" },
+            { "key": "limit", "value": "10" },
+            { "key": "category", "value": "", "disabled": true },
+            { "key": "brand", "value": "", "disabled": true },
+            { "key": "min_price", "value": "", "disabled": true },
+            { "key": "max_price", "value": "", "disabled": true },
+            { "key": "availability", "value": "", "disabled": true },
+            { "key": "sort", "value": "", "disabled": true }
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));",
+              "pm.test('Has data array', () => pm.expect(pm.response.json().data).to.be.an('array'));",
+              "pm.test('Has pagination', () => pm.expect(pm.response.json().pagination).to.have.property('total'));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Search Suggestions",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/public/search/suggestions?q=iph&limit=5",
+          "host": ["{{base_url}}"],
+          "path": ["public", "search", "suggestions"],
+          "query": [
+            { "key": "q", "value": "iph" },
+            { "key": "limit", "value": "5" }
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));",
+              "pm.test('Has data array', () => pm.expect(pm.response.json().data).to.be.an('array'));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Search Filters",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/public/search/filters?q=laptop",
+          "host": ["{{base_url}}"],
+          "path": ["public", "search", "filters"],
+          "query": [
+            { "key": "q", "value": "laptop" },
+            { "key": "category", "value": "", "disabled": true }
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));",
+              "pm.test('Has filter data', () => {",
+              "  const data = pm.response.json().data;",
+              "  pm.expect(data).to.have.property('brands');",
+              "  pm.expect(data).to.have.property('categories');",
+              "});"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

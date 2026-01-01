@@ -1,0 +1,122 @@
+[
+  {
+    "_id": "69a051b9862bb102d344f292",
+    "code": "WELCOME10",
+    "description": {
+      "en": "10% off your first order",
+      "fr": "10% de réduction sur votre première commande",
+      "de": "10% Rabatt auf Ihre erste Bestellung",
+      "it": "10% di sconto sul primo ordine"
+    },
+    "discount_type": "percentage",
+    "discount_value": 10,
+    "minimum_order": 50,
+    "max_uses": 1000,
+    "used_count": 234,
+    "valid_from": "2025-01-01T00:00:00.000Z",
+    "valid_until": "2025-12-31T23:59:59.000Z",
+    "is_active": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344f293",
+    "code": "SOMMER25",
+    "description": {
+      "en": "CHF 25 off orders over CHF 200",
+      "fr": "CHF 25 de réduction sur les commandes de plus de CHF 200",
+      "de": "CHF 25 Rabatt auf Bestellungen über CHF 200",
+      "it": "CHF 25 di sconto sugli ordini superiori a CHF 200"
+    },
+    "discount_type": "fixed",
+    "discount_value": 25,
+    "minimum_order": 200,
+    "max_uses": 500,
+    "used_count": 147,
+    "valid_from": "2025-01-01T00:00:00.000Z",
+    "valid_until": "2025-12-31T23:59:59.000Z",
+    "is_active": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344f294",
+    "code": "TECHWEEK15",
+    "description": {
+      "en": "15% off during Tech Week",
+      "fr": "15% de réduction pendant la Tech Week",
+      "de": "15% Rabatt während der Tech Week",
+      "it": "15% di sconto durante la Tech Week"
+    },
+    "discount_type": "percentage",
+    "discount_value": 15,
+    "minimum_order": 100,
+    "max_uses": 2000,
+    "used_count": 589,
+    "valid_from": "2025-01-01T00:00:00.000Z",
+    "valid_until": "2025-12-31T23:59:59.000Z",
+    "is_active": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344f295",
+    "code": "FREEDELIVERY",
+    "description": {
+      "en": "Free delivery on all orders",
+      "fr": "Livraison gratuite sur toutes les commandes",
+      "de": "Kostenloser Versand auf alle Bestellungen",
+      "it": "Consegna gratuita su tutti gli ordini"
+    },
+    "discount_type": "fixed",
+    "discount_value": 8.9,
+    "minimum_order": 0,
+    "max_uses": 5000,
+    "used_count": 1203,
+    "valid_from": "2025-01-01T00:00:00.000Z",
+    "valid_until": "2025-12-31T23:59:59.000Z",
+    "is_active": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344f296",
+    "code": "NEWYEAR20",
+    "description": {
+      "en": "20% off to start the new year",
+      "fr": "20% de réduction pour commencer la nouvelle année",
+      "de": "20% Rabatt zum neuen Jahr",
+      "it": "20% di sconto per iniziare il nuovo anno"
+    },
+    "discount_type": "percentage",
+    "discount_value": 20,
+    "minimum_order": 150,
+    "max_uses": 800,
+    "used_count": 412,
+    "valid_from": "2025-01-01T00:00:00.000Z",
+    "valid_until": "2025-12-31T23:59:59.000Z",
+    "is_active": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "69a051b9862bb102d344f297",
+    "code": "STUDENT5",
+    "description": {
+      "en": "CHF 5 student discount",
+      "fr": "CHF 5 réduction étudiants",
+      "de": "CHF 5 Studentenrabatt",
+      "it": "CHF 5 sconto studenti"
+    },
+    "discount_type": "fixed",
+    "discount_value": 5,
+    "minimum_order": 30,
+    "max_uses": 10000,
+    "used_count": 3241,
+    "valid_from": "2025-01-01T00:00:00.000Z",
+    "valid_until": "2025-12-31T23:59:59.000Z",
+    "is_active": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  }
+]
