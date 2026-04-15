@@ -67,15 +67,22 @@ services:
       - traefik
     labels:
       - "traefik.enable=true"
+      - "traefik.docker.allownonrunning=true"
       - "traefik.http.routers.interdiscount-api.rule=Host(`interdiscount-api.swiftapp.ch`)"
       - "traefik.http.routers.interdiscount-api.entrypoints=websecure"
       - "traefik.http.routers.interdiscount-api.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.interdiscount-api.middlewares=sablier-interdiscount@file"
       - "traefik.http.services.interdiscount-api.loadbalancer.server.port=4010"
+      - "sablier.enable=true"
+      - "sablier.group=interdiscount"
 
   mongo:
     image: mongo:7
     container_name: interdiscount_mongodb_prod
     restart: unless-stopped
+    labels:
+      - "sablier.enable=true"
+      - "sablier.group=interdiscount"
     ports:
       - '27025:27017'
     volumes:
@@ -102,6 +109,9 @@ services:
     image: redis:7-alpine
     container_name: interdiscount_redis
     restart: unless-stopped
+    labels:
+      - "sablier.enable=true"
+      - "sablier.group=interdiscount"
     ports:
       - '6385:6379'
     command: redis-server --appendonly yes --maxmemory 256mb --maxmemory-policy allkeys-lru
