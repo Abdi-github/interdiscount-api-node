@@ -6,3 +6,6 @@ dist/
 coverage/
 .DS_Store
 uploads/
+
+# Production secrets (use .env.production.example as template)
+.env.production

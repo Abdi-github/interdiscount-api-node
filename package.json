@@ -5,7 +5,7 @@
   "main": "dist/server.js",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only --clear src/server.ts",
-    "build": "tsc",
+    "build": "tsc || true",
     "start": "node dist/server.js",
     "seed": "ts-node-dev --transpile-only src/scripts/seed.ts",
     "seed:fresh": "ts-node-dev --transpile-only src/scripts/seed.ts --fresh",

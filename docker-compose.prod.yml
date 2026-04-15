@@ -62,6 +62,13 @@ services:
           cpus: '1.0'
     networks:
       - interdiscount_network
+      - traefik
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.interdiscount-api.rule=Host(`interdiscount-api.swiftapp.ch`)"
+      - "traefik.http.routers.interdiscount-api.entrypoints=websecure"
+      - "traefik.http.routers.interdiscount-api.tls.certresolver=letsencrypt"
+      - "traefik.http.services.interdiscount-api.loadbalancer.server.port=4010"
 
   mongo:
     image: mongo:7
@@ -118,3 +125,5 @@ volumes:
 networks:
   interdiscount_network:
     driver: bridge
+  traefik:
+    external: true
