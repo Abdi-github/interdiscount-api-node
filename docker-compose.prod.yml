@@ -44,13 +44,15 @@ services:
       - RATE_LIMIT_MAX=100
       - DEFAULT_PAGE_SIZE=24
       - MAX_PAGE_SIZE=100
+    env_file:
+      - .env.production
     depends_on:
       mongo:
         condition: service_healthy
       redis:
         condition: service_healthy
     healthcheck:
-      test: ['CMD', 'wget', '-q', '--spider', 'http://localhost:4010/api/v1/health']
+      test: ['CMD', 'wget', '-q', '--spider', 'http://127.0.0.1:4010/api/v1/health']
       interval: 30s
       timeout: 10s
       retries: 3
@@ -72,7 +74,7 @@ services:
 
   mongo:
     image: mongo:7
-    container_name: interdiscount_mongo
+    container_name: interdiscount_mongodb_prod
     restart: unless-stopped
     ports:
       - '27025:27017'
@@ -91,7 +93,7 @@ services:
     deploy:
       resources:
         limits:
-          memory: 1G
+          memory: 512M
           cpus: '1.0'
     networks:
       - interdiscount_network
@@ -124,6 +126,6 @@ volumes:
 
 networks:
   interdiscount_network:
-    driver: bridge
+    external: true
   traefik:
     external: true
