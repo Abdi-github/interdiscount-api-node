@@ -4,7 +4,9 @@ import helmet from 'helmet';
 import compression from 'compression';
 import cookieParser from 'cookie-parser';
 import morgan from 'morgan';
+import swaggerUi from 'swagger-ui-express';
 import config from './config';
+import { swaggerSpec } from './config/swagger';
 import requestLogger from './shared/middlewares/requestLogger';
 import { globalLimiter } from './shared/middlewares/rateLimiters';
 import languageMiddleware from './shared/middlewares/language';
@@ -152,6 +154,32 @@ app.use(`${API_PREFIX}/admin/coupons`, auth, requireRoles('admin', 'super_admin'
 app.use(`${API_PREFIX}/admin/locations`, auth, requireRoles('admin', 'super_admin'), adminLocationRoutes);
 app.use(`${API_PREFIX}/admin/rbac`, auth, requireRoles('admin', 'super_admin'), adminRbacRoutes);
 app.use(`${API_PREFIX}/admin/analytics`, auth, requireRoles('admin', 'super_admin'), adminAnalyticsRoutes);
+
+// ---------------------
+// Root → redirect to docs
+// ---------------------
+app.get('/', (_req, res) => {
+  res.redirect(`${API_PREFIX}/docs`);
+});
+app.get(API_PREFIX, (_req, res) => {
+  ApiResponse.success(res, {
+    name: 'Interdiscount Clone API',
+    version: config.apiVersion,
+    documentation: `${API_PREFIX}/docs`,
+  }, 'Interdiscount Clone API is running');
+});
+
+// ---------------------
+// Swagger API docs
+// ---------------------
+app.use(
+  `${API_PREFIX}/docs`,
+  swaggerUi.serve,
+  swaggerUi.setup(swaggerSpec, {
+    customCss: '.swagger-ui .topbar { display: none }',
+    customSiteTitle: 'Interdiscount Clone API Documentation',
+  })
+);
 
 // ---------------------
 // 404 Handler
